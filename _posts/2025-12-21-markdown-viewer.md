@@ -16,6 +16,8 @@ MarkdownViewer is built with SwiftUI and includes:
 
 - **Full Markdown support** — headers, bold, italic, links, code blocks, lists, tables, images, strikethrough, task lists
 - **Syntax highlighting** — fenced code blocks are properly highlighted
+- **Edit mode** — toggle between viewing and editing with a live preview
+- **Save support** — save changes with Cmd+S
 - **Multiple open methods** — File menu, double-click, or drag & drop
 - **Copy options** — raw Markdown or formatted rich text
 - **Light/dark mode** — follows your system theme
