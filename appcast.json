@@ -1,0 +1,77 @@
+{
+  "viewers": [
+    {
+      "id": "text-viewer",
+      "bundleId": "com.ryanlitalien.TextViewer",
+      "name": "Text Viewer",
+      "description": "Plain text and code with syntax highlighting",
+      "fileTypes": [".txt", ".log", ".swift", ".py", ".js", ".ts", ".c", ".cpp", ".h"],
+      "masUrl": null,
+      "directUrl": "https://www.ryanlitalien.com/assets/downloads/TextViewer.dmg",
+      "latestVersion": "1.0.0",
+      "minimumOSVersion": "13.0",
+      "releaseNotes": null
+    },
+    {
+      "id": "json-viewer",
+      "bundleId": "com.ryanlitalien.JSONViewer",
+      "name": "JSON Viewer",
+      "description": "JSON with collapsible sections and syntax highlighting",
+      "fileTypes": [".json"],
+      "masUrl": null,
+      "directUrl": "https://www.ryanlitalien.com/assets/downloads/JSONViewer.dmg",
+      "latestVersion": "1.4.0",
+      "minimumOSVersion": "13.0",
+      "releaseNotes": null
+    },
+    {
+      "id": "md-viewer",
+      "bundleId": "com.ryanlitalien.MarkdownViewer",
+      "name": "MD Viewer",
+      "description": "Markdown rendering with live preview",
+      "fileTypes": [".md", ".markdown"],
+      "masUrl": null,
+      "directUrl": "https://www.ryanlitalien.com/assets/downloads/MarkdownViewer.dmg",
+      "latestVersion": "1.5.0",
+      "minimumOSVersion": "13.0",
+      "releaseNotes": null
+    },
+    {
+      "id": "3d-viewer",
+      "bundleId": "com.ryanlitalien.ThreeDViewer",
+      "name": "3D Viewer",
+      "description": "3D model viewing with SceneKit",
+      "fileTypes": [".obj", ".stl", ".usdz", ".scn"],
+      "masUrl": null,
+      "directUrl": "https://www.ryanlitalien.com/assets/downloads/ThreeDViewer.dmg",
+      "latestVersion": "1.3.0",
+      "minimumOSVersion": "13.0",
+      "releaseNotes": null
+    },
+    {
+      "id": "yaml-viewer",
+      "bundleId": "com.ryanlitalien.YAMLViewer",
+      "name": "YAML Viewer",
+      "description": "YAML with syntax highlighting and validation",
+      "fileTypes": [".yaml", ".yml"],
+      "masUrl": null,
+      "directUrl": "https://www.ryanlitalien.com/assets/downloads/YAMLViewer.dmg",
+      "latestVersion": "1.1.0",
+      "minimumOSVersion": "13.0",
+      "releaseNotes": null
+    },
+    {
+      "id": "csv-viewer",
+      "bundleId": "com.ryanlitalien.CSVViewer",
+      "name": "CSV Viewer",
+      "description": "CSV and TSV data in a table format",
+      "fileTypes": [".csv", ".tsv"],
+      "masUrl": null,
+      "directUrl": "https://www.ryanlitalien.com/assets/downloads/CSVViewer.dmg",
+      "latestVersion": "1.0.0",
+      "minimumOSVersion": "13.0",
+      "releaseNotes": null
+    }
+  ],
+  "lastUpdated": "2026-02-07T00:00:00Z"
+}
