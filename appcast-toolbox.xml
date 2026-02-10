@@ -6,14 +6,14 @@
     <description>Viewer Toolbox updates</description>
     <language>en</language>
     <item>
-      <title>Viewer Toolbox 1.1.0</title>
-      <pubDate>Fri, 07 Feb 2026 00:00:00 +0000</pubDate>
-      <sparkle:version>1</sparkle:version>
-      <sparkle:shortVersionString>1.1.0</sparkle:shortVersionString>
+      <title>Viewer Toolbox 1.2.0</title>
+      <pubDate>Mon, 10 Feb 2026 00:00:00 +0000</pubDate>
+      <sparkle:version>2</sparkle:version>
+      <sparkle:shortVersionString>1.2.0</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
       <description><![CDATA[
         <ul>
-          <li>Initial signed release</li>
+          <li>Add DMG download and install flow for viewer apps</li>
         </ul>
       ]]></description>
       <enclosure
