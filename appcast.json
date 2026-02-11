@@ -9,7 +9,7 @@
       "macAppStoreUrl": null,
       "directUrl": "https://www.ryanlitalien.com/assets/downloads/TextViewer.dmg",
       "iconUrl": "https://www.ryanlitalien.com/assets/icons/text-viewer.png",
-      "latestVersion": "1.0.0",
+      "latestVersion": "1.0.1",
       "minimumOSVersion": "13.0",
       "releaseNotes": null
     },
@@ -22,7 +22,7 @@
       "macAppStoreUrl": null,
       "directUrl": "https://www.ryanlitalien.com/assets/downloads/JSONViewer.dmg",
       "iconUrl": "https://www.ryanlitalien.com/assets/icons/json-viewer.png",
-      "latestVersion": "1.4.0",
+      "latestVersion": "1.4.1",
       "minimumOSVersion": "13.0",
       "releaseNotes": null
     },
@@ -35,7 +35,7 @@
       "macAppStoreUrl": null,
       "directUrl": "https://www.ryanlitalien.com/assets/downloads/MarkdownViewer.dmg",
       "iconUrl": "https://www.ryanlitalien.com/assets/icons/md-viewer.png",
-      "latestVersion": "1.7.0",
+      "latestVersion": "1.7.1",
       "minimumOSVersion": "13.0",
       "releaseNotes": null
     },
@@ -48,7 +48,7 @@
       "macAppStoreUrl": null,
       "directUrl": "https://www.ryanlitalien.com/assets/downloads/ThreeDViewer.dmg",
       "iconUrl": "https://www.ryanlitalien.com/assets/icons/3d-viewer.png",
-      "latestVersion": "1.3.0",
+      "latestVersion": "1.3.1",
       "minimumOSVersion": "13.0",
       "releaseNotes": null
     },
@@ -61,7 +61,7 @@
       "macAppStoreUrl": null,
       "directUrl": "https://www.ryanlitalien.com/assets/downloads/YAMLViewer.dmg",
       "iconUrl": "https://www.ryanlitalien.com/assets/icons/yaml-viewer.png",
-      "latestVersion": "1.1.0",
+      "latestVersion": "1.1.1",
       "minimumOSVersion": "13.0",
       "releaseNotes": null
     },
@@ -74,10 +74,10 @@
       "macAppStoreUrl": null,
       "directUrl": "https://www.ryanlitalien.com/assets/downloads/CSVViewer.dmg",
       "iconUrl": "https://www.ryanlitalien.com/assets/icons/csv-viewer.png",
-      "latestVersion": "1.0.0",
+      "latestVersion": "1.0.1",
       "minimumOSVersion": "13.0",
       "releaseNotes": null
     }
   ],
-  "lastUpdated": "2026-02-10T12:00:00Z"
+  "lastUpdated": "2026-02-11T12:00:00Z"
 }
