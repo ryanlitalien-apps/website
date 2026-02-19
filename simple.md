@@ -108,7 +108,7 @@ permalink: /simple/
   <a href="/assets/downloads/MarkdownViewer.dmg" class="btn btn-primary">
     Download MarkdownViewer.dmg
   </a>
-  <span class="text-muted ms-2">v1.7.0</span>
+  <span class="text-muted ms-2">v1.8.0</span>
 </p>
 
 <h4>Requirements</h4>
@@ -121,6 +121,7 @@ permalink: /simple/
 <ul>
   <li>Full Markdown support: headers, bold, italic, links, code blocks, lists, tables, images, strikethrough, task lists</li>
   <li>Syntax highlighting for fenced code blocks</li>
+  <li>Export as PDF</li>
   <li>Dark mode support</li>
   <li>Open files via File menu, double-click, or drag & drop</li>
   <li>Copy raw Markdown or formatted rich text</li>
