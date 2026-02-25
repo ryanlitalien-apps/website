@@ -10,6 +10,8 @@ permalink: /simple/
 <h2>Simple Apps</h2>
 <p class="text-muted">A collection of simple, focused macOS utilities.</p>
 
+<p class="text-muted" style="font-size: 0.9em;">Built with native Swift and SwiftUI. Each app is 1–2 MB — the Electron equivalent would be 80–120 MB. Your disk space is safe here.</p>
+
 <hr>
 
 <h3>Viewer Toolbox</h3>
