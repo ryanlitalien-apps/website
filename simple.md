@@ -43,7 +43,7 @@ permalink: /simple/
   <a href="/assets/downloads/TextViewer.dmg" class="btn btn-primary">
     Download TextViewer.dmg
   </a>
-  <span class="text-muted ms-2">v1.0.0</span>
+  <span class="text-muted ms-2">v1.1.0</span>
 </p>
 
 <h4>Requirements</h4>
