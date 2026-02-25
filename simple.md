@@ -43,7 +43,7 @@ permalink: /simple/
   <a href="/assets/downloads/TextViewer.dmg" class="btn btn-primary">
     Download TextViewer.dmg
   </a>
-  <span class="text-muted ms-2">v1.1.0</span>
+  <span class="text-muted ms-2">v1.1.1</span>
 </p>
 
 <h4>Requirements</h4>
@@ -75,7 +75,7 @@ permalink: /simple/
   <a href="/assets/downloads/JSONViewer.dmg" class="btn btn-primary">
     Download JSONViewer.dmg
   </a>
-  <span class="text-muted ms-2">v1.5.0</span>
+  <span class="text-muted ms-2">v1.5.1</span>
 </p>
 
 <h4>Requirements</h4>
@@ -108,7 +108,7 @@ permalink: /simple/
   <a href="/assets/downloads/MarkdownViewer.dmg" class="btn btn-primary">
     Download MarkdownViewer.dmg
   </a>
-  <span class="text-muted ms-2">v1.9.0</span>
+  <span class="text-muted ms-2">v1.9.1</span>
 </p>
 
 <h4>Requirements</h4>
@@ -142,7 +142,7 @@ permalink: /simple/
   <a href="/assets/downloads/ThreeDViewer.dmg" class="btn btn-primary">
     Download ThreeDViewer.dmg
   </a>
-  <span class="text-muted ms-2">v1.4.0</span>
+  <span class="text-muted ms-2">v1.4.1</span>
 </p>
 
 <h4>Requirements</h4>
@@ -176,7 +176,7 @@ permalink: /simple/
   <a href="/assets/downloads/YAMLViewer.dmg" class="btn btn-primary">
     Download YAMLViewer.dmg
   </a>
-  <span class="text-muted ms-2">v1.2.0</span>
+  <span class="text-muted ms-2">v1.2.1</span>
 </p>
 
 <h4>Requirements</h4>
@@ -208,7 +208,7 @@ permalink: /simple/
   <a href="/assets/downloads/CSVViewer.dmg" class="btn btn-primary">
     Download CSVViewer.dmg
   </a>
-  <span class="text-muted ms-2">v1.1.0</span>
+  <span class="text-muted ms-2">v1.1.1</span>
 </p>
 
 <h4>Requirements</h4>
