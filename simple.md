@@ -144,7 +144,7 @@ permalink: /simple/
   <a href="/assets/downloads/ThreeDViewer.dmg" class="btn btn-primary">
     Download ThreeDViewer.dmg
   </a>
-  <span class="text-muted ms-2">v1.4.1</span>
+  <span class="text-muted ms-2">v1.5.0</span>
 </p>
 
 <h4>Requirements</h4>
