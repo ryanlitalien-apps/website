@@ -77,7 +77,7 @@ permalink: /simple/
   <a href="/assets/downloads/JSONViewer.dmg" class="btn btn-primary">
     Download JSONViewer.dmg
   </a>
-  <span class="text-muted ms-2">v1.5.1</span>
+  <span class="text-muted ms-2">v1.6.0</span>
 </p>
 
 <h4>Requirements</h4>
