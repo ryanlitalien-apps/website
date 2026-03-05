@@ -178,7 +178,7 @@ permalink: /simple/
   <a href="/assets/downloads/YAMLViewer.dmg" class="btn btn-primary">
     Download YAMLViewer.dmg
   </a>
-  <span class="text-muted ms-2">v1.2.1</span>
+  <span class="text-muted ms-2">v1.3.0</span>
 </p>
 
 <h4>Requirements</h4>
