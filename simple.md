@@ -25,7 +25,7 @@ permalink: /simple/
   <a href="https://ryanlitalien.gumroad.com/l/viewer-toolbox" class="btn btn-success">
     Buy on Gumroad — $20
   </a>
-  <span class="text-muted ms-2">v1.6.0</span>
+  <span class="text-muted ms-2">v1.7.0</span>
 </p>
 
 <h4>Features</h4>
@@ -77,7 +77,7 @@ permalink: /simple/
   <a href="/assets/downloads/JSONViewer.dmg" class="btn btn-primary">
     Download JSONViewer.dmg
   </a>
-  <span class="text-muted ms-2">v1.6.0</span>
+  <span class="text-muted ms-2">v1.6.1</span>
 </p>
 
 <h4>Requirements</h4>
@@ -144,7 +144,7 @@ permalink: /simple/
   <a href="/assets/downloads/ThreeDViewer.dmg" class="btn btn-primary">
     Download ThreeDViewer.dmg
   </a>
-  <span class="text-muted ms-2">v1.5.1</span>
+  <span class="text-muted ms-2">v1.5.2</span>
 </p>
 
 <h4>Requirements</h4>
