@@ -86,7 +86,7 @@
       "fileTypes": [".png", ".jpg", ".jpeg", ".gif", ".bmp", ".tiff", ".heic", ".webp", ".ico", ".svg"],
       "macAppStoreUrl": null,
       "directUrl": "https://www.ryanlitalien.com/assets/downloads/ImageViewer_v1.1.0.dmg",
-      "iconUrl": null,
+      "iconUrl": "https://www.ryanlitalien.com/assets/icons/image-viewer.png",
       "latestVersion": "1.1.0",
       "minimumOSVersion": "13.0",
       "releaseNotes": null
@@ -99,7 +99,7 @@
       "fileTypes": [".mp3", ".wav", ".m4a", ".aac", ".aiff", ".flac", ".caf"],
       "macAppStoreUrl": null,
       "directUrl": "https://www.ryanlitalien.com/assets/downloads/AudioViewer_v1.1.0.dmg",
-      "iconUrl": null,
+      "iconUrl": "https://www.ryanlitalien.com/assets/icons/audio-viewer.png",
       "latestVersion": "1.1.0",
       "minimumOSVersion": "13.0",
       "releaseNotes": null
