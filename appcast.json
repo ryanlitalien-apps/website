@@ -103,7 +103,20 @@
       "latestVersion": "1.1.0",
       "minimumOSVersion": "13.0",
       "releaseNotes": null
+    },
+    {
+      "id": "3mf-viewer",
+      "bundleId": "com.ryanlitalien.ThreeMFViewer",
+      "name": "3MF Viewer",
+      "description": "3MF 3D printing files with color and material support",
+      "fileTypes": [".3mf"],
+      "macAppStoreUrl": null,
+      "directUrl": "https://www.ryanlitalien.com/assets/downloads/ThreeMFViewer_v1.0.0.dmg",
+      "iconUrl": null,
+      "latestVersion": "1.0.0",
+      "minimumOSVersion": "13.0",
+      "releaseNotes": null
     }
   ],
-  "lastUpdated": "2026-02-17T00:00:00Z"
+  "lastUpdated": "2026-03-14T00:00:00Z"
 }
