@@ -48,7 +48,7 @@
       "macAppStoreUrl": null,
       "directUrl": "https://www.ryanlitalien.com/assets/downloads/ThreeDViewer.dmg",
       "iconUrl": "https://www.ryanlitalien.com/assets/icons/3d-viewer.png",
-      "latestVersion": "1.5.2",
+      "latestVersion": "1.6.0",
       "minimumOSVersion": "13.0",
       "releaseNotes": null
     },
@@ -111,9 +111,9 @@
       "description": "3MF 3D printing files with color and material support",
       "fileTypes": [".3mf"],
       "macAppStoreUrl": null,
-      "directUrl": "https://www.ryanlitalien.com/assets/downloads/ThreeMFViewer_v1.0.0.dmg",
+      "directUrl": "https://www.ryanlitalien.com/assets/downloads/ThreeMFViewer_v1.1.0.dmg",
       "iconUrl": "https://www.ryanlitalien.com/assets/icons/3mf-viewer.png",
-      "latestVersion": "1.0.0",
+      "latestVersion": "1.1.0",
       "minimumOSVersion": "13.0",
       "releaseNotes": null
     }
