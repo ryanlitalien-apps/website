@@ -9,7 +9,7 @@
       "macAppStoreUrl": null,
       "directUrl": "https://www.ryanlitalien.com/assets/downloads/TextViewer.dmg",
       "iconUrl": "https://www.ryanlitalien.com/assets/icons/text-viewer.png",
-      "latestVersion": "1.4.0",
+      "latestVersion": "1.5.0",
       "minimumOSVersion": "13.0",
       "releaseNotes": null
     },
@@ -22,7 +22,7 @@
       "macAppStoreUrl": null,
       "directUrl": "https://www.ryanlitalien.com/assets/downloads/JSONViewer.dmg",
       "iconUrl": "https://www.ryanlitalien.com/assets/icons/json-viewer.png",
-      "latestVersion": "1.8.0",
+      "latestVersion": "1.9.0",
       "minimumOSVersion": "13.0",
       "releaseNotes": null
     },
@@ -35,7 +35,7 @@
       "macAppStoreUrl": null,
       "directUrl": "https://www.ryanlitalien.com/assets/downloads/MarkdownViewer.dmg",
       "iconUrl": "https://www.ryanlitalien.com/assets/icons/md-viewer.png",
-      "latestVersion": "1.11.1",
+      "latestVersion": "1.12.0",
       "minimumOSVersion": "13.0",
       "releaseNotes": null
     },
@@ -48,7 +48,7 @@
       "macAppStoreUrl": null,
       "directUrl": "https://www.ryanlitalien.com/assets/downloads/ThreeDViewer.dmg",
       "iconUrl": "https://www.ryanlitalien.com/assets/icons/3d-viewer.png",
-      "latestVersion": "1.6.0",
+      "latestVersion": "1.7.0",
       "minimumOSVersion": "13.0",
       "releaseNotes": null
     },
@@ -61,7 +61,7 @@
       "macAppStoreUrl": null,
       "directUrl": "https://www.ryanlitalien.com/assets/downloads/YAMLViewer.dmg",
       "iconUrl": "https://www.ryanlitalien.com/assets/icons/yaml-viewer.png",
-      "latestVersion": "1.6.0",
+      "latestVersion": "1.7.0",
       "minimumOSVersion": "13.0",
       "releaseNotes": null
     },
@@ -74,7 +74,7 @@
       "macAppStoreUrl": null,
       "directUrl": "https://www.ryanlitalien.com/assets/downloads/CSVViewer.dmg",
       "iconUrl": "https://www.ryanlitalien.com/assets/icons/csv-viewer.png",
-      "latestVersion": "1.4.0",
+      "latestVersion": "1.5.0",
       "minimumOSVersion": "13.0",
       "releaseNotes": null
     },
