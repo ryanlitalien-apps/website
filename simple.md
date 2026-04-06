@@ -178,7 +178,7 @@ permalink: /simple/
   <a href="/assets/downloads/YAMLViewer.dmg" class="btn btn-primary">
     Download YAMLViewer.dmg
   </a>
-  <span class="text-muted ms-2">v1.5.0</span>
+  <span class="text-muted ms-2">v1.6.0</span>
 </p>
 
 <h4>Requirements</h4>
@@ -210,7 +210,7 @@ permalink: /simple/
   <a href="/assets/downloads/CSVViewer.dmg" class="btn btn-primary">
     Download CSVViewer.dmg
   </a>
-  <span class="text-muted ms-2">v1.3.0</span>
+  <span class="text-muted ms-2">v1.4.0</span>
 </p>
 
 <h4>Requirements</h4>

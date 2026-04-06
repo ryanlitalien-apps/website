@@ -61,7 +61,7 @@
       "macAppStoreUrl": null,
       "directUrl": "https://www.ryanlitalien.com/assets/downloads/YAMLViewer.dmg",
       "iconUrl": "https://www.ryanlitalien.com/assets/icons/yaml-viewer.png",
-      "latestVersion": "1.5.0",
+      "latestVersion": "1.6.0",
       "minimumOSVersion": "13.0",
       "releaseNotes": null
     },
@@ -74,7 +74,7 @@
       "macAppStoreUrl": null,
       "directUrl": "https://www.ryanlitalien.com/assets/downloads/CSVViewer.dmg",
       "iconUrl": "https://www.ryanlitalien.com/assets/icons/csv-viewer.png",
-      "latestVersion": "1.3.0",
+      "latestVersion": "1.4.0",
       "minimumOSVersion": "13.0",
       "releaseNotes": null
     },
