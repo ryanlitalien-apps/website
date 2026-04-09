@@ -10,20 +10,23 @@ permalink: /simple/
 <h2>Simple Apps</h2>
 <p class="text-muted">A collection of simple, focused macOS utilities.</p>
 
-<p class="text-muted" style="font-size: 0.9em;">Built with native Swift and SwiftUI. Each app is 1–2 MB — the Electron equivalent would be 80–120 MB. Your disk space is safe here.</p>
+<p class="text-muted" style="font-size: 0.9em;">Built with native Swift and SwiftUI. Each app is ~2 MB — the Electron equivalent would be 80–120 MB. Your disk space is safe here.</p>
 
 <hr>
 
 <h3>Viewer Toolbox</h3>
-<p>A macOS menu bar app that manages all viewer apps, shared settings, and keeps everything up to date.</p>
+<p>A macOS menu bar app that manages all viewer apps, shared settings, and keeps everything up to date. Each viewer app below is <strong>free</strong> — the Toolbox is a paid app that makes it easy to install, update, and manage them all from one place.</p>
 
 <p>
   <img src="/assets/img/viewer-toolbox-screenshot.png" alt="Viewer Toolbox screenshot" style="max-width: 346px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.15); margin-bottom: 16px;">
 </p>
 
 <p>
-  <a href="https://ryanlitalien.gumroad.com/l/viewer-toolbox" class="btn btn-success">
-    Buy on Gumroad — $20
+  <a href="https://ryanlitalien.gumroad.com/l/viewer-toolbox" class="btn btn-success" target="_blank">
+    Buy on Gumroad — $9.99
+  </a>
+  <a href="https://apps.apple.com/us/app/viewer-toolbox/id6760922295?mt=12" class="btn btn-primary ms-2" target="_blank">
+    Buy on App Store — $9.99
   </a>
   <span class="text-muted ms-2">v1.8.0</span>
 </p>
@@ -43,7 +46,7 @@ permalink: /simple/
 
 <p>
   <a href="/assets/downloads/TextViewer.dmg" class="btn btn-primary">
-    Download TextViewer.dmg
+    Download TextViewer for free
   </a>
   <span class="text-muted ms-2">v1.5.0</span>
 </p>
@@ -71,11 +74,11 @@ permalink: /simple/
 <hr>
 
 <h3>JSONViewer</h3>
-<p>A simple, native macOS app for viewing JSON files — like Preview for images, but for <code>.json</code> files.</p>
+<p>A simple, native macOS app for viewing JSON files — like Preview for images, but for <code>.json</code> and <code>.jsonl</code> files.</p>
 
 <p>
   <a href="/assets/downloads/JSONViewer.dmg" class="btn btn-primary">
-    Download JSONViewer.dmg
+    Download JSONViewer for free
   </a>
   <span class="text-muted ms-2">v1.9.0</span>
 </p>
@@ -108,7 +111,7 @@ permalink: /simple/
 
 <p>
   <a href="/assets/downloads/MarkdownViewer.dmg" class="btn btn-primary">
-    Download MarkdownViewer.dmg
+    Download MarkdownViewer for free
   </a>
   <span class="text-muted ms-2">v1.12.0</span>
 </p>
@@ -142,7 +145,7 @@ permalink: /simple/
 
 <p>
   <a href="/assets/downloads/ThreeDViewer.dmg" class="btn btn-primary">
-    Download ThreeDViewer.dmg
+    Download 3DViewer for free
   </a>
   <span class="text-muted ms-2">v1.7.0</span>
 </p>
@@ -176,7 +179,7 @@ permalink: /simple/
 
 <p>
   <a href="/assets/downloads/YAMLViewer.dmg" class="btn btn-primary">
-    Download YAMLViewer.dmg
+    Download YAMLViewer for free
   </a>
   <span class="text-muted ms-2">v1.7.0</span>
 </p>
@@ -208,7 +211,7 @@ permalink: /simple/
 
 <p>
   <a href="/assets/downloads/CSVViewer.dmg" class="btn btn-primary">
-    Download CSVViewer.dmg
+    Download CSVViewer for free
   </a>
   <span class="text-muted ms-2">v1.5.0</span>
 </p>
@@ -232,6 +235,31 @@ permalink: /simple/
   <li>Download and open the DMG</li>
   <li>Drag CSVViewer to your Applications folder</li>
 </ol>
+
+<hr>
+
+<h3>App Sizes</h3>
+<p class="text-muted">Each viewer is a tiny, native macOS app — no Electron bloat.</p>
+
+<table class="table table-sm" style="max-width: 360px;">
+  <thead>
+    <tr>
+      <th>App</th>
+      <th class="text-end">Size</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>JSONViewer</td><td class="text-end">1.0 MB</td></tr>
+    <tr><td>3DViewer</td><td class="text-end">1.4 MB</td></tr>
+    <tr><td>TextViewer</td><td class="text-end">1.8 MB</td></tr>
+    <tr><td>MarkdownViewer</td><td class="text-end">1.8 MB</td></tr>
+    <tr><td>ImageViewer</td><td class="text-end">2.1 MB</td></tr>
+    <tr><td>CSVViewer</td><td class="text-end">2.2 MB</td></tr>
+    <tr><td>AudioViewer</td><td class="text-end">2.3 MB</td></tr>
+    <tr><td>YAMLViewer</td><td class="text-end">2.4 MB</td></tr>
+    <tr><td>3MFViewer</td><td class="text-end">2.6 MB</td></tr>
+  </tbody>
+</table>
 
   </div>
 </div>
