@@ -113,7 +113,7 @@ permalink: /simple/
   <a href="/assets/downloads/MarkdownViewer.dmg" class="btn btn-primary">
     Download MarkdownViewer for free
   </a>
-  <span class="text-muted ms-2">v1.15.0</span>
+  <span class="text-muted ms-2">v1.16.0</span>
 </p>
 
 <h4>Requirements</h4>
