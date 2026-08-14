@@ -48,7 +48,7 @@ permalink: /simple/
   <a href="/assets/downloads/TextViewer.dmg" class="btn btn-primary">
     Download TextViewer for free
   </a>
-  <span class="text-muted ms-2">v1.5.0</span>
+  <span class="text-muted ms-2">v1.6.0</span>
 </p>
 
 <h4>Requirements</h4>
@@ -80,7 +80,7 @@ permalink: /simple/
   <a href="/assets/downloads/JSONViewer.dmg" class="btn btn-primary">
     Download JSONViewer for free
   </a>
-  <span class="text-muted ms-2">v1.9.0</span>
+  <span class="text-muted ms-2">v1.10.0</span>
 </p>
 
 <h4>Requirements</h4>
@@ -147,7 +147,7 @@ permalink: /simple/
   <a href="/assets/downloads/ThreeDViewer.dmg" class="btn btn-primary">
     Download 3DViewer for free
   </a>
-  <span class="text-muted ms-2">v1.7.0</span>
+  <span class="text-muted ms-2">v1.8.0</span>
 </p>
 
 <h4>Requirements</h4>
@@ -181,7 +181,7 @@ permalink: /simple/
   <a href="/assets/downloads/YAMLViewer.dmg" class="btn btn-primary">
     Download YAMLViewer for free
   </a>
-  <span class="text-muted ms-2">v1.7.0</span>
+  <span class="text-muted ms-2">v1.8.0</span>
 </p>
 
 <h4>Requirements</h4>
@@ -213,7 +213,7 @@ permalink: /simple/
   <a href="/assets/downloads/CSVViewer.dmg" class="btn btn-primary">
     Download CSVViewer for free
   </a>
-  <span class="text-muted ms-2">v1.5.0</span>
+  <span class="text-muted ms-2">v1.6.0</span>
 </p>
 
 <h4>Requirements</h4>

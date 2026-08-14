@@ -9,7 +9,7 @@
       "macAppStoreUrl": null,
       "directUrl": "https://www.ryanlitalien.com/assets/downloads/TextViewer.dmg",
       "iconUrl": "https://www.ryanlitalien.com/assets/icons/text-viewer.png",
-      "latestVersion": "1.5.0",
+      "latestVersion": "1.6.0",
       "minimumOSVersion": "13.0",
       "releaseNotes": null
     },
@@ -22,7 +22,7 @@
       "macAppStoreUrl": null,
       "directUrl": "https://www.ryanlitalien.com/assets/downloads/JSONViewer.dmg",
       "iconUrl": "https://www.ryanlitalien.com/assets/icons/json-viewer.png",
-      "latestVersion": "1.9.0",
+      "latestVersion": "1.10.0",
       "minimumOSVersion": "13.0",
       "releaseNotes": null
     },
@@ -48,7 +48,7 @@
       "macAppStoreUrl": null,
       "directUrl": "https://www.ryanlitalien.com/assets/downloads/ThreeDViewer.dmg",
       "iconUrl": "https://www.ryanlitalien.com/assets/icons/3d-viewer.png",
-      "latestVersion": "1.7.0",
+      "latestVersion": "1.8.0",
       "minimumOSVersion": "13.0",
       "releaseNotes": null
     },
@@ -61,7 +61,7 @@
       "macAppStoreUrl": null,
       "directUrl": "https://www.ryanlitalien.com/assets/downloads/YAMLViewer.dmg",
       "iconUrl": "https://www.ryanlitalien.com/assets/icons/yaml-viewer.png",
-      "latestVersion": "1.7.0",
+      "latestVersion": "1.8.0",
       "minimumOSVersion": "13.0",
       "releaseNotes": null
     },
@@ -74,7 +74,7 @@
       "macAppStoreUrl": null,
       "directUrl": "https://www.ryanlitalien.com/assets/downloads/CSVViewer.dmg",
       "iconUrl": "https://www.ryanlitalien.com/assets/icons/csv-viewer.png",
-      "latestVersion": "1.5.0",
+      "latestVersion": "1.6.0",
       "minimumOSVersion": "13.0",
       "releaseNotes": null
     },
@@ -85,9 +85,9 @@
       "description": "Image viewing with zoom and info display",
       "fileTypes": [".png", ".jpg", ".jpeg", ".gif", ".bmp", ".tiff", ".heic", ".webp", ".ico", ".svg"],
       "macAppStoreUrl": null,
-      "directUrl": "https://www.ryanlitalien.com/assets/downloads/ImageViewer_v1.1.0.dmg",
+      "directUrl": "https://www.ryanlitalien.com/assets/downloads/ImageViewer_v1.2.0.dmg",
       "iconUrl": "https://www.ryanlitalien.com/assets/icons/image-viewer.png",
-      "latestVersion": "1.1.0",
+      "latestVersion": "1.2.0",
       "minimumOSVersion": "13.0",
       "releaseNotes": null
     },
@@ -98,9 +98,9 @@
       "description": "Audio playback with metadata display",
       "fileTypes": [".mp3", ".wav", ".m4a", ".aac", ".aiff", ".flac", ".caf"],
       "macAppStoreUrl": null,
-      "directUrl": "https://www.ryanlitalien.com/assets/downloads/AudioViewer_v1.1.0.dmg",
+      "directUrl": "https://www.ryanlitalien.com/assets/downloads/AudioViewer_v1.2.0.dmg",
       "iconUrl": "https://www.ryanlitalien.com/assets/icons/audio-viewer.png",
-      "latestVersion": "1.1.0",
+      "latestVersion": "1.2.0",
       "minimumOSVersion": "13.0",
       "releaseNotes": null
     },
