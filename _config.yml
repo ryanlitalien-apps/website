@@ -36,13 +36,14 @@ theme: jekyll-theme-minimal
 #  - jekyll-feed
 
 # Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# NOTE: setting `exclude` REPLACES Jekyll's defaults rather than extending them,
+# so the default entries below must stay listed or they start being published.
+exclude:
+  - docs/            # planning docs, not part of the published site
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
