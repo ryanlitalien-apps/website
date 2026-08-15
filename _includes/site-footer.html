@@ -1,0 +1,24 @@
+<!--
+  Named site-footer.html (not footer.html) on purpose: _includes/footer.html
+  already exists and is shared by the old Bootstrap/mediumish layout that
+  every other page on the site still uses. Overwriting it would restyle
+  those pages before Phase 1 gets to them, which the build brief says not
+  to do. This file is included only by _layouts/base.html.
+
+  /accessibility/ and /privacy/ do not exist yet as pages -- both are
+  Phase 1 (rebrand plan s.12/13). These links will 404 until then; that is
+  expected, not a bug in this branch.
+-->
+<footer class="pitch-footer">
+  <p>
+    Ryan L&rsquo;Italien | Innovative Technology Solutions
+  </p>
+  <ul class="footer-links">
+    <li><a href="mailto:{{ site.data.contact.email }}">{{ site.data.contact.email }}</a></li>
+    <li><a href="{{ site.data.contact.linkedin }}">LinkedIn</a></li>
+    <li><a href="{{ site.data.contact.github }}">GitHub</a></li>
+    <li><a href="{{ site.data.contact.calendly }}">Calendly</a></li>
+    <li><a href="/accessibility/">Accessibility</a></li>
+    <li><a href="/privacy/">Privacy</a></li>
+  </ul>
+</footer>

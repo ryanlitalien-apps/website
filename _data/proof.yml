@@ -1,0 +1,42 @@
+# Four proof blocks for the "/" pitch page, per portfolio-site-content.md.
+#
+# `employer` is intentionally generic while the Affirm separation is unresolved
+# (counsel not yet retained, nothing signed as of this build). Both the employer
+# name and the title are public on LinkedIn and could be named directly once
+# that's cleared -- until then this stays a one-line edit:
+#   employer: "Affirm"
+employer: "a publicly traded fintech"
+employer_title: "Staff Partner Engineer"
+
+# Data files are not run through Liquid, so block 0 has no `body` field --
+# index.md builds its sentence from `employer_title` / `employer` above plus
+# `employer_body_suffix` below, which is the only way to keep the employer
+# name a single edit while still rendering as real text (not literal "{{ }}").
+employer_body_suffix: >-
+  owned integration architecture and the technical relationship for global
+  marketplaces and payment processors, design through launch through
+  escalation.
+
+blocks:
+  - title: "Payments at platform scale"
+    employer_block: true
+
+  - title: "Enterprise AI that closed"
+    body: >-
+      Snowflake Senior Solutions Engineer: GenAI assistant, image-recognition
+      pipeline, and synthetic-data generator that became reference
+      implementations; technical lead on $21M, $12M, and $7M deals. SnowPro
+      certified.
+
+  - title: "Game-dev infrastructure"
+    body: >-
+      Perforce Director of Solutions and Gaming Evangelist: studio
+      infrastructure for teams from 2 people to Disney Animation, ran the AWS
+      Games partnership, product-managed Helix Core Cloud. Now founder of
+      ButterStack, a SaaS platform for game studios.
+
+  - title: "Agentic development, daily"
+    body: >-
+      MCP servers, Claude Code plugins, and multi-agent workflows are how I
+      build now. If you want this capability in your team, I have already
+      made every mistake for you.

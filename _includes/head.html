@@ -1,0 +1,33 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="{{ page.description | default: site.description }}">
+<meta name="author" content="{{ site.author }}">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+{% seo %}
+
+<!--
+  Theme init: inline and blocking (no `defer`/`async`) so it runs before
+  the stylesheet paints -- this is the "no flash on load" requirement. It
+  only ever sets data-theme when the visitor already made an explicit
+  light/dark choice on a previous visit; "system" (no stored value) leaves
+  the attribute off entirely and site.css's prefers-color-scheme query
+  takes over. Kept tiny and dependency-free on purpose.
+-->
+<script>
+  (function () {
+    try {
+      var stored = localStorage.getItem("theme");
+      if (stored === "light" || stored === "dark") {
+        document.documentElement.setAttribute("data-theme", stored);
+      }
+    } catch (e) {}
+  })();
+</script>
+
+<link rel="stylesheet" href="/assets/css/site.css">
+<script defer data-domain="ryanlitalien.com" src="https://plausible.io/js/script.js"></script>

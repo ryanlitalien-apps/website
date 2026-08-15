@@ -1,0 +1,11 @@
+# Single source for booking + contact links. Both hero CTAs and the footer
+# read from this file, so swapping in the real Calendly link or a live
+# mailbox is a one-line edit.
+#
+# NOTE: the domain mailbox (howdy@ryanlitalien.com) is not yet live --
+# forwarding + send-as is a Phase 2 task (rebrand plan section 10). Do not
+# point real traffic at this address until that's set up.
+calendly: "https://calendly.com/ryanlitalien/20min"
+email: "howdy@ryanlitalien.com"
+linkedin: "https://www.linkedin.com/in/ryanlitalien"
+github: "https://github.com/ryanlitalien"

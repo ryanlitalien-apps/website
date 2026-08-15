@@ -1,0 +1,18 @@
+<!--
+  The "[x] Work" rail. Brackets are CSS ::before generated content (see
+  .rail-nav a::before in site.css) -- never real DOM text -- so a screen
+  reader does not announce "left bracket x right bracket Work". The state
+  that actually gets announced is aria-current="page" on the active link.
+
+  Still needs a manual VoiceOver pass (rebrand plan s.4) to confirm no
+  browser/AT combination reads the generated content aloud; that is a
+  Phase 1 task, not blocking this page from existing.
+-->
+<nav class="rail-nav" aria-label="Primary">
+  <ul>
+    <li><a href="/" {% if page.url == "/" %}aria-current="page"{% endif %}>Work</a></li>
+    <li><a href="/apps/" {% if page.url == "/apps/" %}aria-current="page"{% endif %}>Apps</a></li>
+    <li><a href="/writing/" {% if page.url == "/writing/" %}aria-current="page"{% endif %}>Writing</a></li>
+    <li><a href="/about/" {% if page.url == "/about/" %}aria-current="page"{% endif %}>About</a></li>
+  </ul>
+</nav>

@@ -1,0 +1,11 @@
+JetBrains Mono
+Copyright 2020 The JetBrains Mono Project Authors (https://github.com/JetBrains/JetBrainsMono)
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+Full license text: https://scripts.sil.org/OFL
+
+The files JetBrainsMono-Regular-latin.woff2 and JetBrainsMono-Bold-latin.woff2
+in this directory are a latin-subset, woff2-compressed build of JetBrains Mono
+(upstream version 2.304), produced locally with fonttools (pyftsubset) for
+self-hosting on this site. No glyphs were modified; only unused unicode
+ranges were removed to reduce file size.

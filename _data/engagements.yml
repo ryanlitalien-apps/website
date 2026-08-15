@@ -1,0 +1,25 @@
+# The 4 offers. Fixed-fee language on the page; numbers only in conversation.
+- name: "AI & Integration Readiness Diagnostic"
+  terms: "fixed fee, 3-4 weeks"
+  body: >-
+    Senior read on architecture, delivery, partner surface, and where AI
+    actually pays off. Written findings, prioritized roadmap,
+    decision-ready recommendation. The usual starting point.
+
+- name: "Advisory"
+  terms: "monthly retainer"
+  body: >-
+    Judgment on tap: architecture calls, hiring, build-vs-buy, partner
+    escalations.
+
+- name: "Fractional CTO"
+  terms: "1-2 days/week, minimum three months"
+  body: >-
+    Embedded engineering leadership through a raise, a re-platform, or a
+    partner launch.
+
+- name: "Technical due diligence"
+  terms: "fixed fee per engagement"
+  body: >-
+    For investors on deadline: a written, defensible findings document on
+    the target's stack and team.

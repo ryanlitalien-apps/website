@@ -16,7 +16,11 @@
 title: ryanlitalien.com
 author: "Ryan L'Italien"
 #email: your-email@example.com
-logo: /assets/img/trail-running-medium-narrow.png
+# `logo:` intentionally removed: it pointed jekyll-seo-tag's structured data
+# at trail-running-medium-narrow.png, a stock photo of someone who is not
+# Ryan. That image is still used by the old header.html hero banner (left
+# alone here, Phase 1 deletes it per rebrand plan s.12), but it should not
+# also be asserted as the site's Organization logo in public JSON-LD.
 description: >- # this means to ignore newlines until "baseurl:"
   Ryan L'Italien's blog
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -32,17 +36,26 @@ github: [metadata]
 #  extensions: ["strikethrough", "autolink", "table", "tagfilter"]
 
 theme: jekyll-theme-minimal
-#plugins:
-#  - jekyll-feed
+plugins:
+  - jekyll-seo-tag
+  - jekyll-redirect-from
+  - jekyll-feed
 
 # Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# NOTE: setting `exclude` REPLACES Jekyll's defaults rather than extending
+# them, so the default entries below must stay listed or they start being
+# published. CLAUDE.md, README.md, docs, .idea, and .claude are repo/tooling
+# exhaust that was otherwise being served publicly (rebrand plan s.12).
+exclude:
+  - CLAUDE.md
+  - README.md
+  - docs
+  - .idea
+  - .claude
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
