@@ -336,7 +336,14 @@ body.pitch {
 /* -- Buttons -------------------------------------------------------------
    Boxed mono-caps. One primary CTA per screen; secondary is outline-only.
    -------------------------------------------------------------------------- */
-.btn {
+/* `.pitch a` (type + class, specificity 0-1-1) would otherwise beat these
+   class-only selectors (0-1-0) and win on `color` and `text-decoration`
+   regardless of source order -- that was the invisible-button-text bug
+   (accent text on accent background) and the stray underline on buttons.
+   Prefixing with `.pitch a` raises these to 0-2-1 / 0-3-1 so the button
+   rules always win, while keeping the relative cascade between .btn,
+   .btn-primary and their :hover states unchanged. */
+.pitch a.btn {
   display: inline-block;
   font-family: var(--font-mono);
   font-weight: 700;
@@ -350,18 +357,18 @@ body.pitch {
   background: transparent;
 }
 
-.btn:hover {
+.pitch a.btn:hover {
   border-color: var(--accent);
   color: var(--accent);
 }
 
-.btn-primary {
+.pitch a.btn-primary {
   background: var(--accent);
   border-color: var(--accent);
   color: var(--accent-contrast);
 }
 
-.btn-primary:hover {
+.pitch a.btn-primary:hover {
   background: var(--text);
   border-color: var(--text);
   color: var(--ground);
@@ -529,10 +536,15 @@ body.pitch {
 
 /* Social proof. */
 .testimonial {
+  margin: 0;
   border-left: 1px solid var(--rule);
   padding-left: var(--space-3);
   font-style: italic;
   color: var(--muted);
+}
+
+.testimonial + .testimonial {
+  margin-top: var(--space-4);
 }
 
 .testimonial cite {
@@ -543,10 +555,20 @@ body.pitch {
   font-size: 0.85rem;
 }
 
+.testimonial-source {
+  display: block;
+  margin-top: var(--space-1);
+  font-size: 0.8rem;
+}
+
 /* Selected work. */
 .work-grid {
   display: grid;
   gap: var(--space-3);
+}
+
+.selected-writing {
+  margin-top: var(--space-4);
 }
 
 /* FAQ, native <details>/<summary> so it is keyboard- and

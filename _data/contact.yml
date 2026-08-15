@@ -1,11 +1,15 @@
 # Single source for booking + contact links. Both hero CTAs and the footer
-# read from this file, so swapping in the real Calendly link or a live
+# read from this file, so swapping in the real booking link or a live
 # mailbox is a one-line edit.
 #
-# NOTE: the domain mailbox (howdy@ryanlitalien.com) is not yet live --
-# forwarding + send-as is a Phase 2 task (rebrand plan section 10). Do not
-# point real traffic at this address until that's set up.
-calendly: "https://calendly.com/ryanlitalien/20min"
-email: "howdy@ryanlitalien.com"
+# NOTE: the domain mailbox (ryan@ryanlitalien.com) is now live via
+# Namecheap Private Email. Catch-all forwards any other domain address.
+# Production-ready.
+#
+# booking: Cal.com booking link. When set, index.md and the footer
+# use this for the primary CTA buttons, with text changing to "Book a
+# 20-minute call". When empty, they fall back to a mailto link.
+booking: "https://cal.com/ryanlitalien/20-min-meeting"
+email: "ryan@ryanlitalien.com"
 linkedin: "https://www.linkedin.com/in/ryanlitalien"
 github: "https://github.com/ryanlitalien"

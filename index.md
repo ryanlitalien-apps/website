@@ -10,12 +10,14 @@ permalink: /
   <p class="tagline"><strong>Fractional CTO for companies whose growth runs through partners, integrations, and AI.</strong></p>
   <p>Most fractional CTOs are pure engineering. I also carry the revenue side: the partner channel, the solutions function, and being the person your biggest partner&rsquo;s engineers actually want on the call. 20+ years, startups to Fortune 100. I ship, not just advise.</p>
   <div class="cta-group">
-    <a class="btn btn-primary" href="{{ site.data.contact.calendly }}">Book a 20-minute call</a>
+    {% if site.data.contact.booking != empty %}
+    <a class="btn btn-primary" href="{{ site.data.contact.booking }}">Book a 20-minute call</a>
+    {% else %}
+    <a class="btn btn-primary" href="mailto:{{ site.data.contact.email }}">Email me about your project</a>
+    {% endif %}
     <a class="btn" href="#how-i-work">See how I work</a>
   </div>
 </section>
-
-<hr class="hairline">
 
 <section class="stats" aria-labelledby="stats-heading">
   <h2 id="stats-heading" class="sr-only">By the numbers</h2>
@@ -93,19 +95,21 @@ permalink: /
 
 <section class="social-proof" aria-labelledby="social-proof-heading">
   <h2 id="social-proof-heading">What people say</h2>
-  <!--
-    Content brief (portfolio-site-content.md) names two LinkedIn
-    recommendations on file (Michael Adams, Sue Derderian, 2008 and 2012)
-    but does not include their quote text, and that text is not something
-    this build should invent and attribute to a named person. Placeholder
-    below is deliberately labeled as one -- pull the real quotes from the
-    LinkedIn archive before this ships. See final report.
-  -->
-  <p class="testimonial-placeholder">
-    Two LinkedIn recommendations are on file (2008, 2012) and will run here,
-    plainly labeled, once their text is pulled in. Standing task: ask for one
-    fresh line from every engagement going forward.
-  </p>
+  <blockquote class="testimonial">
+    <p>&ldquo;Ryan brings technical experience, common sense, business understanding, insight and a great attitude to wherever he is and whatever he is doing... a rare and valuable combination for anyone.&rdquo;</p>
+    <cite>Michael Adams, Sr. Release Train Engineer, Cox Automotive <span class="testimonial-source">LinkedIn recommendation, 2012</span></cite>
+  </blockquote>
+  <blockquote class="testimonial">
+    <p>&ldquo;He is able to convey the technicalities to those who do not live in that world in a manner so everyone can follow along.&rdquo;</p>
+    <cite>Sue Derderian, Director, Enterprise Business Continuity, Fidelity Investments <span class="testimonial-source">LinkedIn recommendation, 2008</span></cite>
+  </blockquote>
+
+  {% comment %}
+  Pending fresh quotes to collect (do not publish anything for these people
+  until they provide a quote and consent): Rachael Gomer, Carlos Lovera,
+  Diipo, Eric, Kevin. When a quote arrives, add it above using the same
+  markup.
+  {% endcomment %}
 </section>
 
 <section class="selected-work" aria-labelledby="selected-work-heading">
@@ -124,6 +128,13 @@ permalink: /
       <p>MCP servers and Claude Code plugins built for daily use, not demos: this site&rsquo;s own build pipeline runs on the same tooling.</p>
     </div>
   </div>
+  <div class="selected-writing">
+    <h3>Selected writing</h3>
+    <ul class="work-list">
+      <li><a href="https://www.perforce.com/blog/vcs/what-is-virtual-production">What is Virtual Production?</a> (Perforce, 2021)</li>
+      <li><a href="https://www.perforce.com/blog/vcs/perforce-enhanced-studio-pack">What Is the Perforce Enhanced Studio Pack? Everything You Need For the Cloud.</a> (Perforce, 2021)</li>
+    </ul>
+  </div>
 </section>
 
 <section class="faq" aria-labelledby="faq-heading">
@@ -141,9 +152,17 @@ permalink: /
 
 <section class="contact" aria-labelledby="contact-heading">
   <h2 id="contact-heading">Get in touch</h2>
+  {% if site.data.contact.booking != empty %}
   <p>The fastest path in is a 20-minute call. Email works too, though a booked call skips a round trip.</p>
+  {% else %}
+  <p>Email is the fastest path in for now.</p>
+  {% endif %}
   <div class="cta-group">
-    <a class="btn btn-primary" href="{{ site.data.contact.calendly }}">Book a 20-minute call</a>
+    {% if site.data.contact.booking != empty %}
+    <a class="btn btn-primary" href="{{ site.data.contact.booking }}">Book a 20-minute call</a>
     <a class="btn" href="mailto:{{ site.data.contact.email }}">{{ site.data.contact.email }}</a>
+    {% else %}
+    <a class="btn btn-primary" href="mailto:{{ site.data.contact.email }}">Email me about your project</a>
+    {% endif %}
   </div>
 </section>

@@ -5,9 +5,16 @@
   those pages before Phase 1 gets to them, which the build brief says not
   to do. This file is included only by _layouts/base.html.
 
-  /accessibility/ and /privacy/ do not exist yet as pages -- both are
-  Phase 1 (rebrand plan s.12/13). These links will 404 until then; that is
-  expected, not a bug in this branch.
+  /accessibility/ and /privacy/ do not exist yet as real pages at those
+  URLs (Phase 1, rebrand plan s.12/13) -- privacy.md currently only
+  publishes at /simple/privacy/. Their links are commented out below
+  instead of left as dead links. Restore once those pages exist at these
+  paths.
+
+  Booking: site.data.contact.booking is empty until a Cal.com link is
+  added (the previous scheduling link 404s and was removed -- see
+  _data/contact.yml). The "Book a call" entry only renders once booking
+  is set.
 -->
 <footer class="pitch-footer">
   <p>
@@ -17,8 +24,13 @@
     <li><a href="mailto:{{ site.data.contact.email }}">{{ site.data.contact.email }}</a></li>
     <li><a href="{{ site.data.contact.linkedin }}">LinkedIn</a></li>
     <li><a href="{{ site.data.contact.github }}">GitHub</a></li>
-    <li><a href="{{ site.data.contact.calendly }}">Calendly</a></li>
+    {% if site.data.contact.booking != empty %}
+    <li><a href="{{ site.data.contact.booking }}">Book a call</a></li>
+    {% endif %}
+    {% comment %}
+    Phase 1: restore when page exists.
     <li><a href="/accessibility/">Accessibility</a></li>
     <li><a href="/privacy/">Privacy</a></li>
+    {% endcomment %}
   </ul>
 </footer>
