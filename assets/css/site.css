@@ -45,6 +45,15 @@
   --rule: #E5E2DF;
   --accent: #D9480F;
   --accent-contrast: #FFFFFF;
+  /* Hover accent. #45CAFF fails contrast as TEXT on white (light theme) --
+     never assign it to `color` in the light block. It is fine as text on
+     dark ground, and fine as a border/underline/background color in either
+     theme. --link-hover-color / --btn-hover-text below encode where the
+     blue is safe to use as text color per theme. */
+  --accent-hover: #45CAFF;
+  --accent-hover-contrast: #111110;
+  --link-hover-color: var(--accent);
+  --btn-hover-text: var(--text);
 
   --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas,
     "Liberation Mono", monospace;
@@ -72,6 +81,10 @@
     --rule: #26262B;
     --accent: #FF7A45;
     --accent-contrast: #0D0D0F;
+    --accent-hover: #45CAFF;
+    --accent-hover-contrast: #111110;
+    --link-hover-color: var(--accent-hover);
+    --btn-hover-text: var(--accent-hover);
     --focus-ring: 0 0 0 3px var(--ground), 0 0 0 5px var(--accent);
   }
 }
@@ -85,6 +98,10 @@
   --rule: #26262B;
   --accent: #FF7A45;
   --accent-contrast: #0D0D0F;
+  --accent-hover: #45CAFF;
+  --accent-hover-contrast: #111110;
+  --link-hover-color: var(--accent-hover);
+  --btn-hover-text: var(--accent-hover);
 }
 
 /* -- Reset ---------------------------------------------------------------- */
@@ -141,7 +158,9 @@ body.pitch {
 }
 
 .pitch a:hover {
+  color: var(--link-hover-color);
   text-decoration-thickness: 2px;
+  text-decoration-color: var(--accent-hover);
 }
 
 /* Visible focus ring on every interactive element: 2px accent, 3px offset. */
@@ -313,7 +332,10 @@ body.pitch {
   color: var(--accent);
 }
 
-.rail-nav a:hover,
+.rail-nav a:hover {
+  color: var(--link-hover-color);
+}
+
 .rail-nav a:focus-visible {
   color: var(--accent);
 }
@@ -330,7 +352,7 @@ body.pitch {
 }
 
 .theme-toggle:hover {
-  border-color: var(--accent);
+  border-color: var(--accent-hover);
 }
 
 /* -- Buttons -------------------------------------------------------------
@@ -358,8 +380,8 @@ body.pitch {
 }
 
 .pitch a.btn:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  border-color: var(--accent-hover);
+  color: var(--btn-hover-text);
 }
 
 .pitch a.btn-primary {
@@ -369,9 +391,9 @@ body.pitch {
 }
 
 .pitch a.btn-primary:hover {
-  background: var(--text);
-  border-color: var(--text);
-  color: var(--ground);
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  color: var(--accent-hover-contrast);
 }
 
 .cta-group {
@@ -629,6 +651,75 @@ body.pitch {
   gap: var(--space-3);
   padding: 0;
   margin: var(--space-2) 0 0;
+}
+
+/* -- Certification ---------------------------------------------------------
+   Small badge + linked credential line, used on /about/.
+   -------------------------------------------------------------------------- */
+.certification {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin: 0 0 var(--space-3);
+}
+
+.certification .cert-badge {
+  width: 64px;
+  height: 64px;
+  flex: none;
+}
+
+/* -- Simple / viewer pages --------------------------------------------------
+   /simple/ and /simple/privacy/ keep the base layout and site.css tokens but
+   are not part of the narrow "pitch" sales copy -- they are a content-dense
+   download listing whose text is locked (App Store Connect + Gumroad link to
+   it). This is a minimal, own-section variant: mono labels, hairline rules,
+   a plain data table, no card/shadow treatment the rest of the design system
+   does not otherwise use.
+   -------------------------------------------------------------------------- */
+.simple-meta {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.screenshot {
+  max-width: 346px;
+  border: 1px solid var(--rule);
+  margin: 0 0 var(--space-4);
+}
+
+.app-version {
+  display: inline-block;
+  margin-left: var(--space-2);
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.size-table {
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  max-width: 360px;
+}
+
+.size-table th,
+.size-table td {
+  border-bottom: 1px solid var(--rule);
+  padding: var(--space-2) var(--space-3) var(--space-2) 0;
+  text-align: left;
+}
+
+.size-table th {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.size-table td.size-cell,
+.size-table th.size-cell {
+  text-align: right;
+  padding-right: 0;
 }
 
 /* -- Motion --------------------------------------------------------------- */

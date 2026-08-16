@@ -1,31 +1,14 @@
 ---
-layout: default
+layout: base
+title: "Ryan L'Italien"
+description: "Ryan L'Italien: Fractional CTO for companies whose growth runs through partners, development, integrations, and AI."
 ---
 
-<div class="container">
-	<div class="row">
-		<div class="col-md-2"></div>
-		<div class="col-md-8 col-md-offset-2">
-			<div class="mainheading">
-				<div class="row post-top-meta authorpage">
-					<div class="col-md-10 col-xs-12">
-						<h1>Ryan</h1>
-						<p>
-              <span class="author-description">Founder of <a href="https://www.ryanlitalien.com">ryanlitalien.com</a>. Full 
-                stack developer doing everything from CSS -> SQL.</span>
-            </p>
-            <p>
-              You can reach me out on the social links below.
-            </p>
-            <a target="_blank" href="https://www.facebook.com/ryanlitalien" class="btn follow">Follow <i class="fa fa-facebook"></i></a>
-            <a target="_blank" href="https://twitter.com/ryanlitalien" class="btn follow">Follow <i class="fa fa-twitter"></i></a>
-            <a target="_blank" href="https://www.github.com/ryanlitalien" class="btn follow">Follow <i class="fa fa-github"></i></a>
-          </div>
-          <div class="col-md-2 col-xs-12">
-            <img class="author-thumb" src="https://s.gravatar.com/avatar/79c3827e7bad5914462a25d732300459?s=250&amp;d=mm&amp;r=x" alt="Ryan">
-          </div>          
-        </div>
-      </div>
-    </div>
+<section class="hero">
+  <h1>Ryan L&rsquo;Italien</h1>
+  <p class="tagline"><strong>Fractional CTO for companies whose growth runs through partners, development, integrations, and AI.</strong></p>
+  <p>20+ years, startups to Fortune 100. I ship, not just advise.</p>
+  <div class="cta-group">
+    <a class="btn btn-primary" href="/about/">About</a>
   </div>
-</div>
+</section>
