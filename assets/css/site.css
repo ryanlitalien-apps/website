@@ -2,9 +2,9 @@
    site.css -- design system for the ryanlitalien.com consulting pitch
    Phase 0 of the rebrand (see life-log/career/website-rebrand-plan.md, s.8).
 
-   Scope: this file is loaded ONLY by _layouts/base.html (the new pitch
-   page). The old Bootstrap/mediumish theme is untouched and still serves
-   every other page for now -- that cleanup is Phase 1.
+   Scope: the site's only stylesheet. Every page renders through
+   _layouts/base.html (posts wrap it via _layouts/post.html); the old
+   Bootstrap/mediumish theme was deleted in Phase 1.
 
    Register: Swiss grotesque. White by default, dark on toggle. Helvetica-class
    system sans throughout, one green accent (Dartmouth green), granite gray
@@ -49,6 +49,7 @@
 /* System preference, only when the visitor has not made an explicit choice. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
+    color-scheme: dark;
     --ground: #0D0F0E;
     --surface: #151816;
     --text: #EBEEEC;
@@ -66,6 +67,7 @@
 
 /* Explicit dark choice wins regardless of OS setting. */
 :root[data-theme="dark"] {
+  color-scheme: dark;
   --ground: #0D0F0E;
   --surface: #151816;
   --text: #EBEEEC;
@@ -86,8 +88,13 @@
   box-sizing: border-box;
 }
 
+/* color-scheme must track the ACTIVE theme, not advertise both: with
+   "light dark" Chrome resolves the used scheme from the OS preference, so
+   an explicit dark toggle under a light OS painted the canvas (and the
+   sticky rail composited against it) light while the tokens were dark.
+   The dark token blocks below override this to dark. */
 html.pitch {
-  color-scheme: light dark;
+  color-scheme: light;
 }
 
 body.pitch {
@@ -211,6 +218,9 @@ body.pitch {
   gap: var(--space-3);
   padding: var(--space-3) var(--space-4);
   border-bottom: 1px solid var(--rule);
+  /* Explicit ground: the rail is sticky (own compositor layer) and must
+     never rely on the canvas behind it for its background. */
+  background: var(--ground);
 }
 
 .pitch-main {
@@ -678,6 +688,107 @@ body.pitch {
   height: 20px;
   background: currentColor;
   opacity: 0.25;
+}
+
+/* -- Posts ---------------------------------------------------------------
+   Article pages share the pitch shell but need document typography: real
+   headings instead of the pitch's uppercase section labels, spaced prose,
+   framed images.
+   -------------------------------------------------------------------------- */
+.post-header h1 {
+  margin-bottom: var(--space-1);
+}
+
+.post-meta {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-bottom: var(--space-5);
+}
+
+.post-content h2 {
+  font-size: 1.35rem;
+  letter-spacing: -0.01em;
+  text-transform: none;
+  color: var(--text);
+  margin-top: var(--space-5);
+}
+
+.post-content h3 {
+  font-size: 1.1rem;
+  margin-top: var(--space-4);
+}
+
+.post-content img {
+  border: 1px solid var(--rule);
+  margin: var(--space-4) 0;
+}
+
+.post-content ul,
+.post-content ol {
+  padding-left: 1.2rem;
+  margin: 0 0 var(--space-3);
+}
+
+.post-content li {
+  margin-bottom: var(--space-1);
+}
+
+.post-content blockquote {
+  margin: 0 0 var(--space-3);
+  border-left: 2px solid var(--accent);
+  padding-left: var(--space-3);
+  color: var(--muted);
+}
+
+.post-content pre {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  padding: var(--space-3);
+  overflow-x: auto;
+  font-size: 0.85rem;
+}
+
+.post-content code {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.9em;
+}
+
+.post-content p > code,
+.post-content li > code {
+  background: var(--surface);
+  padding: 0.1em 0.3em;
+  border: 1px solid var(--rule);
+}
+
+/* Front-matter hero image, rendered by _layouts/post.html when set. */
+.post-hero {
+  border: 1px solid var(--rule);
+  margin: 0 0 var(--space-4);
+}
+
+.post-footer {
+  margin-top: var(--space-6);
+  border-top: 1px solid var(--rule);
+  padding-top: var(--space-3);
+}
+
+.post-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-2);
+}
+
+.post-list li {
+  display: flex;
+  gap: var(--space-3);
+  align-items: baseline;
+}
+
+.post-list .post-date {
+  flex: 0 0 5.5rem;
+  margin-left: 0;
 }
 
 /* -- Footer ------------------------------------------------------------- */

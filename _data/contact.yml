@@ -2,15 +2,14 @@
 # read from this file, so swapping in the real booking link or a live
 # mailbox is a one-line edit.
 #
-# NOTE: the public contact address is now ryan@chieftechadvisor.com. The
-# ryanlitalien.com mailbox (ryan@ryanlitalien.com) still exists via
-# Namecheap Private Email, and catch-all forwarding for that domain
-# remains in place.
+# NOTE: the CTA-domain address (ryan@chieftechadvisor.com) is planned but
+# its mailbox is untested pending Kevin's confirmation. Flip this value
+# once it is verified. Until then this stays ryan@ryanlitalien.com.
 #
 # booking: Cal.com booking link. When set, index.md and the footer
 # use this for the primary CTA buttons, with text changing to "Book a
 # 20-minute call". When empty, they fall back to a mailto link.
 booking: "https://cal.com/ryanlitalien/20-min-meeting"
-email: "ryan@chieftechadvisor.com"
+email: "ryan@ryanlitalien.com"
 linkedin: "https://www.linkedin.com/in/ryanlitalien"
 github: "https://github.com/ryanlitalien"

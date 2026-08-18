@@ -31,14 +31,15 @@ permalink: /personal/
     <li><a href="{{ post.url }}">{{ post.title }}</a> <span class="post-date">{{ post.date | date: "%b %Y" }}</span></li>
     {% endfor %}
   </ul>
+  <p><a href="/posts/">All posts &rarr;</a></p>
 </section>
 
 <section class="personal-outdoors" aria-labelledby="outdoors-heading">
-  <h2 id="outdoors-heading">Off the clock</h2>
+  <h2 id="outdoors-heading">When I&rsquo;m not in front of a computer</h2>
   <ul class="work-list">
     <li>Two full Ironmans, a dozen halves.</li>
     <li>All 48 of New Hampshire&rsquo;s 4,000-footers.</li>
     <li>Eagle Scout.</li>
-    <li>Three company-wide hackathon wins (the line between work and personal is thin).</li>
+    <li>Three company-wide hackathon wins and various innovation awards.</li>
   </ul>
 </section>

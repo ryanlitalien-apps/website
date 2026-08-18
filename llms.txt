@@ -1,0 +1,18 @@
+# Ryan L'Italien
+
+> Fractional CTO and forward deployed engineer for companies whose growth runs through partners, integrations, and AI. 20+ years shipping production code, startups to Fortune 100. Founder of ButterStack (game-studio SaaS) and the Simple viewer apps for macOS.
+
+## Pages
+
+- [Work](https://www.ryanlitalien.com/): engagements (AI and integration readiness diagnostic, advisory retainer, fractional CTO, technical due diligence), proof, FAQ, booking
+- [Personal](https://www.ryanlitalien.com/personal/): Simple macOS apps, side projects, writing, endurance sports
+- [About](https://www.ryanlitalien.com/about/): background and certifications
+- [Posts](https://www.ryanlitalien.com/posts/): all writing, 2012 to now
+- [Simple apps](https://www.ryanlitalien.com/simple/): nine native macOS viewer apps plus Viewer Toolbox
+
+## Contact
+
+- Email: ryan@ryanlitalien.com
+- Book a 20-minute call: https://cal.com/ryanlitalien/20-min-meeting
+- LinkedIn: https://www.linkedin.com/in/ryanlitalien
+- GitHub: https://github.com/ryanlitalien

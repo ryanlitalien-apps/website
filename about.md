@@ -1,13 +1,13 @@
 ---
 layout: base
 title: "About - Ryan L'Italien"
-description: "Fractional CTO background: payments infrastructure, enterprise AI, and game-dev infrastructure, from startups to Fortune 100."
+description: "Fractional CTO and forward deployed engineer: payments infrastructure, enterprise AI, and game-dev infrastructure, from startups to Fortune 100."
 permalink: /about/
 ---
 
 <section class="hero">
   <h1>About</h1>
-  <p class="tagline"><strong>Fractional CTO for companies whose growth runs through partners, development, integrations, and AI.</strong></p>
+  <p class="tagline"><strong>Fractional CTO &amp; forward deployed engineer for companies whose growth runs through partners, integrations, and AI.</strong></p>
 </section>
 
 <section class="about-bio" aria-labelledby="bio-heading">

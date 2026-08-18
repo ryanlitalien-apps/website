@@ -1,13 +1,13 @@
 ---
 layout: base
-title: "Ryan L'Italien - Fractional CTO"
-description: "Fractional CTO for companies whose growth runs through partners, integrations, and AI. Diagnostic, advisory, fractional CTO, and technical due diligence engagements."
+title: "Ryan L'Italien - Fractional CTO & Forward Deployed Engineer"
+description: "Fractional CTO and forward deployed engineer for companies whose growth runs through partners, integrations, and AI. Diagnostic, advisory, fractional CTO, and technical due diligence engagements."
 permalink: /
 ---
 
 <section class="hero">
   <h1>Ryan L&rsquo;Italien</h1>
-  <p class="tagline"><strong>Fractional CTO for companies whose growth runs through partners, integrations, and AI.</strong></p>
+  <p class="tagline"><strong>Fractional CTO &amp; forward deployed engineer for companies whose growth runs through partners, integrations, and AI.</strong></p>
   <p>Most fractional CTOs are pure engineering. I also carry the revenue side: the partner channel, the solutions function, and being the person your biggest partner&rsquo;s engineers actually want on the call. 20+ years, startups to Fortune 100. I ship, not just advise.</p>
   <div class="cta-group">
     {% if site.data.contact.booking != empty %}

@@ -16,15 +16,12 @@
 title: ryanlitalien.com
 author: "Ryan L'Italien"
 #email: your-email@example.com
-# `logo:` intentionally removed: it pointed jekyll-seo-tag's structured data
-# at trail-running-medium-narrow.png, a stock photo of someone who is not
-# Ryan. That image is still used by the old header.html hero banner (left
-# alone here, Phase 1 deletes it per rebrand plan s.12), but it should not
-# also be asserted as the site's Organization logo in public JSON-LD.
+# `logo:` is intentionally unset for jekyll-seo-tag's structured data.
 description: >- # this means to ignore newlines until "baseurl:"
-  Fractional CTO for companies whose growth runs through partners, integrations, and AI.
+  Fractional CTO and forward deployed engineer for companies whose growth runs through partners, integrations, and AI.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.ryanlitalien.com" # the base hostname & protocol for your site, e.g. http://example.com
+permalink: /posts/:title/
 twitter_username: ryanlitalien
 twitter:
   username: ryanlitalien
@@ -38,11 +35,11 @@ github: [metadata]
 #  options: ["SMART", "FOOTNOTES"]
 #  extensions: ["strikethrough", "autolink", "table", "tagfilter"]
 
-theme: jekyll-theme-minimal
 plugins:
   - jekyll-seo-tag
   - jekyll-redirect-from
   - jekyll-feed
+  - jekyll-sitemap
 
 # Exclude from processing.
 # NOTE: setting `exclude` REPLACES Jekyll's defaults rather than extending
