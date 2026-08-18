@@ -22,10 +22,13 @@ author: "Ryan L'Italien"
 # alone here, Phase 1 deletes it per rebrand plan s.12), but it should not
 # also be asserted as the site's Organization logo in public JSON-LD.
 description: >- # this means to ignore newlines until "baseurl:"
-  Ryan L'Italien's blog
+  Fractional CTO for companies whose growth runs through partners, integrations, and AI.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.ryanlitalien.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ryanlitalien
+twitter:
+  username: ryanlitalien
+  card: summary_large_image
 github_username:  ryanlitalien
 github: [metadata]
 
@@ -59,3 +62,12 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+
+# Default front matter: every page gets the social card unless it sets its
+# own `image`. jekyll-seo-tag ({% seo %} in _includes/head.html) reads
+# page.image to emit og:image and twitter:image.
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/img/social-card.png

@@ -19,13 +19,15 @@ permalink: /about/
 </section>
 
 <section class="certifications" aria-labelledby="certifications-heading">
-  <h2 id="certifications-heading">Certification</h2>
+  <h2 id="certifications-heading">Certifications</h2>
   <p class="certification">
     <a href="https://achieve.snowflake.com/a1762c54-0a20-4dff-ba46-bce977554591" title="SnowPro Core Certification, verify credential">
       <img class="cert-badge" src="/assets/img/snowpro-core-badge.png" alt="SnowPro Core Certification badge">
     </a>
-    <a href="https://achieve.snowflake.com/a1762c54-0a20-4dff-ba46-bce977554591" title="SnowPro Core Certification, verify credential">SnowPro Core Certification, Snowflake. Issued Nov 2024, valid through Nov 2026.</a>
+    <a href="https://achieve.snowflake.com/a1762c54-0a20-4dff-ba46-bce977554591" title="SnowPro Core Certification, verify credential">SnowPro Core Certification, Snowflake. Issued Dec 2024, valid through Dec 2026.</a>
   </p>
+  <p><a href="https://aws.amazon.com/certification/certified-solutions-architect-associate/">AWS Certified Solutions Architect, Associate</a>. Coming soon.</p>
+  <p><a href="https://anthropic-partners.skilljar.com/claude-certified-associate-foundations-certification">Claude Certified Associate, Foundations (Anthropic)</a>. Coming soon.</p>
 </section>
 
 <section class="contact" aria-labelledby="contact-heading">

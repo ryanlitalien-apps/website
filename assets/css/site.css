@@ -6,61 +6,36 @@
    page). The old Bootstrap/mediumish theme is untouched and still serves
    every other page for now -- that cleanup is Phase 1.
 
-   Register: mono-terminal. White by default, dark on toggle. Monospace for
-   nav/labels/numbers/buttons, system sans for prose, one accent color.
-   Contrast figures below are documented for /accessibility/ (Phase 1):
-     body text   18.9:1 light / ~15.9:1 dark   (AAA)
-     accent      5.07:1 light / ~6.7:1 dark    (AA, normal text)
-     muted       5.4:1 light                    (AA)
+   Register: Swiss grotesque. White by default, dark on toggle. Helvetica-class
+   system sans throughout, one green accent (Dartmouth green), granite gray
+   muted. Contrast figures below are documented for /accessibility/ (Phase 1):
+     body text   18.8:1 light / 16.5:1 dark   (AAA)
+     accent      6.8:1 light / 7.1:1 dark     (AA+, normal text)
+     muted       6.1:1 light / 7.0:1 dark     (AA+)
    ========================================================================== */
-
-/* -- Fonts -----------------------------------------------------------------
-   Self-hosted JetBrains Mono, latin subset, woff2 only. No CDN, no Google
-   Fonts. Subsetted locally from the OFL-licensed upstream font; see
-   assets/fonts/LICENSE-OFL.txt.
-   -------------------------------------------------------------------------- */
-@font-face {
-  font-family: "JetBrains Mono";
-  src: url("/assets/fonts/JetBrainsMono-Regular-latin.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "JetBrains Mono";
-  src: url("/assets/fonts/JetBrainsMono-Bold-latin.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
 
 /* -- Tokens ------------------------------------------------------------- */
 :root {
   /* light (default) */
   --ground: #FFFFFF;
-  --surface: #FAF9F8;
-  --text: #111110;
-  --muted: #6B6764;
-  --rule: #E5E2DF;
-  --accent: #D9480F;
+  --surface: #F3F5F4;
+  --text: #121413;
+  --muted: #5C645F;
+  --rule: #E2E6E3;
+  --accent: #00693E;
   --accent-contrast: #FFFFFF;
-  /* Hover accent. #45CAFF fails contrast as TEXT on white (light theme) --
-     never assign it to `color` in the light block. It is fine as text on
-     dark ground, and fine as a border/underline/background color in either
-     theme. --link-hover-color / --btn-hover-text below encode where the
-     blue is safe to use as text color per theme. */
-  --accent-hover: #45CAFF;
-  --accent-hover-contrast: #111110;
-  --link-hover-color: var(--accent);
-  --btn-hover-text: var(--text);
+  /* Hover shades stay in the accent hue: darker green in light theme,
+     brighter green in dark. Both are AA+ as text on their own ground
+     (9.3:1 light, 9.6:1 dark). */
+  --accent-hover: #00522F;
+  --accent-hover-contrast: #FFFFFF;
+  --link-hover-color: var(--accent-hover);
+  --btn-hover-text: var(--accent-hover);
 
-  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas,
-    "Liberation Mono", monospace;
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif;
+  --font-sans: "Helvetica Neue", Helvetica, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Arial, sans-serif;
 
-  --col-content: 720px;
+  --col-content: 880px;
   --col-rail: 190px;
   --space-1: 0.25rem;
   --space-2: 0.5rem;
@@ -74,15 +49,15 @@
 /* System preference, only when the visitor has not made an explicit choice. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --ground: #0D0D0F;
-    --surface: #16161A;
-    --text: #EDEBE8;
-    --muted: #99948E;
-    --rule: #26262B;
-    --accent: #FF7A45;
-    --accent-contrast: #0D0D0F;
-    --accent-hover: #45CAFF;
-    --accent-hover-contrast: #111110;
+    --ground: #0D0F0E;
+    --surface: #151816;
+    --text: #EBEEEC;
+    --muted: #8FA098;
+    --rule: #242A26;
+    --accent: #34B27B;
+    --accent-contrast: #0D0F0E;
+    --accent-hover: #3ECF8E;
+    --accent-hover-contrast: #0D0F0E;
     --link-hover-color: var(--accent-hover);
     --btn-hover-text: var(--accent-hover);
     --focus-ring: 0 0 0 3px var(--ground), 0 0 0 5px var(--accent);
@@ -91,15 +66,15 @@
 
 /* Explicit dark choice wins regardless of OS setting. */
 :root[data-theme="dark"] {
-  --ground: #0D0D0F;
-  --surface: #16161A;
-  --text: #EDEBE8;
-  --muted: #99948E;
-  --rule: #26262B;
-  --accent: #FF7A45;
-  --accent-contrast: #0D0D0F;
-  --accent-hover: #45CAFF;
-  --accent-hover-contrast: #111110;
+  --ground: #0D0F0E;
+  --surface: #151816;
+  --text: #EBEEEC;
+  --muted: #8FA098;
+  --rule: #242A26;
+  --accent: #34B27B;
+  --accent-contrast: #0D0F0E;
+  --accent-hover: #3ECF8E;
+  --accent-hover-contrast: #0D0F0E;
   --link-hover-color: var(--accent-hover);
   --btn-hover-text: var(--accent-hover);
 }
@@ -124,6 +99,7 @@ body.pitch {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  padding-bottom: 96px;
 }
 
 .pitch img {
@@ -135,19 +111,19 @@ body.pitch {
 .pitch h2,
 .pitch h3,
 .pitch h4 {
-  font-family: var(--font-mono);
+  font-family: var(--font-sans);
   font-weight: 700;
   line-height: 1.25;
   margin: 0 0 var(--space-3);
 }
 
-.pitch h1 { font-size: 1.75rem; }
-.pitch h2 { font-size: 1.15rem; letter-spacing: 0.02em; text-transform: uppercase; color: var(--muted); }
-.pitch h3 { font-size: 1.05rem; }
+.pitch h1 { font-size: 2.1rem; letter-spacing: -0.02em; }
+.pitch h2 { font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.pitch h3 { font-size: 1.05rem; letter-spacing: -0.01em; }
 
 .pitch p {
   margin: 0 0 var(--space-3);
-  max-width: 68ch;
+  max-width: 72ch;
 }
 
 .pitch a {
@@ -198,7 +174,7 @@ body.pitch {
   background: var(--accent);
   color: var(--accent-contrast);
   padding: var(--space-2) var(--space-3);
-  font-family: var(--font-mono);
+  font-family: var(--font-sans);
   font-weight: 700;
   text-decoration: none;
 }
@@ -209,11 +185,12 @@ body.pitch {
 }
 
 /* -- Layout ----------------------------------------------------------------
-   One <header> holds the brand, the single <nav>, and the theme toggle. It
+   One <header> holds the brand and the single <nav>; the theme control now
+   lives in the floating .dock (see below), outside the header. The header
    is a plain top bar below 900px and becomes a sticky 190px left rail at
    900px and up -- same DOM, repositioned by CSS, so there is exactly one
    nav landmark and one set of links at every viewport. Content column
-   capped at 720px.
+   capped at 880px.
    -------------------------------------------------------------------------- */
 .pitch-shell {
   display: flex;
@@ -234,7 +211,6 @@ body.pitch {
   gap: var(--space-3);
   padding: var(--space-3) var(--space-4);
   border-bottom: 1px solid var(--rule);
-  font-family: var(--font-mono);
 }
 
 .pitch-main {
@@ -284,11 +260,19 @@ body.pitch {
   }
 }
 
-.rail-brand {
+/* .pitch a (0-1-1) would otherwise beat a bare .rail-brand (0-1-0) on color
+   and text-decoration, rendering the brand as a green underlined link. */
+.pitch a.rail-brand {
   font-weight: 700;
   text-decoration: none;
   color: var(--text);
   white-space: nowrap;
+  letter-spacing: -0.01em;
+  font-size: 1rem;
+}
+
+.pitch a.rail-brand:hover {
+  color: var(--link-hover-color);
 }
 
 .rail-nav ul {
@@ -306,30 +290,23 @@ body.pitch {
   }
 }
 
-/* Brackets are generated content, never DOM text, per the rebrand plan's
-   accessibility section (the "bracket-nav trap"). aria-current="page" is
-   what actually announces state to a screen reader; the bracket swap is
-   a sighted-only affordance layered on top of it. */
 .rail-nav a {
   display: block;
   text-decoration: none;
   color: var(--muted);
   padding: var(--space-1) 0;
-}
-
-.rail-nav a::before {
-  content: "[ ] ";
-  color: var(--rule);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
 }
 
 .rail-nav a[aria-current="page"] {
   color: var(--text);
-  font-weight: 700;
-}
-
-.rail-nav a[aria-current="page"]::before {
-  content: "[x] ";
-  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
 }
 
 .rail-nav a:hover {
@@ -338,21 +315,6 @@ body.pitch {
 
 .rail-nav a:focus-visible {
   color: var(--accent);
-}
-
-/* -- Theme toggle ------------------------------------------------------- */
-.theme-toggle {
-  font-family: var(--font-mono);
-  background: var(--surface);
-  color: var(--text);
-  border: 1px solid var(--rule);
-  padding: var(--space-1) var(--space-2);
-  cursor: pointer;
-  font-size: 0.85rem;
-}
-
-.theme-toggle:hover {
-  border-color: var(--accent-hover);
 }
 
 /* -- Buttons -------------------------------------------------------------
@@ -367,11 +329,11 @@ body.pitch {
    .btn-primary and their :hover states unchanged. */
 .pitch a.btn {
   display: inline-block;
-  font-family: var(--font-mono);
+  font-family: var(--font-sans);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   text-decoration: none;
   padding: var(--space-2) var(--space-3);
   border: 2px solid var(--text);
@@ -434,14 +396,12 @@ body.pitch {
   }
 }
 
-.stat {
-  font-family: var(--font-mono);
-}
-
 .stat-number {
   display: block;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
   color: var(--accent);
 }
 
@@ -468,7 +428,6 @@ body.pitch {
 }
 
 .problem-quote {
-  font-family: var(--font-mono);
   font-weight: 700;
   margin: 0 0 var(--space-2);
 }
@@ -520,14 +479,12 @@ body.pitch {
 }
 
 .engagement-name {
-  font-family: var(--font-mono);
   font-weight: 700;
   margin: 0;
   display: inline;
 }
 
 .engagement-terms {
-  font-family: var(--font-mono);
   color: var(--muted);
   font-size: 0.85rem;
   display: block;
@@ -553,7 +510,13 @@ body.pitch {
   position: absolute;
   left: 0;
   color: var(--accent);
-  font-family: var(--font-mono);
+}
+
+.post-date {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-left: var(--space-2);
+  font-variant-numeric: tabular-nums;
 }
 
 /* Social proof. */
@@ -572,7 +535,6 @@ body.pitch {
 .testimonial cite {
   display: block;
   margin-top: var(--space-2);
-  font-family: var(--font-mono);
   font-style: normal;
   font-size: 0.85rem;
 }
@@ -600,7 +562,6 @@ body.pitch {
 }
 
 .faq-item summary {
-  font-family: var(--font-mono);
   font-weight: 700;
   cursor: pointer;
   padding: var(--space-3) 0;
@@ -612,12 +573,14 @@ body.pitch {
 }
 
 .faq-item summary::before {
-  content: "[+] ";
+  content: "+ ";
   color: var(--accent);
 }
 
 .faq-item[open] summary::before {
-  content: "[-] ";
+  /* Literal minus sign: with the "\2212 " escape form, the trailing space
+     only terminates the escape and never renders. */
+  content: "\2212\a0";
 }
 
 .faq-item p {
@@ -625,11 +588,102 @@ body.pitch {
   color: var(--muted);
 }
 
+/* -- Dock -------------------------------------------------------------------
+   Floating bottom-center pill: segmented three-state theme control plus
+   LinkedIn and GitHub links. In light theme it is an ink pill on the white
+   ground; in dark theme an elevated surface pill with a hairline border.
+   The only rounded and only shadowed element on the site, on purpose: it
+   floats above the page rather than sitting in it.
+   -------------------------------------------------------------------------- */
+.dock {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: var(--space-4);
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2);
+  background: #121413;
+  color: #FFFFFF;
+  border: 1px solid #121413;
+  border-radius: 14px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.22);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .dock {
+    background: #1B1F1D;
+    color: #EBEEEC;
+    border-color: #2E3531;
+  }
+}
+
+:root[data-theme="dark"] .dock {
+  background: #1B1F1D;
+  color: #EBEEEC;
+  border-color: #2E3531;
+}
+
+.dock-theme {
+  display: flex;
+  gap: 2px;
+}
+
+.dock button,
+.dock a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  background: transparent;
+  border: none;
+  border-radius: 9px;
+  color: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+
+.dock svg {
+  width: 17px;
+  height: 17px;
+  display: block;
+  fill: currentColor;
+}
+
+.dock button[aria-pressed="true"] {
+  background: var(--accent);
+  color: var(--accent-contrast);
+}
+
+.dock button:hover,
+.dock a:hover {
+  color: var(--accent-hover);
+}
+
+.dock button[aria-pressed="true"]:hover {
+  color: var(--accent-contrast);
+}
+
+.dock button:focus-visible,
+.dock a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.dock-sep {
+  width: 1px;
+  height: 20px;
+  background: currentColor;
+  opacity: 0.25;
+}
+
 /* -- Footer ------------------------------------------------------------- */
 .pitch-footer {
   border-top: 1px solid var(--rule);
   padding: var(--space-4);
-  font-family: var(--font-mono);
   font-size: 0.85rem;
   color: var(--muted);
 }
@@ -679,7 +733,6 @@ body.pitch {
    -------------------------------------------------------------------------- */
 .simple-meta {
   color: var(--muted);
-  font-family: var(--font-mono);
   font-size: 0.85rem;
 }
 
@@ -693,13 +746,12 @@ body.pitch {
   display: inline-block;
   margin-left: var(--space-2);
   color: var(--muted);
-  font-family: var(--font-mono);
   font-size: 0.85rem;
 }
 
 .size-table {
   border-collapse: collapse;
-  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
   font-size: 0.9rem;
   max-width: 360px;
 }

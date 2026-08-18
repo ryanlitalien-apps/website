@@ -1,11 +1,12 @@
 /**
- * Three-state theme toggle: system -> light -> dark -> system.
+ * Segmented three-state theme control: system / light / dark, one button
+ * each, in the floating .dock.
  *
  * The no-flash part happens in _includes/head.html via a tiny inline,
  * blocking script that reads localStorage and sets data-theme before the
  * stylesheet paints. This file only has to run after that: it wires up the
- * visible toggle button, cycles state, persists the choice, and keeps the
- * button label in sync.
+ * three [data-set-theme] buttons, applies the chosen state, persists the
+ * choice, and keeps aria-pressed in sync across all three buttons.
  *
  * "system" means: no explicit choice stored, follow the OS via the
  * prefers-color-scheme media query in site.css. That state is represented
@@ -32,7 +33,7 @@
       }
     } catch (e) {
       /* Storage unavailable (private mode, disabled cookies) -- degrade to
-         session-only state; the toggle still works, it just will not
+         session-only state; the control still works, it just will not
          persist across a reload. */
     }
   }
@@ -51,27 +52,31 @@
     }
   }
 
-  function label(state) {
-    return state.toUpperCase();
+  function reflect(buttons, state) {
+    buttons.forEach(function (button) {
+      var pressed = button.getAttribute("data-set-theme") === state;
+      button.setAttribute("aria-pressed", pressed ? "true" : "false");
+    });
   }
 
   function init() {
-    var button = document.querySelector("[data-theme-toggle]");
-    if (!button) {
+    var buttons = Array.prototype.slice.call(
+      document.querySelectorAll("[data-set-theme]")
+    );
+    if (!buttons.length) {
       return;
     }
 
     var state = currentState();
-    button.textContent = label(state);
-    button.setAttribute("aria-label", "Theme: " + state + ". Activate to change.");
+    reflect(buttons, state);
 
-    button.addEventListener("click", function () {
-      var next = STATES[(STATES.indexOf(state) + 1) % STATES.length];
-      state = next;
-      apply(state);
-      setStored(state);
-      button.textContent = label(state);
-      button.setAttribute("aria-label", "Theme: " + state + ". Activate to change.");
+    buttons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        state = button.getAttribute("data-set-theme");
+        apply(state);
+        setStored(state);
+        reflect(buttons, state);
+      });
     });
   }
 

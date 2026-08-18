@@ -131,8 +131,8 @@ permalink: /
   <div class="selected-writing">
     <h3>Selected writing</h3>
     <ul class="work-list">
-      <li><a href="https://www.perforce.com/blog/vcs/what-is-virtual-production">What is Virtual Production?</a> (Perforce, 2021)</li>
-      <li><a href="https://www.perforce.com/blog/vcs/perforce-enhanced-studio-pack">What Is the Perforce Enhanced Studio Pack? Everything You Need For the Cloud.</a> (Perforce, 2021)</li>
+      <li><a href="{% post_url 2021-09-22-what-is-virtual-production %}">What is Virtual Production?</a> (Perforce, 2021)</li>
+      <li><a href="{% post_url 2021-11-30-perforce-enhanced-studio-pack %}">What Is the Perforce Enhanced Studio Pack? Everything You Need For the Cloud.</a> (Perforce, 2021)</li>
     </ul>
   </div>
 </section>
@@ -140,7 +140,7 @@ permalink: /
 <section class="faq" aria-labelledby="faq-heading">
   <h2 id="faq-heading">FAQ</h2>
   {% for item in site.data.faq %}
-  <details class="faq-item">
+  <details class="faq-item" open>
     <summary>{{ item.question }}</summary>
     <p>
       {{ item.answer }}

@@ -11,10 +11,9 @@
   instead of left as dead links. Restore once those pages exist at these
   paths.
 
-  Booking: site.data.contact.booking is empty until a Cal.com link is
-  added (the previous scheduling link 404s and was removed -- see
-  _data/contact.yml). The "Book a call" entry only renders once booking
-  is set.
+  Booking: site.data.contact.booking carries the live Cal.com link; the
+  conditional stays so the entry drops out cleanly if the link is ever
+  emptied.
 -->
 <footer class="pitch-footer">
   <p>
