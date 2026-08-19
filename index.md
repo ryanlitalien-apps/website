@@ -1,40 +1,177 @@
 ---
-layout: default
+layout: base
+title: "Ryan L'Italien - Fractional CTO & Forward Deployed Engineer"
+description: "Fractional CTO and forward deployed engineer for companies whose growth runs through partners, integrations, and AI. Diagnostic, advisory, fractional CTO, and technical due diligence engagements."
+permalink: /
 ---
-<section class="recent-posts">
-  <div class="section-title">
-    <h2><span>All Posts</span></h2>
+
+<section class="hero">
+  <h1>Ryan L&rsquo;Italien</h1>
+  <p class="tagline"><strong>Fractional CTO &amp; forward deployed engineer for companies whose growth runs through partners, integrations, and AI.</strong></p>
+  <p>Most fractional CTOs are pure engineering. I also carry the revenue side, partner channels, solutioning function, and being the person you actually want on the call. 20+ years, startups to Fortune 100. I&rsquo;m pragmatic, I ship, not just advise.</p>
+  <div class="cta-group">
+    {% if site.data.contact.booking != empty %}
+    <a class="btn btn-primary" href="{{ site.data.contact.booking }}">Book a 20-minute call</a>
+    {% else %}
+    <a class="btn btn-primary" href="mailto:{{ site.data.contact.email }}">Email me about your project, love hard problems</a>
+    {% endif %}
+    <a class="btn" href="#how-i-work">See how I work</a>
   </div>
-  <div class="row listrecent">
-    {% for post in site.posts %}
-    <div class="col-md-4">
-      <div class="card">
-        <div class="card-block">
-          <h2 class="card-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-          <h4 class="card-text">{{ post.excerpt | strip_html | strip_newlines | truncate: 150 }}</h4>
-          <div class="metafooter">
-            <div class="wrapfooter">
-              <span class="meta-footer-thumb">
-              <a href="{{ post.url }}">
-                <img class="author-thumb" src="https://s.gravatar.com/avatar/79c3827e7bad5914462a25d732300459?s=250&amp;d=mm&amp;r=x" alt="Ryan">
-              </a>
-              </span>
-              <span class="author-meta">
-              <span class="post-name"><a href="/author.html">Ryan</a></span><br/>
-              <span class="post-date">{{ post.published_at | date: '%B %d, %Y' }}</span><span class="dot"></span><span class="post-read">5 min read</span>
-              </span>
-              <span class="post-read-more">
-                <a href="{{ post.url }}" title="Read Story">
-                  <svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25">
-                    <path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path>
-                  </svg>
-                </a>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
+</section>
+
+<section class="stats" aria-labelledby="stats-heading">
+  <h2 id="stats-heading" class="sr-only">By the numbers</h2>
+  <div class="stat-bar">
+    {% for stat in site.data.stats %}
+    <div class="stat">
+      <span class="stat-number">{{ stat.number }}</span>
+      <span class="stat-label">{{ stat.label }}</span>
     </div>
     {% endfor %}
+  </div>
+</section>
+
+<section class="problems" aria-labelledby="problems-heading">
+  <h2 id="problems-heading">Pick the sentence that sounds like you <span class="heading-aside">(yes, you, the one reading this)</span></h2>
+  <ul class="problem-list">
+    <li class="problem-card">
+      <p class="problem-quote">We signed the partner deal and nobody senior enough knows how to land it.</p>
+      <p class="problem-answer">Integration architecture, technical relationships, marketplace listings, onboarding, process improvements, gap analysis. I did this for a public fintech&rsquo;s largest merchant partners.</p>
+    </li>
+    <li class="problem-card">
+      <p class="problem-quote">Our AI plans are ChatGPT? How do we scale?</p>
+      <p class="problem-answer">I build agentic systems for real: MCP servers, Claude-based tooling, multi-agent pipelines in production. I will tell you where AI pays off in your stack and where it is theater/shovelware.</p>
+    </li>
+    <li class="problem-card">
+      <p class="problem-quote">Engineering outgrew the architecture and the founders&rsquo; available hours.</p>
+      <p class="problem-answer">Fractional CTO: architecture, hiring, delivery process, board-ready technical narrative. Digging in to help with programming as well.</p>
+    </li>
+    <li class="problem-card">
+      <p class="problem-quote">We need a senior technical code review and analysis before we wire the acquisition money.</p>
+      <p class="problem-answer">Technical due diligence for investors: a written, defensible findings document on the target&rsquo;s stack and team.</p>
+    </li>
+  </ul>
+</section>
+
+<section class="proof" aria-labelledby="proof-heading">
+  <h2 id="proof-heading">Proof</h2>
+  <div class="proof-grid">
+    {% for block in site.data.proof.blocks %}
+    <div class="proof-block">
+      <h3>{{ block.title }}</h3>
+      {% if block.employer_block %}
+      <p>{{ site.data.proof.employer_title }} at {{ site.data.proof.employer }}: {{ site.data.proof.employer_body_suffix }}</p>
+      {% else %}
+      <p>{{ block.body }}</p>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="engagements" aria-labelledby="engagements-heading">
+  <h2 id="engagements-heading">Engagements</h2>
+  <ul class="engagement-list">
+    {% for e in site.data.engagements %}
+    <li class="engagement">
+      <h3 class="engagement-name">{{ e.name }}</h3>
+      <span class="engagement-terms">{{ e.terms }}</span>
+      <p>{{ e.body }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+  <p class="engagements-note">The four shapes mix and match; many engagements combine them. No public prices here on purpose, fixed-fee language above, numbers in the conversation.</p>
+</section>
+
+<section class="how-i-work" id="how-i-work" aria-labelledby="how-i-work-heading">
+  <h2 id="how-i-work-heading">How I work</h2>
+  <ul class="work-list">
+    <li>Diagnose before prescribing. The first deliverable is always a written read of where you actually are.</li>
+    <li>Fixed scopes, named deliverables, no meter running.</li>
+    <li>I write code with your team, not decks about your team.</li>
+    <li>Everything I recommend, I have run in production somewhere.</li>
+  </ul>
+</section>
+
+<section class="social-proof" aria-labelledby="social-proof-heading">
+  <h2 id="social-proof-heading">What people say</h2>
+  <blockquote class="testimonial">
+    <p>Ryan brings technical experience, common sense, business understanding, insight and a great attitude to wherever he is and whatever he is doing... a rare and valuable combination for anyone.</p>
+    <cite>Michael Adams, Sr. Release Train Engineer, Cox Automotive <span class="testimonial-source">LinkedIn recommendation, 2012</span></cite>
+  </blockquote>
+  <blockquote class="testimonial">
+    <p>He is able to convey the technicalities to those who do not live in that world in a manner so everyone can follow along.</p>
+    <cite>Sue Derderian, Director, Enterprise Business Continuity, Fidelity Investments <span class="testimonial-source">LinkedIn recommendation, 2008</span></cite>
+  </blockquote>
+
+  {% comment %}
+  Pending fresh quotes to collect (do not publish anything for these people
+  until they provide a quote and consent): Rachael Gomer, Carlos Lovera,
+  Diipo, Eric, Kevin. When a quote arrives, add it above using the same
+  markup.
+  {% endcomment %}
+</section>
+
+<section class="selected-work" aria-labelledby="selected-work-heading">
+  <h2 id="selected-work-heading">Selected work</h2>
+  <div class="work-grid">
+    <div class="work-card">
+      <img src="/assets/img/work/butterstack.png" alt="ButterStack: stop logging into five tools to ship one build">
+      <div class="work-card-body">
+        <h3><a href="https://butterstack.com">ButterStack</a></h3>
+        <p>Game-studio SaaS I founded and run, born from the AWS partnership and studio-infrastructure work turning into a product.</p>
+      </div>
+    </div>
+    <div class="work-card">
+      <img class="fit-top shot-light" src="/assets/img/work/markdown-viewer.png" alt="Markdown Viewer rendering a hiking trip plan">
+      <div class="work-card-body">
+        <h3><a href="/simple/">Viewer suite</a></h3>
+        <p>Nine native macOS apps (JSON, CSV, Markdown, YAML, Text, Image, Audio, 3D, 3MF) sharing one core, plus Viewer Toolbox to manage and update them.</p>
+      </div>
+    </div>
+    <div class="work-card">
+      <img src="/assets/img/personal/aida-icon.svg" alt="">
+      <div class="work-card-body">
+        <h3>Agentic tooling</h3>
+        <p>MCP servers and Claude Code plugins built for daily use, not demos: this site&rsquo;s own build pipeline runs on the same tooling.</p>
+      </div>
+    </div>
+  </div>
+  <div class="selected-writing">
+    <h3>Selected writing</h3>
+    <ul class="work-list">
+      <li><a href="{% post_url 2021-09-22-what-is-virtual-production %}">What is Virtual Production?</a> (Perforce, 2021)</li>
+      <li><a href="{% post_url 2021-11-30-perforce-enhanced-studio-pack %}">What Is the Perforce Enhanced Studio Pack? Everything You Need For the Cloud.</a> (Perforce, 2021)</li>
+    </ul>
+  </div>
+</section>
+
+<section class="faq" aria-labelledby="faq-heading">
+  <h2 id="faq-heading">FAQ</h2>
+  {% for item in site.data.faq %}
+  <details class="faq-item" open>
+    <summary>{{ item.question }}</summary>
+    <p>
+      {{ item.answer }}
+      {% if item.link_url %}<a href="{{ item.link_url }}">{{ item.link_text }}</a>.{% endif %}
+    </p>
+  </details>
+  {% endfor %}
+</section>
+
+<section class="contact" aria-labelledby="contact-heading">
+  <h2 id="contact-heading">Get in touch</h2>
+  {% if site.data.contact.booking != empty %}
+  <p>The fastest path in is a 20-minute call. Email works too, though a booked call skips a round trip.</p>
+  {% else %}
+  <p>Email is the fastest path in for now.</p>
+  {% endif %}
+  <div class="cta-group">
+    {% if site.data.contact.booking != empty %}
+    <a class="btn btn-primary" href="{{ site.data.contact.booking }}">Book a 20-minute call</a>
+    <a class="btn" href="mailto:{{ site.data.contact.email }}">{{ site.data.contact.email }}</a>
+    {% else %}
+    <a class="btn btn-primary" href="mailto:{{ site.data.contact.email }}">Email me about your project, love hard problems</a>
+    {% endif %}
   </div>
 </section>

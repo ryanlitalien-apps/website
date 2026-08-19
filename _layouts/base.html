@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" class="pitch">
+<head>
+{% include head.html %}
+</head>
+<body class="pitch">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <div class="pitch-shell">
+    <header class="pitch-rail">
+      <div class="rail-top">
+        <div class="rail-id">
+          <a class="rail-brand" href="/">Ryan L&rsquo;Italien</a>
+          <span class="rail-photo-wrap">
+            <img class="rail-photo" src="/assets/img/ryan-headshot.jpg" alt="Ryan L'Italien">
+            <img class="rail-photo rail-photo-wink" src="/assets/img/ryan-headshot-wink.jpg" alt="" aria-hidden="true">
+          </span>
+        </div>
+        {% include nav.html %}
+      </div>
+    </header>
+
+    <main id="main-content" class="pitch-main">
+      <div class="col">
+        {{ content }}
+      </div>
+    </main>
+  </div>
+
+  <nav class="dock" aria-label="Theme and profiles">
+    <div class="dock-theme" role="group" aria-label="Color theme">
+      <button type="button" data-set-theme="system" aria-label="Use system theme" title="System theme">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-6v2h3a1 1 0 1 1 0 2H7a1 1 0 1 1 0-2h3v-2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm0 2v10h16V5H4z"/></svg>
+      </button>
+      <button type="button" data-set-theme="light" aria-label="Use light theme" title="Light theme">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0-6a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0V2a1 1 0 0 1 1-1zm0 19a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1zM2 11h2a1 1 0 1 1 0 2H2a1 1 0 1 1 0-2zm18 0h2a1 1 0 1 1 0 2h-2a1 1 0 1 1 0-2zM4.9 3.5l1.4 1.4A1 1 0 1 1 4.9 6.3L3.5 4.9A1 1 0 0 1 4.9 3.5zm14.2 14.2l1.4 1.4a1 1 0 1 1-1.4 1.4l-1.4-1.4a1 1 0 1 1 1.4-1.4zm1.4-14.2a1 1 0 0 1 0 1.4l-1.4 1.4a1 1 0 1 1-1.4-1.4l1.4-1.4a1 1 0 0 1 1.4 0zM6.3 17.7a1 1 0 0 1 0 1.4l-1.4 1.4a1 1 0 1 1-1.4-1.4l1.4-1.4a1 1 0 0 1 1.4 0z"/></svg>
+      </button>
+      <button type="button" data-set-theme="dark" aria-label="Use dark theme" title="Dark theme">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 14.4A9 9 0 0 1 9.6 3a9 9 0 1 0 11.4 11.4z"/></svg>
+      </button>
+    </div>
+    <span class="dock-sep" aria-hidden="true"></span>
+    <a href="{{ site.data.contact.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn, opens in a new tab" title="LinkedIn">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+    </a>
+    <a href="{{ site.data.contact.github }}" target="_blank" rel="noopener" aria-label="GitHub, opens in a new tab" title="GitHub">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.49 5.92.43.37.82 1.11.82 2.23v3.3c0 .32.21.7.82.58A12 12 0 0 0 12 .3z"/></svg>
+    </a>
+    {% if site.data.contact.booking != empty %}
+    <a href="{{ site.data.contact.booking }}" target="_blank" rel="noopener" aria-label="Book a call, opens in a new tab" title="Book a call">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4V3a1 1 0 1 1 2 0v1h6V3a1 1 0 1 1 2 0v1h2a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2zm-3 6v9h16v-9H4z"/></svg>
+    </a>
+    {% endif %}
+  </nav>
+
+  {% include site-footer.html %}
+
+  <script src="/assets/js/theme.js" defer></script>
+  <script src="/assets/js/lightbox.js" defer></script>
+</body>
+</html>

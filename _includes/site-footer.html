@@ -1,0 +1,34 @@
+<!--
+  Named site-footer.html (not footer.html): the old Bootstrap/mediumish
+  layout's _includes/footer.html is gone now that Phase 1 (post migration,
+  old-theme deletion) is done, but this file keeps its distinct name rather
+  than reclaiming the old one. This file is included only by _layouts/base.html.
+
+  /accessibility/ and /privacy/ do not exist yet as real pages at those
+  URLs (Phase 1, rebrand plan s.12/13) -- privacy.md currently only
+  publishes at /simple/privacy/. Their links are commented out below
+  instead of left as dead links. Restore once those pages exist at these
+  paths.
+
+  Booking: site.data.contact.booking carries the live Cal.com link; the
+  conditional stays so the entry drops out cleanly if the link is ever
+  emptied.
+-->
+<footer class="pitch-footer">
+  <p>
+    Ryan L&rsquo;Italien
+  </p>
+  <ul class="footer-links">
+    <li><a href="mailto:{{ site.data.contact.email }}">{{ site.data.contact.email }}</a></li>
+    <li><a href="{{ site.data.contact.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn, opens in a new tab">LinkedIn</a></li>
+    <li><a href="{{ site.data.contact.github }}" target="_blank" rel="noopener" aria-label="GitHub, opens in a new tab">GitHub</a></li>
+    {% if site.data.contact.booking != empty %}
+    <li><a href="{{ site.data.contact.booking }}" target="_blank" rel="noopener" aria-label="Book a call, opens in a new tab">Book a call</a></li>
+    {% endif %}
+    {% comment %}
+    Phase 1: restore when page exists.
+    <li><a href="/accessibility/">Accessibility</a></li>
+    <li><a href="/privacy/">Privacy</a></li>
+    {% endcomment %}
+  </ul>
+</footer>

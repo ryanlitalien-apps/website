@@ -1,0 +1,15 @@
+<!--
+  Primary nav. Active state is aria-current="page" plus an accent underline
+  in CSS; no generated content, so screen readers announce exactly the link
+  text and the current-page state. (The old bracket-glyph treatment and its
+  VoiceOver caveat are gone with the mono-terminal design.)
+-->
+<nav class="rail-nav" aria-label="Primary">
+  <ul>
+    <li><a href="/" {% if page.url == "/" %}aria-current="page"{% endif %}>Work</a></li>
+    {% comment %} Writing stays lit on the index and on every /posts/<slug>/ page. {% endcomment %}
+    <li><a href="/posts/" {% if page.url contains "/posts/" %}aria-current="page"{% endif %}>Writing</a></li>
+    <li><a href="/personal/" {% if page.url == "/personal/" %}aria-current="page"{% endif %}>Personal</a></li>
+    <li><a href="/about/" {% if page.url == "/about/" %}aria-current="page"{% endif %}>About</a></li>
+  </ul>
+</nav>

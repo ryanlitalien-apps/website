@@ -16,12 +16,16 @@
 title: ryanlitalien.com
 author: "Ryan L'Italien"
 #email: your-email@example.com
-logo: /assets/img/trail-running-medium-narrow.png
+# `logo:` is intentionally unset for jekyll-seo-tag's structured data.
 description: >- # this means to ignore newlines until "baseurl:"
-  Ryan L'Italien's blog
+  Fractional CTO and forward deployed engineer for companies whose growth runs through partners, integrations, and AI.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.ryanlitalien.com" # the base hostname & protocol for your site, e.g. http://example.com
+permalink: /posts/:title/
 twitter_username: ryanlitalien
+twitter:
+  username: ryanlitalien
+  card: summary_large_image
 github_username:  ryanlitalien
 github: [metadata]
 
@@ -31,15 +35,23 @@ github: [metadata]
 #  options: ["SMART", "FOOTNOTES"]
 #  extensions: ["strikethrough", "autolink", "table", "tagfilter"]
 
-theme: jekyll-theme-minimal
-#plugins:
-#  - jekyll-feed
+plugins:
+  - jekyll-seo-tag
+  - jekyll-redirect-from
+  - jekyll-feed
+  - jekyll-sitemap
 
 # Exclude from processing.
-# NOTE: setting `exclude` REPLACES Jekyll's defaults rather than extending them,
-# so the default entries below must stay listed or they start being published.
+# NOTE: setting `exclude` REPLACES Jekyll's defaults rather than extending
+# them, so the default entries below must stay listed or they start being
+# published. CLAUDE.md, README.md, docs, .idea, and .claude are repo/tooling
+# exhaust that was otherwise being served publicly (rebrand plan s.12).
 exclude:
-  - docs/            # planning docs, not part of the published site
+  - CLAUDE.md
+  - README.md
+  - docs
+  - .idea
+  - .claude
   - Gemfile
   - Gemfile.lock
   - node_modules
@@ -47,3 +59,12 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+
+# Default front matter: every page gets the social card unless it sets its
+# own `image`. jekyll-seo-tag ({% seo %} in _includes/head.html) reads
+# page.image to emit og:image and twitter:image.
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/img/social-card.png
