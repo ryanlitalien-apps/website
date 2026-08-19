@@ -5,7 +5,13 @@ layout: base
   <header class="post-header">
     <h1>{{ page.title }}</h1>
     <p class="post-meta">{{ page.date | date: "%B %-d, %Y" }}</p>
-    {% if page.image %}<img class="post-hero" src="{{ page.image }}" alt="">{% endif %}
+    {% comment %}
+      page.image serves double duty: og:image for jekyll-seo-tag and the
+      rendered hero. A _config.yml front-matter default gives EVERY page
+      the site social card as its og:image, so only render a hero when the
+      post set its own image, not the inherited default.
+    {% endcomment %}
+    {% if page.image and page.image != "/assets/img/social-card.png" %}<img class="post-hero" src="{{ page.image }}" alt="">{% endif %}
   </header>
   <div class="post-content">
 {{ content }}
