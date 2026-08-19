@@ -27,7 +27,7 @@ permalink: /about/
     <a href="https://achieve.snowflake.com/a1762c54-0a20-4dff-ba46-bce977554591" title="SnowPro Core Certification, verify credential">SnowPro Core Certification, Snowflake. Issued Dec 2024, valid through Dec 2026.</a>
   </p>
   <p><a href="https://aws.amazon.com/certification/certified-solutions-architect-associate/">AWS Certified Solutions Architect, Associate</a>. Coming soon.</p>
-  <p><a href="https://anthropic-partners.skilljar.com/claude-certified-associate-foundations-certification">Claude Certified Associate, Foundations (Anthropic)</a>. Coming soon.</p>
+  <p><a href="https://anthropic-partners.skilljar.com/claude-certified-associate-foundations-certification">(Anthropic) Claude Certified Associate, Foundations</a>. Coming soon.</p>
 </section>
 
 <section class="contact" aria-labelledby="contact-heading">

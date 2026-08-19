@@ -8,12 +8,12 @@ permalink: /
 <section class="hero">
   <h1>Ryan L&rsquo;Italien</h1>
   <p class="tagline"><strong>Fractional CTO &amp; forward deployed engineer for companies whose growth runs through partners, integrations, and AI.</strong></p>
-  <p>Most fractional CTOs are pure engineering. I also carry the revenue side: the partner channel, the solutions function, and being the person your biggest partner&rsquo;s engineers actually want on the call. 20+ years, startups to Fortune 100. I ship, not just advise.</p>
+  <p>Most fractional CTOs are pure engineering. I also carry the revenue side, partner channels, solutioning function, and being the person you actually want on the call. 20+ years, startups to Fortune 100. I&rsquo;m pragmatic, I ship, not just advise.</p>
   <div class="cta-group">
     {% if site.data.contact.booking != empty %}
     <a class="btn btn-primary" href="{{ site.data.contact.booking }}">Book a 20-minute call</a>
     {% else %}
-    <a class="btn btn-primary" href="mailto:{{ site.data.contact.email }}">Email me about your project</a>
+    <a class="btn btn-primary" href="mailto:{{ site.data.contact.email }}">Email me about your project, love hard problems</a>
     {% endif %}
     <a class="btn" href="#how-i-work">See how I work</a>
   </div>
@@ -35,19 +35,19 @@ permalink: /
   <h2 id="problems-heading">Pick the sentence that sounds like you</h2>
   <ul class="problem-list">
     <li class="problem-card">
-      <p class="problem-quote">We signed the partner deal and nobody senior enough owns landing it.</p>
-      <p class="problem-answer">Integration architecture, partner-technical relationships, marketplace listings. I did this for a public fintech&rsquo;s largest merchant partners.</p>
+      <p class="problem-quote">We signed the partner deal and nobody senior enough knows how to land it.</p>
+      <p class="problem-answer">Integration architecture, technical relationships, marketplace listings, onboarding, process improvements, gap analysis. I did this for a public fintech&rsquo;s largest merchant partners.</p>
     </li>
     <li class="problem-card">
-      <p class="problem-quote">Our AI plans are slideware.</p>
-      <p class="problem-answer">I build agentic systems for real: MCP servers, Claude-based tooling, multi-agent pipelines in production. I will tell you where AI pays off in your stack and where it is theater.</p>
+      <p class="problem-quote">Our AI plans are ChatGPT? How do we scale?</p>
+      <p class="problem-answer">I build agentic systems for real: MCP servers, Claude-based tooling, multi-agent pipelines in production. I will tell you where AI pays off in your stack and where it is theater/shovelware.</p>
     </li>
     <li class="problem-card">
-      <p class="problem-quote">Engineering outgrew the architecture and the founders&rsquo; hours.</p>
-      <p class="problem-answer">Fractional CTO: architecture, hiring, delivery process, board-ready technical narrative.</p>
+      <p class="problem-quote">Engineering outgrew the architecture and the founders&rsquo; available hours.</p>
+      <p class="problem-answer">Fractional CTO: architecture, hiring, delivery process, board-ready technical narrative. Digging in to help with programming as well.</p>
     </li>
     <li class="problem-card">
-      <p class="problem-quote">We need a senior technical read before we wire the money.</p>
+      <p class="problem-quote">We need a senior technical code review and analysis before we wire the acquisition money.</p>
       <p class="problem-answer">Technical due diligence for investors: a written, defensible findings document on the target&rsquo;s stack and team.</p>
     </li>
   </ul>
@@ -80,7 +80,7 @@ permalink: /
     </li>
     {% endfor %}
   </ul>
-  <p class="engagements-note">No public prices here on purpose, fixed-fee language above, numbers in the conversation.</p>
+  <p class="engagements-note">The four shapes mix and match; many engagements combine them. No public prices here on purpose, fixed-fee language above, numbers in the conversation.</p>
 </section>
 
 <section class="how-i-work" id="how-i-work" aria-labelledby="how-i-work-heading">
@@ -162,7 +162,7 @@ permalink: /
     <a class="btn btn-primary" href="{{ site.data.contact.booking }}">Book a 20-minute call</a>
     <a class="btn" href="mailto:{{ site.data.contact.email }}">{{ site.data.contact.email }}</a>
     {% else %}
-    <a class="btn btn-primary" href="mailto:{{ site.data.contact.email }}">Email me about your project</a>
+    <a class="btn btn-primary" href="mailto:{{ site.data.contact.email }}">Email me about your project, love hard problems</a>
     {% endif %}
   </div>
 </section>

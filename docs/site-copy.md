@@ -8,24 +8,24 @@ Edit any text below and tell Claude to apply it; structure headings map to files
 
 **Tagline:** Fractional CTO & forward deployed engineer for companies whose growth runs through partners, integrations, and AI.
 
-**Intro paragraph:** Most fractional CTOs are pure engineering. I also carry the revenue side: the partner channel, the solutions function, and being the person your biggest partner's engineers actually want on the call. 20+ years, startups to Fortune 100. I ship, not just advise.
+**Intro paragraph:** Most fractional CTOs are pure engineering. I also carry the revenue side, partner channels, solutioning function, and being the person you actually want on the call. 20+ years, startups to Fortune 100. I'm pragmatic, I ship, not just advise.
 
-**CTA labels:** "Book a 20-minute call" (primary, shown when a booking link is set) / "Email me about your project" (fallback when no booking link) / "See how I work" (secondary, scrolls to How I work)
+**CTA labels:** "Book a 20-minute call" (primary, shown when a booking link is set) / "Email me about your project, love hard problems" (fallback when no booking link) / "See how I work" (secondary, scrolls to How I work)
 
 ## Home - the "Pick the sentence that sounds like you" boxes (index.md)
 
 The four bordered boxes on the homepage. Each Quote is a sentence a prospect might say (the bold line in quotation marks); the matching Answer is your response underneath it. Edit either side; they stay paired by number.
 
-**Quote 1:** We signed the partner deal and nobody senior enough owns landing it.
-**Answer 1:** Integration architecture, partner-technical relationships, marketplace listings. I did this for a public fintech's largest merchant partners.
+**Quote 1:** We signed the partner deal and nobody senior enough knows how to land it.
+**Answer 1:** Integration architecture, technical relationships, marketplace listings, onboarding, process improvements, gap analysis. I did this for a public fintech's largest merchant partners.
 
-**Quote 2:** Our AI plans are slideware.
-**Answer 2:** I build agentic systems for real: MCP servers, Claude-based tooling, multi-agent pipelines in production. I will tell you where AI pays off in your stack and where it is theater.
+**Quote 2:** Our AI plans are ChatGPT? How do we scale?
+**Answer 2:** I build agentic systems for real: MCP servers, Claude-based tooling, multi-agent pipelines in production. I will tell you where AI pays off in your stack and where it is theater/shovelware.
 
-**Quote 3:** Engineering outgrew the architecture and the founders' hours.
-**Answer 3:** Fractional CTO: architecture, hiring, delivery process, board-ready technical narrative.
+**Quote 3:** Engineering outgrew the architecture and the founders' available hours.
+**Answer 3:** Fractional CTO: architecture, hiring, delivery process, board-ready technical narrative. Digging in to help with programming as well.
 
-**Quote 4:** We need a senior technical read before we wire the money.
+**Quote 4:** We need a senior technical code review and analysis before we wire the acquisition money.
 **Answer 4:** Technical due diligence for investors: a written, defensible findings document on the target's stack and team.
 
 ## Home - the numbers bar under the hero (_data/stats.yml)
@@ -53,10 +53,10 @@ Note: block 1's body is assembled from `employer_title` + `employer` + `employer
 **Body 2:** Snowflake Senior Solutions Engineer: GenAI assistant, image-recognition pipeline, and synthetic-data generator that became reference implementations; technical lead on $21M, $12M, and $7M deals. SnowPro certified (linked).
 
 **Title 3:** Game-dev infrastructure
-**Body 3:** Perforce Director of Solutions and Gaming Evangelist: studio infrastructure for teams from 2 people to Disney Animation, ran the AWS Games partnership, product-managed Helix Core Cloud. Now founder of ButterStack, a SaaS platform for game studios.
+**Body 3:** Perforce Director of Solutions and Gaming Evangelist: studio infrastructure for teams from 2 people to Epic Games, Take Two and Electronic Arts, ran the AWS Games partnership (also Google/Microsoft), product-managed Helix Core Cloud. Now CEO and Founder of ButterStack, a SaaS platform for game studios.
 
 **Title 4:** Agentic development, daily
-**Body 4:** MCP servers, Claude Code plugins, and multi-agent workflows are how I build now. If you want this capability in your team, I have already made every mistake for you.
+**Body 4:** MCP servers, Claude Code plugins, and multi-agent workflows are how I build now. If you want this capability in your team, I have already made every mistake, almost 😉.
 
 ## Home - engagements (_data/engagements.yml): 4 name/terms/body
 
@@ -72,9 +72,11 @@ Note: block 1's body is assembled from `employer_title` + `employer` + `employer
 **Name 4:** Technical due diligence **Terms 4:** fixed fee per engagement
 **Body 4:** For investors on deadline: a written, defensible findings document on the target's stack and team.
 
+**Combination note (rendered as the first sentence of the engagements note below):** The four shapes mix and match; many engagements combine them.
+
 ## Home - how I work + engagements note (index.md)
 
-**Engagements note:** No public prices here on purpose, fixed-fee language above, numbers in the conversation.
+**Engagements note:** The four shapes mix and match; many engagements combine them. No public prices here on purpose, fixed-fee language above, numbers in the conversation.
 
 **How I work list:**
 - Diagnose before prescribing. The first deliverable is always a written read of where you actually are.
@@ -85,16 +87,16 @@ Note: block 1's body is assembled from `employer_title` + `employer` + `employer
 ## Home - FAQ (_data/faq.yml): 4 Q/A
 
 **Q1:** Are you available?
-**A1:** Yes, taking new engagements now and can start immediately. Standing availability is weekdays, 9 to 5 Eastern.
+**A1:** Yes, taking new engagements now and can start immediately. Standing availability is weekdays, Eastern Time Zone.
 
 **Q2:** Remote?
-**A2:** Remote-first, on-site near Boston as needed.
+**A2:** Remote-first, Greater Boston area as needed.
 
 **Q3:** Who is this NOT for?
-**A3:** You need a full-time employee, a body-shop team of five, or the cheapest bid. All legitimate; none are me.
+**A3:** You need a body-shop team of five or the cheapest bid. All legitimate options; we just wouldn't be a fit here!
 
 **Q4:** ButterStack?
-**A4:** My game-studio SaaS. Game-dev engagements run through ButterStack Consulting; everything else through ITS. (Links to butterstack.com)
+**A4:** My game-studio SaaS. Game-dev engagements run through ButterStack Consulting; everything else through me. (Links to butterstack.com)
 
 ## About (about.md): tagline, bio paragraphs, certifications lines
 
@@ -111,7 +113,7 @@ Note: block 1's body is assembled from `employer_title` + `employer` + `employer
 **Certifications:**
 - SnowPro Core Certification, Snowflake. Issued Dec 2024, valid through Dec 2026. (badge + verify link)
 - AWS Certified Solutions Architect, Associate. Coming soon.
-- Claude Certified Associate, Foundations (Anthropic). Coming soon.
+- (Anthropic) Claude Certified Associate, Foundations. Coming soon.
 
 ## Personal (personal.md): tagline, intro, section copy
 
@@ -133,7 +135,7 @@ Note: block 1's body is assembled from `employer_title` + `employer` + `employer
 
 ## Contact (_data/contact.yml): email, booking, linkedin, github (values only)
 
-**Email:** ryan@ryanlitalien.com (chieftechadvisor.com address planned but untested, pending Kevin's confirmation)
+**Email:** ryan@ryanlitalien.com
 
 **Booking:** https://cal.com/ryanlitalien/20-min-meeting
 

@@ -30,12 +30,13 @@ blocks:
   - title: "Game-dev infrastructure"
     body: >-
       Perforce Director of Solutions and Gaming Evangelist: studio
-      infrastructure for teams from 2 people to Disney Animation, ran the AWS
-      Games partnership, product-managed Helix Core Cloud. Now founder of
-      ButterStack, a SaaS platform for game studios.
+      infrastructure for teams from 2 people to Epic Games, Take Two and
+      Electronic Arts, ran the AWS Games partnership (also Google/Microsoft),
+      product-managed Helix Core Cloud. Now CEO and Founder of ButterStack,
+      a SaaS platform for game studios.
 
   - title: "Agentic development, daily"
     body: >-
       MCP servers, Claude Code plugins, and multi-agent workflows are how I
       build now. If you want this capability in your team, I have already
-      made every mistake for you.
+      made every mistake, almost 😉.
