@@ -132,6 +132,9 @@ Note: block 1's body is assembled from `employer_title` + `employer` + `employer
 - Simple apps (links to /simple/, Viewer Toolbox screenshot): Nine native macOS viewers plus Viewer Toolbox to manage them.
 - FirstChair (links to firstchair.ski, homepage screenshot): Ski adventure hub: track favorite resorts, discover new mountains, never miss a powder day.
 - Game prototypes (placeholder image, no link): Always at least one in flight; the best excuse to keep the game-dev tooling honest.
+- CoachView (form-builder screenshot, no link): Multi-tenant SaaS for endurance coaches: forms, drip sequences, landing pages, billing. Rails, 2018 to 2020, built and sold.
+- Aida (blue circle icon, no link): The personal AI I built to run my whole world: memory across every project, a fleet of agents, one CLI that answers for all of it.
+- AI org chart (org-chart screenshot, no link): ButterStack runs on an AI staff: named agents with real roles reporting through an org chart like any team. Blog post coming soon.
 
 **Writing section:** shows the latest 6 posts, plus an "All posts" link to /posts/.
 

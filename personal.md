@@ -44,6 +44,27 @@ permalink: /personal/
         <p>Always at least one in flight; the best excuse to keep the game-dev tooling honest.</p>
       </div>
     </div>
+    <div class="work-card">
+      <img class="fit-top" src="/assets/img/personal/coachview.png" alt="CoachView form builder">
+      <div class="work-card-body">
+        <h3>CoachView</h3>
+        <p>Multi-tenant SaaS for endurance coaches: forms, drip sequences, landing pages, billing. Rails, 2018 to 2020, built and sold.</p>
+      </div>
+    </div>
+    <div class="work-card">
+      <img src="/assets/img/personal/aida-icon.svg" alt="">
+      <div class="work-card-body">
+        <h3>Aida</h3>
+        <p>The personal AI I built to run my whole world: memory across every project, a fleet of agents, one CLI that answers for all of it.</p>
+      </div>
+    </div>
+    <div class="work-card">
+      <img class="fit-top" src="/assets/img/personal/butterstack-org-chart.png" alt="ButterStack org chart of AI staff">
+      <div class="work-card-body">
+        <h3>AI org chart</h3>
+        <p>ButterStack runs on an AI staff: named agents with real roles reporting through an org chart like any team. Blog post coming soon.</p>
+      </div>
+    </div>
   </div>
 </section>
 

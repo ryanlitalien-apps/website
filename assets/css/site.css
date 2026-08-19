@@ -613,6 +613,11 @@ body.pitch {
   border-bottom: none;
 }
 
+/* Tall screenshots: crop from the top so the app chrome stays visible. */
+.work-card > img.fit-top {
+  object-position: top;
+}
+
 .work-card-body {
   padding: var(--space-3) var(--space-4) var(--space-4);
 }
