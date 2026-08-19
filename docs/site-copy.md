@@ -12,7 +12,9 @@ Edit any text below and tell Claude to apply it; structure headings map to files
 
 **CTA labels:** "Book a 20-minute call" (primary, shown when a booking link is set) / "Email me about your project" (fallback when no booking link) / "See how I work" (secondary, scrolls to How I work)
 
-## Home - problem cards (index.md): the 4 quote/answer pairs
+## Home - the "Pick the sentence that sounds like you" boxes (index.md)
+
+The four bordered boxes on the homepage. Each Quote is a sentence a prospect might say (the bold line in quotation marks); the matching Answer is your response underneath it. Edit either side; they stay paired by number.
 
 **Quote 1:** We signed the partner deal and nobody senior enough owns landing it.
 **Answer 1:** Integration architecture, partner-technical relationships, marketplace listings. I did this for a public fintech's largest merchant partners.
@@ -26,7 +28,9 @@ Edit any text below and tell Claude to apply it; structure headings map to files
 **Quote 4:** We need a senior technical read before we wire the money.
 **Answer 4:** Technical due diligence for investors: a written, defensible findings document on the target's stack and team.
 
-## Home - stats (_data/stats.yml): the 4 number/label pairs
+## Home - the numbers bar under the hero (_data/stats.yml)
+
+The four green numbers with small gray labels, between the hero and the boxes above.
 
 **Number 1:** $21M **Label 1:** largest multi-year renewal negotiated
 
@@ -36,7 +40,9 @@ Edit any text below and tell Claude to apply it; structure headings map to files
 
 **Number 4:** 20+ yrs **Label 4:** shipping production code, still daily
 
-## Home - proof blocks (_data/proof.yml): titles + bodies (note the employer placeholder mechanism in one line)
+## Home - the "Proof" section (_data/proof.yml)
+
+The four green-edged blocks under the PROOF label: a bold title plus a short body each.
 
 Note: block 1's body is assembled from `employer_title` + `employer` + `employer_body_suffix` below (not a plain `body` field), specifically so the employer name stays a single-line edit; `employer` currently reads "a publicly traded fintech" (a placeholder for Affirm, unnamed while the separation is unresolved) and `employer_title` reads "Staff Partner Engineer".
 
