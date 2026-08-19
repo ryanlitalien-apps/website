@@ -23,10 +23,10 @@ Note: Changes to `_config.yml` require restarting the server.
 
 ## Architecture
 
-- **_posts/**: Blog posts in Markdown with YAML front matter
-- **_layouts/**: Page templates (`default.html`, `post.html`)
-- **_includes/**: Reusable components (header, footer with Plausible analytics)
-- **assets/**: CSS (Bootstrap + custom mediumish theme), JS, images
+- **_posts/**: Blog posts in Markdown with YAML front matter, publish at `/posts/<slug>/`
+- **_layouts/**: `base.html` (the shell for every page) and `post.html` (articles, wraps `base`)
+- **_includes/**: Reusable components (nav, head, site footer with Plausible analytics)
+- **assets/**: `site.css` (the single design system) + `theme.js`, plus images
 
 ## Key Configuration
 

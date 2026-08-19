@@ -1,62 +1,22 @@
-{% include header.html %}
-	<!-- Begin Article ================================================== -->
-	<div class="row">
-
-		<!-- Begin Fixed Left Share -->
-		<div class="col-md-2 col-xs-12">
-			<div class="share">
-			</div>
-		</div>
-		<!-- End Fixed Left Share -->
-
-		<!-- Begin Post -->
-		<div class="col-md-8 col-md-offset-2 col-xs-12">
-			<div class="mainheading">
-
-				<!-- Begin Top Meta -->
-				<div class="row post-top-meta">
-					<div class="col-md-2">
-						<a href="/author.html">
-							<img class="author-thumb" src="https://s.gravatar.com/avatar/79c3827e7bad5914462a25d732300459?s=250&amp;d=mm&amp;r=x" alt="Ryan">
-						</a>
-					</div>
-					<div class="col-md-10">
-						<a class="link-dark" href="/author.html">Ryan</a>
-						<span class="author-description">Full-tilt, full-stack developer, from JS -> SQL and everything in between.</span><br />
-						<span class="post-date">{{ page.date | date: '%B %d, %Y' }}</span><span class="dot"></span><span class="post-read">5 min read</span>
-					</div>
-				</div>
-				<!-- End Top Menta -->
-
-				<h1 class="posttitle">{{ page.title }}</h1>
-			</div>
-
-			<!-- Begin Featured Image -->
-			{% if page.image %}
-			<img class="featured-image img-fluid" src="{{page.image}}" alt="">
-			{% endif %}
-			<!-- End Featured Image -->
-
-			<!-- Begin Post Content -->
-			<div class="article-post">
-				{{ content }}
-			</div>
-			<!-- End Post Content -->
-
-			<!-- Begin Tags -->
-			<div class="after-post-tags">
-				<ul class="tags">
-					{% for tag in page.tags %}
-						<li><a href="#">{{ tag }}</a></li>
-					{% endfor %}
-				</ul>
-			</div>
-			<!-- End Tags -->
-
-		</div>
-		<!-- End Post -->
-
-	</div>
-	<!-- End Article -->
-
-{% include footer.html %}
+---
+layout: base
+---
+<article class="post">
+  <header class="post-header">
+    <h1>{{ page.title }}</h1>
+    <p class="post-meta">{{ page.date | date: "%B %-d, %Y" }}</p>
+    {% comment %}
+      page.image serves double duty: og:image for jekyll-seo-tag and the
+      rendered hero. A _config.yml front-matter default gives EVERY page
+      the site social card as its og:image, so only render a hero when the
+      post set its own image, not the inherited default.
+    {% endcomment %}
+    {% if page.image and page.image != "/assets/img/social-card.png" %}<img class="post-hero" src="{{ page.image }}" alt="">{% endif %}
+  </header>
+  <div class="post-content">
+{{ content }}
+  </div>
+  <footer class="post-footer">
+    <a href="/posts/">&larr; All posts</a>
+  </footer>
+</article>
