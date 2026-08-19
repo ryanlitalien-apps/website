@@ -14,7 +14,10 @@ Edit any text below and tell Claude to apply it; structure headings map to files
 
 ## Home - the "Pick the sentence that sounds like you" boxes (index.md)
 
-The four bordered boxes on the homepage. Each Quote is a sentence a prospect might say (the bold line in quotation marks); the matching Answer is your response underneath it. Edit either side; they stay paired by number.
+The four bordered boxes on the homepage. Each Quote is a sentence a prospect might say (the bold line); the matching Answer is your response underneath it. Edit either side; they stay paired by number.
+
+**Section heading:** Pick the sentence that sounds like you
+**Heading aside (smaller line under it):** (yes, you, the one reading this)
 
 **Quote 1:** We signed the partner deal and nobody senior enough knows how to land it.
 **Answer 1:** Integration architecture, technical relationships, marketplace listings, onboarding, process improvements, gap analysis. I did this for a public fintech's largest merchant partners.
@@ -125,6 +128,11 @@ Note: block 1's body is assembled from `employer_title` + `employer` + `employer
 
 **Side projects section:** A rotating bench of tools I build because I use them: MCP servers that wire AI assistants into version control, fitness platforms, and office suites; Claude Code plugins and multi-agent pipelines; and always at least one game prototype in flight. The public ones live on GitHub.
 
+**Side projects cards (below that paragraph):**
+- Simple apps (links to /simple/, Viewer Toolbox screenshot): Nine native macOS viewers plus Viewer Toolbox to manage them.
+- FirstChair (links to firstchair.ski, homepage screenshot): Ski adventure hub: track favorite resorts, discover new mountains, never miss a powder day.
+- Game prototypes (placeholder image, no link): Always at least one in flight; the best excuse to keep the game-dev tooling honest.
+
 **Writing section:** shows the latest 6 posts, plus an "All posts" link to /posts/.
 
 **"When I'm not in front of a computer" list:**
@@ -132,6 +140,8 @@ Note: block 1's body is assembled from `employer_title` + `employer` + `employer
 - All 48 of New Hampshire's 4,000-footers.
 - Eagle Scout.
 - Three company-wide hackathon wins and various innovation awards.
+
+**Below the list:** three image-only placeholder cards (mountains, bike, compass); swap the SVGs in assets/img/personal/ for real photos.
 
 ## Contact (_data/contact.yml): email, booking, linkedin, github (values only)
 

@@ -128,6 +128,16 @@ body.pitch {
   margin: 0 0 var(--space-3);
 }
 
+/* Smaller second line inside a heading, e.g. the aside under "Pick the
+   sentence that sounds like you". */
+.heading-aside {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--muted);
+  margin-top: var(--space-1);
+}
+
 .pitch a {
   color: var(--accent);
   text-decoration: underline;
@@ -262,6 +272,35 @@ body.pitch {
     flex-direction: column;
     align-items: stretch;
     gap: var(--space-5);
+  }
+}
+
+/* Brand + portrait group inside the rail. The portrait only shows in the
+   desktop rail; the mobile top bar stays slim. */
+.rail-id {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.rail-photo {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .rail-id {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .rail-photo {
+    display: block;
+    width: 104px;
+    height: 104px;
+    object-fit: cover;
+    border: 1px solid var(--rule);
+    border-radius: 12px;
   }
 }
 
@@ -567,6 +606,11 @@ body.pitch {
   object-fit: cover;
   background: var(--surface);
   border-bottom: 1px solid var(--rule);
+}
+
+/* Image-only cards (no body below the media slot). */
+.work-card > img:last-child {
+  border-bottom: none;
 }
 
 .work-card-body {

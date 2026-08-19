@@ -22,6 +22,29 @@ permalink: /personal/
 <section class="personal-projects" aria-labelledby="projects-heading">
   <h2 id="projects-heading">Side projects</h2>
   <p>A rotating bench of tools I build because I use them: MCP servers that wire AI assistants into version control, fitness platforms, and office suites; Claude Code plugins and multi-agent pipelines; and always at least one game prototype in flight. The public ones live on <a href="https://github.com/ryanlitalien">GitHub</a>.</p>
+  <div class="work-grid">
+    <div class="work-card">
+      <img src="/assets/img/viewer-toolbox-screenshot.png" alt="Viewer Toolbox screenshot">
+      <div class="work-card-body">
+        <h3><a href="/simple/">Simple apps</a></h3>
+        <p>Nine native macOS viewers plus Viewer Toolbox to manage them.</p>
+      </div>
+    </div>
+    <div class="work-card">
+      <img src="/assets/img/personal/firstchair.png" alt="FirstChair, a ski adventure hub">
+      <div class="work-card-body">
+        <h3><a href="https://firstchair.ski/">FirstChair</a></h3>
+        <p>Ski adventure hub: track favorite resorts, discover new mountains, never miss a powder day.</p>
+      </div>
+    </div>
+    <div class="work-card">
+      <img src="/assets/img/personal/prototypes-placeholder.svg" alt="">
+      <div class="work-card-body">
+        <h3>Game prototypes</h3>
+        <p>Always at least one in flight; the best excuse to keep the game-dev tooling honest.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="personal-writing" aria-labelledby="writing-heading">
@@ -42,4 +65,15 @@ permalink: /personal/
     <li>Eagle Scout.</li>
     <li>Three company-wide hackathon wins and various innovation awards.</li>
   </ul>
+  <div class="work-grid">
+    <div class="work-card">
+      <img src="/assets/img/personal/outdoors-placeholder-1.svg" alt="">
+    </div>
+    <div class="work-card">
+      <img src="/assets/img/personal/outdoors-placeholder-2.svg" alt="">
+    </div>
+    <div class="work-card">
+      <img src="/assets/img/personal/outdoors-placeholder-3.svg" alt="">
+    </div>
+  </div>
 </section>

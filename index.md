@@ -32,7 +32,7 @@ permalink: /
 </section>
 
 <section class="problems" aria-labelledby="problems-heading">
-  <h2 id="problems-heading">Pick the sentence that sounds like you</h2>
+  <h2 id="problems-heading">Pick the sentence that sounds like you <span class="heading-aside">(yes, you, the one reading this)</span></h2>
   <ul class="problem-list">
     <li class="problem-card">
       <p class="problem-quote">We signed the partner deal and nobody senior enough knows how to land it.</p>
