@@ -1,13 +1,13 @@
 ---
 layout: base
-title: "Posts - Ryan L'Italien"
+title: "Writing - Ryan L'Italien"
 description: "Everything Ryan L'Italien has written: viewer apps, studio infrastructure, virtual production, race reports, and engineering notes from 2012 to now."
 permalink: /posts/
 ---
 
 <section class="hero">
-  <h1>Posts</h1>
-  <p class="tagline"><strong>Writing from 2012 to now.</strong></p>
+  <h1>Writing</h1>
+  <p class="tagline"><strong>Viewer apps, studio infrastructure, virtual production, and race reports, 2012 to now.</strong></p>
 </section>
 
 <section aria-labelledby="all-posts-heading">

@@ -136,8 +136,6 @@ Note: block 1's body is assembled from `employer_title` + `employer` + `employer
 - A.I.D.A. (blue circle icon, no link): Aida (Artificial Intelligence Digital Assistant) is my personal AI chief of staff: long-term memory across every project, a wiki distilled from fifteen years of notes, agents that run overnight, and one CLI that answers for work and life. | Stack: Go, MCP, Claude, Docker
 - AI org chart (org-chart screenshot, no link): ButterStack's staff is mostly AI: a product manager queues the backlog, a tech lead gates quality, engineer agents ship PRs from sandboxed worktrees, and humans review. Blog post coming soon. | Stack: Claude Code, subagents, Docker sandboxes, GitHub Actions
 
-**Writing section:** shows the latest 6 posts, plus an "All posts" link to /posts/.
-
 **"When I'm not in front of a computer" list:**
 - Two full Ironmans, a dozen halves.
 - All 48 of New Hampshire's 4,000-footers.

@@ -74,16 +74,6 @@ permalink: /personal/
   </div>
 </section>
 
-<section class="personal-writing" aria-labelledby="writing-heading">
-  <h2 id="writing-heading">Writing</h2>
-  <ul class="work-list">
-    {% for post in site.posts limit:6 %}
-    <li><a href="{{ post.url }}">{{ post.title }}</a> <span class="post-date">{{ post.date | date: "%b %Y" }}</span></li>
-    {% endfor %}
-  </ul>
-  <p><a href="/posts/">All posts &rarr;</a></p>
-</section>
-
 <section class="personal-outdoors" aria-labelledby="outdoors-heading">
   <h2 id="outdoors-heading">When I&rsquo;m not in front of a computer</h2>
   <ul class="work-list">

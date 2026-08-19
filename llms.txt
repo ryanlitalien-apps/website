@@ -7,7 +7,7 @@
 - [Work](https://www.ryanlitalien.com/): engagements (AI and integration readiness diagnostic, advisory retainer, fractional CTO, technical due diligence), proof, FAQ, booking
 - [Personal](https://www.ryanlitalien.com/personal/): Simple macOS apps, side projects, writing, endurance sports
 - [About](https://www.ryanlitalien.com/about/): background and certifications
-- [Posts](https://www.ryanlitalien.com/posts/): all writing, 2012 to now
+- [Writing](https://www.ryanlitalien.com/posts/): all writing, 2012 to now
 - [Simple apps](https://www.ryanlitalien.com/simple/): nine native macOS viewer apps plus Viewer Toolbox
 
 ## Contact
