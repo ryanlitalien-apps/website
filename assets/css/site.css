@@ -291,6 +291,7 @@ body.pitch {
   min-width: 0;
 }
 
+.rail-photo-wrap,
 .rail-photo {
   display: none;
 }
@@ -301,6 +302,16 @@ body.pitch {
     align-items: flex-start;
   }
 
+  /* Easter egg: hovering the portrait swaps in the winking shot. Both
+     images render stacked (so the wink is preloaded and the swap is
+     instant); the wink sits on top at opacity 0 until hover. */
+  .rail-photo-wrap {
+    display: block;
+    position: relative;
+    width: 104px;
+    height: 104px;
+  }
+
   .rail-photo {
     display: block;
     width: 104px;
@@ -308,6 +319,17 @@ body.pitch {
     object-fit: cover;
     border: 1px solid var(--rule);
     border-radius: var(--radius-card);
+  }
+
+  .rail-photo-wink {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 120ms ease;
+  }
+
+  .rail-photo-wrap:hover .rail-photo-wink {
+    opacity: 1;
   }
 }
 
