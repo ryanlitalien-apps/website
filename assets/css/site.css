@@ -1017,6 +1017,63 @@ body.pitch {
   padding-right: 0;
 }
 
+/* -- Lightbox --------------------------------------------------------------
+   Full-screen viewer for .work-card images. Card media is cropped (fit-top)
+   and/or dimmed (shot-light) to sit inside the card grid; the lightbox
+   shows the same image uncropped and undimmed at its natural aspect ratio.
+   lightbox.js owns all open/close behavior -- this is presentation only. */
+.work-card > img.lightbox-zoom {
+  cursor: zoom-in;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+  background: rgba(8, 10, 9, 0.88);
+}
+
+.lightbox[hidden] {
+  display: none;
+}
+
+.lightbox > img {
+  max-width: min(1400px, 92vw);
+  max-height: 88vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid var(--rule);
+  background: var(--ground);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  line-height: 1;
+  background: var(--ground);
+  color: var(--text);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.lightbox-close:hover {
+  color: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
 /* -- Motion --------------------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
   * {
