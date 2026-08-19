@@ -24,7 +24,7 @@ permalink: /personal/
   <p>A rotating bench of tools I build because I use them: MCP servers that wire AI assistants into version control, fitness platforms, and office suites; Claude Code plugins and multi-agent pipelines; and always at least one game prototype in flight. The public ones live on <a href="https://github.com/ryanlitalien">GitHub</a>.</p>
   <div class="work-grid">
     <div class="work-card">
-      <img src="/assets/img/viewer-toolbox-screenshot.png" alt="Viewer Toolbox screenshot">
+      <img class="shot-light" src="/assets/img/viewer-toolbox-screenshot.png" alt="Viewer Toolbox screenshot">
       <div class="work-card-body">
         <h3><a href="/simple/">Simple apps</a></h3>
         <p>Nine native macOS viewers (JSON, CSV, Markdown, YAML, Text, Image, Audio, 3D, 3MF) on one shared Swift core, each about 2 MB where an Electron app would be 80 to 120. Viewer Toolbox installs and updates the whole set.</p>
@@ -32,7 +32,7 @@ permalink: /personal/
       </div>
     </div>
     <div class="work-card">
-      <img src="/assets/img/personal/firstchair.png" alt="FirstChair, a ski adventure hub">
+      <img class="shot-light" src="/assets/img/personal/firstchair.png" alt="FirstChair, a ski adventure hub">
       <div class="work-card-body">
         <h3><a href="https://firstchair.ski/">FirstChair</a></h3>
         <p>A ski adventure hub covering 440+ mountains: track favorite resorts, compare passes, find uphill access, and never miss a powder day.</p>
@@ -48,7 +48,7 @@ permalink: /personal/
       </div>
     </div>
     <div class="work-card">
-      <img class="fit-top" src="/assets/img/personal/coachview.png" alt="CoachView form builder">
+      <img class="fit-top shot-light" src="/assets/img/personal/coachview.png" alt="CoachView form builder">
       <div class="work-card-body">
         <h3>CoachView</h3>
         <p>Coaching-business SaaS for endurance coaches: athlete onboarding forms, drip sequences, landing pages, and billing in one place, designed to sit beside TrainingPeaks rather than replace it. Built 2018 to 2020, sold.</p>
@@ -64,7 +64,7 @@ permalink: /personal/
       </div>
     </div>
     <div class="work-card">
-      <img class="fit-top" src="/assets/img/personal/butterstack-org-chart.png" alt="ButterStack org chart of AI staff">
+      <img class="fit-top shot-light" src="/assets/img/personal/butterstack-org-chart.png" alt="ButterStack org chart of AI staff">
       <div class="work-card-body">
         <h3>AI org chart</h3>
         <p>ButterStack&rsquo;s staff is mostly AI: a product manager queues the backlog, a tech lead gates quality, engineer agents ship PRs from sandboxed worktrees, and humans review. Blog post coming soon.</p>
@@ -94,13 +94,13 @@ permalink: /personal/
   </ul>
   <div class="work-grid">
     <div class="work-card">
-      <img src="/assets/img/personal/outdoors-placeholder-1.svg" alt="">
+      <img src="/assets/img/personal/outdoors-ironman.jpg" alt="With my kids under the Ironman logo at a race village" style="object-position: center 62%">
     </div>
     <div class="work-card">
-      <img src="/assets/img/personal/outdoors-placeholder-2.svg" alt="">
+      <img src="/assets/img/personal/outdoors-bike.jpg" alt="On the lift at a New Hampshire bike park, mountain bike hanging behind me">
     </div>
     <div class="work-card">
-      <img src="/assets/img/personal/outdoors-placeholder-3.svg" alt="">
+      <img src="/assets/img/personal/outdoors-camp.jpg" alt="Camp selfie in the autumn woods" style="object-position: center 30%">
     </div>
   </div>
 </section>

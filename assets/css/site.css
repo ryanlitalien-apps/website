@@ -44,6 +44,9 @@
   --space-5: 2.5rem;
   --space-6: 4rem;
   --focus-ring: 0 0 0 3px var(--ground), 0 0 0 5px var(--accent);
+  /* Screenshot dimmer: no-op in light theme, dims light-UI screenshots in
+     dark theme so they don't glare against the dark ground. */
+  --shot-dim: none;
 }
 
 /* System preference, only when the visitor has not made an explicit choice. */
@@ -62,6 +65,7 @@
     --link-hover-color: var(--accent-hover);
     --btn-hover-text: var(--accent-hover);
     --focus-ring: 0 0 0 3px var(--ground), 0 0 0 5px var(--accent);
+    --shot-dim: brightness(0.82) contrast(1.03);
   }
 }
 
@@ -79,6 +83,7 @@
   --accent-hover-contrast: #0D0F0E;
   --link-hover-color: var(--accent-hover);
   --btn-hover-text: var(--accent-hover);
+  --shot-dim: brightness(0.82) contrast(1.03);
 }
 
 /* -- Reset ---------------------------------------------------------------- */
@@ -613,6 +618,11 @@ body.pitch {
   border-bottom: none;
 }
 
+/* Light-UI screenshots glare against a dark ground; dim them slightly. */
+.work-card > img.shot-light {
+  filter: var(--shot-dim);
+}
+
 /* Tall screenshots: crop from the top so the app chrome stays visible. */
 .work-card > img.fit-top {
   object-position: top;
@@ -705,6 +715,18 @@ body.pitch {
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.22);
 }
 
+/* At 900px+ every other interactive element on the site (nav, CTAs, footer
+   links) is left-aligned, so pinning the dock to the bottom-right corner
+   instead of bottom-center keeps it out of that left-hand interactive lane
+   and off content like the About page's email CTA. */
+@media (min-width: 900px) {
+  .dock {
+    left: auto;
+    right: var(--space-5);
+    transform: none;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .dock {
     background: #1B1F1D;
@@ -744,6 +766,28 @@ body.pitch {
   height: 17px;
   display: block;
   fill: currentColor;
+}
+
+/* Below 900px the dock stays centered (it has room under the single-column
+   content) but shrinks so it cannot sit on top of short-page content, e.g.
+   the About CTA or the homepage stat labels at first paint. Placed after
+   the base .dock button/.dock a/.dock svg rules above so it wins the
+   cascade: same specificity, later in source order. */
+@media (max-width: 899px) {
+  .dock {
+    padding: var(--space-1);
+  }
+
+  .dock button,
+  .dock a {
+    width: 30px;
+    height: 30px;
+  }
+
+  .dock svg {
+    width: 15px;
+    height: 15px;
+  }
 }
 
 .dock button[aria-pressed="true"] {
@@ -799,6 +843,16 @@ body.pitch {
 .post-content img {
   border: 1px solid var(--rule);
   margin: var(--space-4) 0;
+}
+
+/* Embedded video (e.g. a YouTube iframe with a fixed width attribute)
+   must not force horizontal scroll on narrow viewports. */
+.post-content iframe {
+  width: 100%;
+  max-width: 854px;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: 0;
 }
 
 .post-content ul,

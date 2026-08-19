@@ -123,7 +123,7 @@ permalink: /
       </div>
     </div>
     <div class="work-card">
-      <img class="fit-top" src="/assets/img/work/markdown-viewer.png" alt="Markdown Viewer rendering a hiking trip plan">
+      <img class="fit-top shot-light" src="/assets/img/work/markdown-viewer.png" alt="Markdown Viewer rendering a hiking trip plan">
       <div class="work-card-body">
         <h3><a href="/simple/">Viewer suite</a></h3>
         <p>Nine native macOS apps (JSON, CSV, Markdown, YAML, Text, Image, Audio, 3D, 3MF) sharing one core, plus Viewer Toolbox to manage and update them.</p>

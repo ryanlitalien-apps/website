@@ -144,7 +144,7 @@ Note: block 1's body is assembled from `employer_title` + `employer` + `employer
 - Eagle Scout.
 - Three company-wide hackathon wins and various innovation awards.
 
-**Below the list:** three image-only placeholder cards (mountains, bike, compass); swap the SVGs in assets/img/personal/ for real photos.
+**Below the list:** three image-only cards carrying real photos: Ironman with the kids, bike park lift, autumn camp.
 
 ## Contact (_data/contact.yml): email, booking, linkedin, github (values only)
 
