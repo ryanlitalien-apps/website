@@ -116,21 +116,21 @@ permalink: /
   <h2 id="selected-work-heading">Selected work</h2>
   <div class="work-grid">
     <div class="work-card">
-      <img src="/assets/img/work/butterstack-placeholder.svg" alt="">
+      <img src="/assets/img/work/butterstack.png" alt="ButterStack: stop logging into five tools to ship one build">
       <div class="work-card-body">
         <h3><a href="https://butterstack.com">ButterStack</a></h3>
         <p>Game-studio SaaS I founded and run, born from the AWS partnership and studio-infrastructure work turning into a product.</p>
       </div>
     </div>
     <div class="work-card">
-      <img src="/assets/img/work/viewers-placeholder.svg" alt="">
+      <img class="fit-top" src="/assets/img/work/markdown-viewer.png" alt="Markdown Viewer rendering a hiking trip plan">
       <div class="work-card-body">
         <h3><a href="/simple/">Viewer suite</a></h3>
         <p>Nine native macOS apps (JSON, CSV, Markdown, YAML, Text, Image, Audio, 3D, 3MF) sharing one core, plus Viewer Toolbox to manage and update them.</p>
       </div>
     </div>
     <div class="work-card">
-      <img src="/assets/img/work/agentic-placeholder.svg" alt="">
+      <img src="/assets/img/personal/aida-icon.svg" alt="">
       <div class="work-card-body">
         <h3>Agentic tooling</h3>
         <p>MCP servers and Claude Code plugins built for daily use, not demos: this site&rsquo;s own build pipeline runs on the same tooling.</p>

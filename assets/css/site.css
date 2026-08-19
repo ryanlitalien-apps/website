@@ -620,6 +620,11 @@ body.pitch {
 
 .work-card-body {
   padding: var(--space-3) var(--space-4) var(--space-4);
+  /* Fill the card so the stack line can pin to the bottom edge, keeping
+     the green tech lines aligned across a row of unequal blurbs. */
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .work-card-body h3 {
@@ -631,9 +636,10 @@ body.pitch {
   color: var(--muted);
 }
 
-/* Tech-stack line at the bottom of a card body. */
+/* Tech-stack line, pinned to the bottom of the card body. */
 .work-card-body .stack {
-  margin-top: var(--space-2);
+  margin-top: auto;
+  padding-top: var(--space-2);
   font-size: 0.8rem;
   color: var(--accent);
 }
