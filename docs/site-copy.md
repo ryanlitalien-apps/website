@@ -128,13 +128,13 @@ Note: block 1's body is assembled from `employer_title` + `employer` + `employer
 
 **Side projects section:** A rotating bench of tools I build because I use them: MCP servers that wire AI assistants into version control, fitness platforms, and office suites; Claude Code plugins and multi-agent pipelines; and always at least one game prototype in flight. The public ones live on GitHub.
 
-**Side projects cards (below that paragraph):**
-- Simple apps (links to /simple/, Viewer Toolbox screenshot): Nine native macOS viewers plus Viewer Toolbox to manage them.
-- FirstChair (links to firstchair.ski, homepage screenshot): Ski adventure hub: track favorite resorts, discover new mountains, never miss a powder day.
-- Game prototypes (placeholder image, no link): Always at least one in flight; the best excuse to keep the game-dev tooling honest.
-- CoachView (form-builder screenshot, no link): Multi-tenant SaaS for endurance coaches: forms, drip sequences, landing pages, billing. Rails, 2018 to 2020, built and sold.
-- Aida (blue circle icon, no link): The personal AI I built to run my whole world: memory across every project, a fleet of agents, one CLI that answers for all of it.
-- AI org chart (org-chart screenshot, no link): ButterStack runs on an AI staff: named agents with real roles reporting through an org chart like any team. Blog post coming soon.
+**Side projects cards (below that paragraph):** each card = blurb + a small green tech-stack line.
+- Simple apps (links to /simple/, Viewer Toolbox screenshot): Nine native macOS viewers (JSON, CSV, Markdown, YAML, Text, Image, Audio, 3D, 3MF) on one shared Swift core, each about 2 MB where an Electron app would be 80 to 120. Viewer Toolbox installs and updates the whole set. | Stack: Swift, SwiftUI, Sparkle, Mac App Store, GitHub Actions
+- FirstChair (links to firstchair.ski, homepage screenshot): A ski adventure hub covering 440+ mountains: track favorite resorts, compare passes, find uphill access, and never miss a powder day. | Stack: Vue 3, Vite, Tailwind, Netlify Functions, Google Maps
+- Game prototypes (Pilot Light title art, no link): Always at least one in flight. The current one is Pilot Light: WW1 biplanes, wrong-century enemies, pixel art. The best excuse to keep the game-dev tooling honest. | Stack: Godot, Android, Retro Diffusion, agentic pipeline
+- CoachView (form-builder screenshot, no link): Coaching-business SaaS for endurance coaches: athlete onboarding forms, drip sequences, landing pages, and billing in one place, designed to sit beside TrainingPeaks rather than replace it. Built 2018 to 2020, sold. | Stack: Ruby on Rails, Heroku, Stripe, PostgreSQL
+- Aida (blue circle icon, no link): A personal AI chief of staff: long-term memory across every project, a wiki distilled from fifteen years of notes, agents that run overnight, and one CLI that answers for work and life. | Stack: Go, MCP, Claude, Docker
+- AI org chart (org-chart screenshot, no link): ButterStack's staff is mostly AI: a product manager queues the backlog, a tech lead gates quality, engineer agents ship PRs from sandboxed worktrees, and humans review. Blog post coming soon. | Stack: Claude Code, subagents, Docker sandboxes, GitHub Actions
 
 **Writing section:** shows the latest 6 posts, plus an "All posts" link to /posts/.
 

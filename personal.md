@@ -27,42 +27,48 @@ permalink: /personal/
       <img src="/assets/img/viewer-toolbox-screenshot.png" alt="Viewer Toolbox screenshot">
       <div class="work-card-body">
         <h3><a href="/simple/">Simple apps</a></h3>
-        <p>Nine native macOS viewers plus Viewer Toolbox to manage them.</p>
+        <p>Nine native macOS viewers (JSON, CSV, Markdown, YAML, Text, Image, Audio, 3D, 3MF) on one shared Swift core, each about 2 MB where an Electron app would be 80 to 120. Viewer Toolbox installs and updates the whole set.</p>
+        <p class="stack">Swift &middot; SwiftUI &middot; Sparkle &middot; Mac App Store &middot; GitHub Actions</p>
       </div>
     </div>
     <div class="work-card">
       <img src="/assets/img/personal/firstchair.png" alt="FirstChair, a ski adventure hub">
       <div class="work-card-body">
         <h3><a href="https://firstchair.ski/">FirstChair</a></h3>
-        <p>Ski adventure hub: track favorite resorts, discover new mountains, never miss a powder day.</p>
+        <p>A ski adventure hub covering 440+ mountains: track favorite resorts, compare passes, find uphill access, and never miss a powder day.</p>
+        <p class="stack">Vue 3 &middot; Vite &middot; Tailwind &middot; Netlify Functions &middot; Google Maps</p>
       </div>
     </div>
     <div class="work-card">
-      <img src="/assets/img/personal/prototypes-placeholder.svg" alt="">
+      <img class="fit-top" src="/assets/img/personal/pilot-light.jpeg" alt="Pilot Light title screen, pixel-art biplanes and gunships at sunset">
       <div class="work-card-body">
         <h3>Game prototypes</h3>
-        <p>Always at least one in flight; the best excuse to keep the game-dev tooling honest.</p>
+        <p>Always at least one in flight. The current one is Pilot Light: WW1 biplanes, wrong-century enemies, pixel art. The best excuse to keep the game-dev tooling honest.</p>
+        <p class="stack">Godot &middot; Android &middot; Retro Diffusion &middot; agentic pipeline</p>
       </div>
     </div>
     <div class="work-card">
       <img class="fit-top" src="/assets/img/personal/coachview.png" alt="CoachView form builder">
       <div class="work-card-body">
         <h3>CoachView</h3>
-        <p>Multi-tenant SaaS for endurance coaches: forms, drip sequences, landing pages, billing. Rails, 2018 to 2020, built and sold.</p>
+        <p>Coaching-business SaaS for endurance coaches: athlete onboarding forms, drip sequences, landing pages, and billing in one place, designed to sit beside TrainingPeaks rather than replace it. Built 2018 to 2020, sold.</p>
+        <p class="stack">Ruby on Rails &middot; Heroku &middot; Stripe &middot; PostgreSQL</p>
       </div>
     </div>
     <div class="work-card">
       <img src="/assets/img/personal/aida-icon.svg" alt="">
       <div class="work-card-body">
         <h3>Aida</h3>
-        <p>The personal AI I built to run my whole world: memory across every project, a fleet of agents, one CLI that answers for all of it.</p>
+        <p>A personal AI chief of staff: long-term memory across every project, a wiki distilled from fifteen years of notes, agents that run overnight, and one CLI that answers for work and life.</p>
+        <p class="stack">Go &middot; MCP &middot; Claude &middot; Docker</p>
       </div>
     </div>
     <div class="work-card">
       <img class="fit-top" src="/assets/img/personal/butterstack-org-chart.png" alt="ButterStack org chart of AI staff">
       <div class="work-card-body">
         <h3>AI org chart</h3>
-        <p>ButterStack runs on an AI staff: named agents with real roles reporting through an org chart like any team. Blog post coming soon.</p>
+        <p>ButterStack&rsquo;s staff is mostly AI: a product manager queues the backlog, a tech lead gates quality, engineer agents ship PRs from sandboxed worktrees, and humans review. Blog post coming soon.</p>
+        <p class="stack">Claude Code &middot; subagents &middot; Docker sandboxes &middot; GitHub Actions</p>
       </div>
     </div>
   </div>
