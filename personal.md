@@ -58,8 +58,8 @@ permalink: /personal/
     <div class="work-card">
       <img src="/assets/img/personal/aida-icon.svg" alt="">
       <div class="work-card-body">
-        <h3>Aida</h3>
-        <p>A personal AI chief of staff: long-term memory across every project, a wiki distilled from fifteen years of notes, agents that run overnight, and one CLI that answers for work and life.</p>
+        <h3>A.I.D.A.</h3>
+        <p>Aida (Artificial Intelligence Digital Assistant) is my personal AI chief of staff: long-term memory across every project, a wiki distilled from fifteen years of notes, agents that run overnight, and one CLI that answers for work and life.</p>
         <p class="stack">Go &middot; MCP &middot; Claude &middot; Docker</p>
       </div>
     </div>
