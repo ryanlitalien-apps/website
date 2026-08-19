@@ -35,7 +35,7 @@
   --font-sans: "Helvetica Neue", Helvetica, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Arial, sans-serif;
 
-  --col-content: 880px;
+  --col-content: 1320px;
   --col-rail: 190px;
   --space-1: 0.25rem;
   --space-2: 0.5rem;
@@ -114,23 +114,18 @@ body.pitch {
   display: block;
 }
 
-.pitch h1,
-.pitch h2,
-.pitch h3,
-.pitch h4 {
+/* Only h1 is styled; h2-h6 keep browser defaults (all smaller than h1). */
+.pitch h1 {
   font-family: var(--font-sans);
   font-weight: 700;
   line-height: 1.25;
   margin: 0 0 var(--space-3);
+  font-size: 2.1rem;
+  letter-spacing: -0.02em;
 }
-
-.pitch h1 { font-size: 2.1rem; letter-spacing: -0.02em; }
-.pitch h2 { font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
-.pitch h3 { font-size: 1.05rem; letter-spacing: -0.01em; }
 
 .pitch p {
   margin: 0 0 var(--space-3);
-  max-width: 72ch;
 }
 
 .pitch a {
@@ -197,7 +192,7 @@ body.pitch {
    is a plain top bar below 900px and becomes a sticky 190px left rail at
    900px and up -- same DOM, repositioned by CSS, so there is exactly one
    nav landmark and one set of links at every viewport. Content column
-   capped at 880px.
+   capped at 1320px.
    -------------------------------------------------------------------------- */
 .pitch-shell {
   display: flex;
@@ -442,16 +437,6 @@ body.pitch {
   margin: 0 0 var(--space-2);
 }
 
-.problem-quote::before,
-.problem-quote::after {
-  content: "\201C";
-  color: var(--accent);
-}
-
-.problem-quote::after {
-  content: "\201D";
-}
-
 .problem-answer {
   color: var(--muted);
   margin: 0;
@@ -555,10 +540,46 @@ body.pitch {
   font-size: 0.8rem;
 }
 
-/* Selected work. */
+/* Selected work: bordered cards with a media slot on top. The placeholder
+   SVGs in assets/img/work/ are transparent, so the media slot's surface
+   token supplies the ground in both themes; swap the src for a real
+   screenshot when one exists. */
 .work-grid {
   display: grid;
-  gap: var(--space-3);
+  gap: var(--space-4);
+}
+
+@media (min-width: 700px) {
+  .work-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.work-card {
+  border: 1px solid var(--rule);
+  display: flex;
+  flex-direction: column;
+}
+
+.work-card > img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: var(--surface);
+  border-bottom: 1px solid var(--rule);
+}
+
+.work-card-body {
+  padding: var(--space-3) var(--space-4) var(--space-4);
+}
+
+.work-card-body h3 {
+  margin-top: 0;
+}
+
+.work-card-body p {
+  margin-bottom: 0;
+  color: var(--muted);
 }
 
 .selected-writing {
@@ -706,15 +727,10 @@ body.pitch {
 }
 
 .post-content h2 {
-  font-size: 1.35rem;
-  letter-spacing: -0.01em;
-  text-transform: none;
-  color: var(--text);
   margin-top: var(--space-5);
 }
 
 .post-content h3 {
-  font-size: 1.1rem;
   margin-top: var(--space-4);
 }
 

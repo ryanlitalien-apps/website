@@ -96,11 +96,11 @@ permalink: /
 <section class="social-proof" aria-labelledby="social-proof-heading">
   <h2 id="social-proof-heading">What people say</h2>
   <blockquote class="testimonial">
-    <p>&ldquo;Ryan brings technical experience, common sense, business understanding, insight and a great attitude to wherever he is and whatever he is doing... a rare and valuable combination for anyone.&rdquo;</p>
+    <p>Ryan brings technical experience, common sense, business understanding, insight and a great attitude to wherever he is and whatever he is doing... a rare and valuable combination for anyone.</p>
     <cite>Michael Adams, Sr. Release Train Engineer, Cox Automotive <span class="testimonial-source">LinkedIn recommendation, 2012</span></cite>
   </blockquote>
   <blockquote class="testimonial">
-    <p>&ldquo;He is able to convey the technicalities to those who do not live in that world in a manner so everyone can follow along.&rdquo;</p>
+    <p>He is able to convey the technicalities to those who do not live in that world in a manner so everyone can follow along.</p>
     <cite>Sue Derderian, Director, Enterprise Business Continuity, Fidelity Investments <span class="testimonial-source">LinkedIn recommendation, 2008</span></cite>
   </blockquote>
 
@@ -115,17 +115,26 @@ permalink: /
 <section class="selected-work" aria-labelledby="selected-work-heading">
   <h2 id="selected-work-heading">Selected work</h2>
   <div class="work-grid">
-    <div>
-      <h3><a href="https://butterstack.com">ButterStack</a></h3>
-      <p>Game-studio SaaS I founded and run, born from the AWS partnership and studio-infrastructure work turning into a product.</p>
+    <div class="work-card">
+      <img src="/assets/img/work/butterstack-placeholder.svg" alt="">
+      <div class="work-card-body">
+        <h3><a href="https://butterstack.com">ButterStack</a></h3>
+        <p>Game-studio SaaS I founded and run, born from the AWS partnership and studio-infrastructure work turning into a product.</p>
+      </div>
     </div>
-    <div>
-      <h3><a href="/simple/">Viewer suite</a></h3>
-      <p>Nine native macOS apps (JSON, CSV, Markdown, YAML, Text, Image, Audio, 3D, 3MF) sharing one core, plus Viewer Toolbox to manage and update them.</p>
+    <div class="work-card">
+      <img src="/assets/img/work/viewers-placeholder.svg" alt="">
+      <div class="work-card-body">
+        <h3><a href="/simple/">Viewer suite</a></h3>
+        <p>Nine native macOS apps (JSON, CSV, Markdown, YAML, Text, Image, Audio, 3D, 3MF) sharing one core, plus Viewer Toolbox to manage and update them.</p>
+      </div>
     </div>
-    <div>
-      <h3>Agentic tooling</h3>
-      <p>MCP servers and Claude Code plugins built for daily use, not demos: this site&rsquo;s own build pipeline runs on the same tooling.</p>
+    <div class="work-card">
+      <img src="/assets/img/work/agentic-placeholder.svg" alt="">
+      <div class="work-card-body">
+        <h3>Agentic tooling</h3>
+        <p>MCP servers and Claude Code plugins built for daily use, not demos: this site&rsquo;s own build pipeline runs on the same tooling.</p>
+      </div>
     </div>
   </div>
   <div class="selected-writing">
