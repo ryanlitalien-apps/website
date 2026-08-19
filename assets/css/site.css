@@ -37,6 +37,8 @@
 
   --col-content: 1320px;
   --col-rail: 190px;
+  /* One card radius everywhere, matched to the rail portrait. */
+  --radius-card: 12px;
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 1rem;
@@ -305,7 +307,7 @@ body.pitch {
     height: 104px;
     object-fit: cover;
     border: 1px solid var(--rule);
-    border-radius: 12px;
+    border-radius: var(--radius-card);
   }
 }
 
@@ -474,6 +476,7 @@ body.pitch {
   border: 1px solid var(--rule);
   background: var(--surface);
   padding: var(--space-4);
+  border-radius: var(--radius-card);
 }
 
 .problem-quote {
@@ -515,6 +518,7 @@ body.pitch {
 .engagement {
   border: 1px solid var(--rule);
   padding: var(--space-4);
+  border-radius: var(--radius-card);
 }
 
 .engagement-name {
@@ -603,6 +607,9 @@ body.pitch {
   border: 1px solid var(--rule);
   display: flex;
   flex-direction: column;
+  border-radius: var(--radius-card);
+  /* Clip the media slot to the rounded corners. */
+  overflow: hidden;
 }
 
 .work-card > img {
