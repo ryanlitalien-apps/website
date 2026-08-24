@@ -146,9 +146,9 @@ Note: block 1's body is assembled from `employer_title` + `employer` + `employer
 
 ## Contact (_data/contact.yml): email, booking, linkedin, github (values only)
 
-**Email:** ryan@ryanlitalien.com
+**Email:** ryan@chieftechadvisor.com
 
-**Booking:** https://cal.com/ryanlitalien/20-min-meeting
+**Booking:** https://calendar.app.google/Nf7P5Jam5oW9L7YBA
 
 **LinkedIn:** https://www.linkedin.com/in/ryanlitalien
 
