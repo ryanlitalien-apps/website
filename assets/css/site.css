@@ -102,6 +102,7 @@
    The dark token blocks below override this to dark. */
 html.pitch {
   color-scheme: light;
+  font-size: 18px; /* preview: uncommitted +2px bump, scales all rem sizes */
 }
 
 body.pitch {
