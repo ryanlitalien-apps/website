@@ -132,14 +132,15 @@ permalink: /
     <div class="work-card">
       <img src="/assets/img/personal/aida-icon.svg" alt="">
       <div class="work-card-body">
-        <h3>Agentic tooling</h3>
-        <p>MCP servers and Claude Code plugins built for daily use, not demos: this site&rsquo;s own build pipeline runs on the same tooling.</p>
+        <h3><a href="{% post_url 2026-09-03-an-agent-of-agents-for-one-person %}">Agentic tooling</a></h3>
+        <p>Aida, my agent-of-agents CLI, plus the MCP servers and Claude Code plugins built for daily use, not demos: this site&rsquo;s own build pipeline runs on the same tooling.</p>
       </div>
     </div>
   </div>
   <div class="selected-writing">
     <h3>Selected writing</h3>
     <ul class="work-list">
+      <li><a href="{% post_url 2026-09-03-an-agent-of-agents-for-one-person %}">Introducing Aida - An agent of agents for one person</a> (2026, part 1 of a series)</li>
       <li><a href="{% post_url 2021-09-22-what-is-virtual-production %}">What is Virtual Production?</a> (Perforce, 2021)</li>
       <li><a href="{% post_url 2021-11-30-perforce-enhanced-studio-pack %}">What Is the Perforce Enhanced Studio Pack? Everything You Need For the Cloud.</a> (Perforce, 2021)</li>
     </ul>
