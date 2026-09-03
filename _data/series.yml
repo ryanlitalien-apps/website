@@ -3,14 +3,14 @@
 # "Part n of N" line and the parts list, linking parts that are published and
 # listing the rest as upcoming. Titles here are working titles for unpublished
 # parts; a published post's own title wins.
+#
+# Building Aida is the 4-part broad-audience series decided in aida's
+# docs/plan-open-source.md (Phase 4): readable start to finish with no code
+# blocks, technical depth in sidebars that link into the repo's docs/.
 aida:
   title: "Building Aida"
   parts:
     - "Introducing Aida - An agent of agents for one person"
-    - "Three LLM calls per question"
-    - "Thumbs-down that actually changes behavior"
-    - "Memory levels: from mic blips to a wiki"
-    - "A Ralph loop with a paycheck"
-    - "Jarvis at home, all Go"
-    - "Earth-1610 and Earth-1218"
-    - "What Aida spawned"
+    - "How it decides"
+    - "How it remembers"
+    - "What it spawned"
