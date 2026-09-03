@@ -12,3 +12,7 @@ series: aida
 </section>
 
 {% include series.html %}
+
+<footer class="post-footer">
+  <a href="/posts/">&larr; All posts</a>
+</footer>
