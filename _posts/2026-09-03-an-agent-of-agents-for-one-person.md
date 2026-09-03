@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "An agent of agents for one person"
+title: "Introducing Aida - An agent of agents for one person"
 published_at: 2026-09-03
 tags:
   - Technology
