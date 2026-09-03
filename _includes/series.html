@@ -1,0 +1,31 @@
+{% comment %}
+  Series navigation. include.mode = "line" renders the one-line "Part n of N"
+  under the post meta; anything else renders the full parts list.
+  Needs page.series (key into _data/series.yml) and page.series_part.
+{% endcomment %}
+{% assign series = site.data.series[page.series] %}
+{% if series %}
+{% assign total = series.parts | size %}
+{% if include.mode == "line" %}
+<p class="series-line">Part {{ page.series_part }} of {{ total }} in <a href="#series">{{ series.title }}</a></p>
+{% else %}
+<nav class="series-nav" id="series" aria-labelledby="series-heading">
+  <h2 id="series-heading">{{ series.title }}</h2>
+  <ol>
+  {% for title in series.parts %}
+    {% assign n = forloop.index %}
+    {% assign part_post = site.posts | where: "series", page.series | where: "series_part", n | first %}
+    {% if part_post %}
+      {% if part_post.url == page.url %}
+    <li class="series-current">{{ part_post.title }} <span class="series-note">(you are here)</span></li>
+      {% else %}
+    <li><a href="{{ part_post.url }}">{{ part_post.title }}</a></li>
+      {% endif %}
+    {% else %}
+    <li class="series-upcoming">{{ title }} <span class="series-note">(coming)</span></li>
+    {% endif %}
+  {% endfor %}
+  </ol>
+</nav>
+{% endif %}
+{% endif %}

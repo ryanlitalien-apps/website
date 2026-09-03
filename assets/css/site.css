@@ -856,6 +856,44 @@ body.pitch {
   margin-bottom: var(--space-1);
 }
 
+/* Series: "Part n of N" line under the meta, full parts list before the footer. */
+.series-line {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin: calc(-1 * var(--space-5) + var(--space-1)) 0 var(--space-5);
+}
+
+.series-nav {
+  margin: var(--space-5) 0 0;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+}
+
+.series-nav h2 {
+  margin: 0 0 var(--space-2);
+  font-size: 1rem;
+}
+
+.series-nav ol {
+  margin: 0;
+  padding-left: 1.4rem;
+}
+
+.series-nav li {
+  margin: var(--space-1) 0;
+}
+
+.series-current {
+  font-weight: 600;
+}
+
+.series-upcoming,
+.series-note {
+  color: var(--muted);
+}
+
 .post-meta {
   color: var(--muted);
   font-size: 0.85rem;

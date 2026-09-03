@@ -1,0 +1,16 @@
+# Multi-part series. A post joins one by setting `series: <key>` and
+# `series_part: <n>` in its front matter; _includes/series.html renders the
+# "Part n of N" line and the parts list, linking parts that are published and
+# listing the rest as upcoming. Titles here are working titles for unpublished
+# parts; a published post's own title wins.
+aida:
+  title: "Building Aida"
+  parts:
+    - "Introducing Aida - An agent of agents for one person"
+    - "Three LLM calls per question"
+    - "Thumbs-down that actually changes behavior"
+    - "Memory levels: from mic blips to a wiki"
+    - "A Ralph loop with a paycheck"
+    - "Jarvis at home, all Go"
+    - "Earth-1610 and Earth-1218"
+    - "What Aida spawned"
