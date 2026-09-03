@@ -9,7 +9,7 @@ tags:
 
 I've been using technology in some capacity since the 286 and Hayes modem. I don't remember those, but I do remember the Atari 2600 and playing shareware games on our 386.
 
-<img src="/assets/img/blog/classic-pc-games-1988-1995-grid.png" alt="Classic PC games, 1988 to 1995" style="width:75%;">
+<img src="/assets/img/blog/classic-pc-games-1988-1995-grid.png" alt="Classic PC games, 1988 to 1995" style="display:block;width:75%;margin:0 auto;">
 
 Man, what a blast, great memories. From typing commands in MS-DOS to play Doom, to customizing my first college computer ("Dude, you're getting a Dell!"), to a full file and photo NAS backup of what I've accumulated so far, to home automation and now AI assistants. It's been so fun to play, tinker, learn and adapt along the way.
 
@@ -23,7 +23,7 @@ Introducing, A.I.D.A., or Aida for short (or 'aida' in the cli) and J.A.R.V.I.S.
 
 Yes, the names are Marvel. J.A.R.V.I.S. (Just A Rather Very Intelligent System) is Tony Stark's AI, the dry voice in the workshop that runs the house, the suits, and the sarcasm. A.I.D.A. (Artificial Intelligent Digital Assistant) is from Agents of S.H.I.E.L.D., the lab assistant that started out helpful and, well... that one doesn't end well. The theme goes all the way down: the daemon listens on port 1610 (Earth-1610), the phone talks to it on port 1218 (Earth-1218, the "real world" in Marvel cosmology), and the Android Auto client is the Life Model Decoy. It started with one device years ago to help name my desktop and laptop. Now it makes the terminal way more fun, sarcastic and a butler with a British accent are far more interesting to talk to than Piper (rhasspy/piper).
 
-<img src="/assets/img/blog/deadpool-wolverine-standee.jpg" alt="Me between the Deadpool and Wolverine standees at the theater" style="width:75%;">
+<img src="/assets/img/blog/deadpool-wolverine-standee.jpg" alt="Me between the Deadpool and Wolverine standees at the theater" style="display:block;width:75%;margin:0 auto;">
 
 <!-- TODO: picture + GitHub link once the repo is public -->
 
