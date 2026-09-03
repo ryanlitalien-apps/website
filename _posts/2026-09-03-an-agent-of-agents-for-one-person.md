@@ -9,7 +9,7 @@ tags:
 
 I've been using technology in some capacity since the 286 and Hayes modem. I don't remember those, but I do remember the Atari 2600 and playing shareware games on our 386.
 
-![Classic PC games, 1988 to 1995](/assets/img/blog/classic-pc-games-1988-1995-grid.png)
+<img src="/assets/img/blog/classic-pc-games-1988-1995-grid.png" alt="Classic PC games, 1988 to 1995" style="width:75%;">
 
 Man, what a blast, great memories. From typing commands in MS-DOS to play Doom, to customizing my first college computer ("Dude, you're getting a Dell!"), to a full file and photo NAS backup of what I've accumulated so far, to home automation and now AI assistants. It's been so fun to play, tinker, learn and adapt along the way.
 
@@ -22,6 +22,8 @@ How can you keep data local, use SOTA models and avoid vendor lock-in? Build you
 Introducing, A.I.D.A., or Aida for short (or 'aida' in the cli) and J.A.R.V.I.S. or Jarvis for short.
 
 Yes, the names are Marvel. J.A.R.V.I.S. (Just A Rather Very Intelligent System) is Tony Stark's AI, the dry voice in the workshop that runs the house, the suits, and the sarcasm. A.I.D.A. (Artificial Intelligent Digital Assistant) is from Agents of S.H.I.E.L.D., the lab assistant that started out helpful and, well... that one doesn't end well. The theme goes all the way down: the daemon listens on port 1610 (Earth-1610), the phone talks to it on port 1218 (Earth-1218, the "real world" in Marvel cosmology), and the Android Auto client is the Life Model Decoy. It started with one device years ago to help name my desktop and laptop. Now it makes the terminal way more fun, sarcastic and a butler with a British accent are far more interesting to talk to than Piper (rhasspy/piper).
+
+<img src="/assets/img/blog/deadpool-wolverine-standee.jpg" alt="Me between the Deadpool and Wolverine standees at the theater" style="width:75%;">
 
 <!-- TODO: picture + GitHub link once the repo is public -->
 
@@ -98,3 +100,5 @@ This is a substrate. It's the place I prove a pattern before it shows up somewhe
 Over the next few posts I'll open it up: the pipeline, process and where the model calls actually go, what happens when I send a thumbs-up or down, how the memory tiers work, and the looping that works while I sleep.
 
 It is, still, mostly magic. It's just magic I can understand. Rock on 🤘!
+
+<img src="/assets/img/blog/college-dell-crt.jpg" alt="My college Dell: Winamp, a Golf R32 wallpaper, and a Return of the King poster" style="display:block;width:50%;margin:0 auto;">
