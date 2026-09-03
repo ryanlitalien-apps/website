@@ -5,6 +5,7 @@ layout: base
   <header class="post-header">
     <h1>{{ page.title }}</h1>
     <p class="post-meta">{{ page.date | date: "%B %-d, %Y" }}</p>
+    {% if page.series %}{% include series.html mode="line" %}{% endif %}
     {% comment %}
       page.image serves double duty: og:image for jekyll-seo-tag and the
       rendered hero. A _config.yml front-matter default gives EVERY page
@@ -16,6 +17,7 @@ layout: base
   <div class="post-content">
 {{ content }}
   </div>
+  {% if page.series %}{% include series.html %}{% endif %}
   <footer class="post-footer">
     <a href="/posts/">&larr; All posts</a>
   </footer>
