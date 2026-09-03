@@ -103,4 +103,4 @@ Over the next few posts I'll open it up: the pipeline, process and where the mod
 
 It is, still, mostly magic. It's just magic I can understand. Rock on 🤘!
 
-<img src="/assets/img/blog/college-dell-crt.jpg" alt="My college Dell: Winamp, a Golf R32 wallpaper, and a Return of the King poster" style="display:block;width:50%;margin:0 auto;">
+<img src="/assets/img/blog/deadpool-thumbs-up.jpg" alt="Deadpool figure on the windowsill giving a thumbs up" style="display:block;width:50%;margin:0 auto;">
