@@ -11,7 +11,7 @@ tags:
 
 I've been using technology in some capacity since the 286 and Hayes modem. I don't remember those, but I do remember the Atari 2600 and playing shareware games on our 386.
 
-<img src="/assets/img/blog/classic-pc-games-1988-1995-grid.png" alt="Classic PC games, 1988 to 1995" style="display:block;width:75%;margin:0 auto;">
+<img src="/assets/img/blog/classic-pc-games-1988-1995-grid.jpg" alt="Classic PC games, 1988 to 1995" style="display:block;width:75%;margin:0 auto;">
 
 Man, what a blast, great memories. From typing commands in MS-DOS to play Doom, to customizing my first college computer ("Dude, you're getting a Dell!"), to a full file and photo NAS backup of what I've accumulated so far, to home automation and now AI assistants. It's been so fun to play, tinker, learn and adapt along the way.
 
