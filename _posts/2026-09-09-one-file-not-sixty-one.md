@@ -122,6 +122,28 @@ Roots (1 present):
 
 That is the whole integration. One markdown file, three lines of YAML, a struct field. No marketplace, no manifest, no evals harness.
 
+## Before and after
+
+Here is the actual thing that happened to me this morning, in both shapes. I wanted to know how to switch output styles.
+
+Before:
+
+> Great question! Let me take a look at how output styles work in Claude Code.
+>
+> Output styles let you change how Claude communicates with you while keeping its underlying coding capabilities intact. They are stored as markdown files with YAML front matter, and you can define your own custom styles in addition to the built-in ones like Default, Explanatory, and Learning.
+>
+> To switch between them, you would normally use the `/output-style` command, which opens an interactive picker. However, it is worth noting that this command may have been removed in more recent versions of the CLI. If that is the case, the setting has moved into the `/config` panel instead.
+>
+> Hope this helps! Let me know if you would like me to walk through creating a custom style.
+
+After:
+
+> `/config`
+>
+> `/output-style` was removed in 2.1.266. The picker lives under Config now.
+
+Same information. The first one makes you read 90 words and a hedge to find out that the command you were about to type does not exist. The second one is the answer.
+
 ## The file
 
 Below is the entire thing, as of today, 9 September 2026. I am dating it because this stuff moves weekly. `/output-style` existed and then it didn't. Assume the mechanics have drifted by the time you read this, and that the rules have not.
