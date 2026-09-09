@@ -978,6 +978,13 @@ body.pitch {
   padding-top: var(--space-3);
 }
 
+/* Sign-off on every post, above the back link. */
+.post-signature {
+  margin: 0 0 var(--space-3);
+  color: var(--muted);
+  font-style: italic;
+}
+
 .post-list {
   list-style: none;
   margin: 0;
