@@ -21,7 +21,7 @@ bundle exec jekyll serve
 
 ## Deployment
 
-Push to `master` branch. GitHub Pages automatically builds and deploys to www.ryanlitalien.com.
+Push to `main` branch. GitHub Pages automatically builds and deploys to www.ryanlitalien.com.
 
 ## Writing Posts
 
