@@ -124,7 +124,13 @@ That is the whole integration. One markdown file, three lines of YAML, a struct 
 
 ## Before and after
 
-Here is the actual thing that happened to me this morning, in both shapes. I wanted to know how to switch output styles.
+Here is the actual thing that happened to me this morning, in both shapes.
+
+What I asked:
+
+```
+> how do I switch output styles?
+```
 
 Before:
 
