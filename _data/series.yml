@@ -4,7 +4,7 @@
 # listing the rest as upcoming. Titles here are working titles for unpublished
 # parts; a published post's own title wins.
 #
-# Building Aida is the 4-part broad-audience series decided in aida's
+# Building Aida is the broad-audience series (four parts plus a fifth in progress) decided in aida's
 # docs/plan-open-source.md (Phase 4): readable start to finish with no code
 # blocks, technical depth in sidebars that link into the repo's docs/.
 aida:
@@ -14,3 +14,4 @@ aida:
     - "How it decides"
     - "How it remembers"
     - "What it spawned"
+    - "Dynamic model selection (work in progress)"
