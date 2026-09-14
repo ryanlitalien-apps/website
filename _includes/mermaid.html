@@ -36,10 +36,9 @@
   var root = document.documentElement;
   var media = window.matchMedia("(prefers-color-scheme: dark)");
 
-  function effectiveTheme() {
-    var explicit = root.getAttribute("data-theme");
+  function effectiveTheme(explicit, prefersDark) {
     if (explicit === "dark" || explicit === "light") return explicit;
-    return media.matches ? "dark" : "light";
+    return prefersDark ? "dark" : "light";
   }
 
   var blocks = [];
@@ -57,7 +56,7 @@
     var rendering = null;
 
     function renderAll() {
-      var theme = effectiveTheme() === "dark" ? "dark" : "default";
+      var theme = effectiveTheme(root.getAttribute("data-theme"), media.matches) === "dark" ? "dark" : "default";
       mermaid.initialize({ startOnLoad: false, theme: theme });
       var run = (async function () {
         for (var i = 0; i < blocks.length; i++) {
