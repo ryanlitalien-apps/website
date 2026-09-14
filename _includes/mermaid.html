@@ -1,0 +1,88 @@
+{% comment %}
+  Mermaid diagrams, opt-in per post with `mermaid: true` in front matter.
+
+  kramdown renders a ```mermaid fence as <pre><code class="language-mermaid">.
+  This include swaps each one for a <div class="mermaid"> and renders it with
+  the theme the page is actually showing: the explicit data-theme on <html>
+  when the visitor picked light or dark in the dock, else the OS preference.
+  It re-renders on either kind of change (the dock buttons flip data-theme;
+  the OS flips prefers-color-scheme), so a diagram never sits in the wrong
+  theme after a toggle. Source text is kept on the element, so a re-render is
+  a pure function of the current theme.
+
+  If the CDN is blocked or JS is off, the fence stays a normal code block, so
+  the reader still gets the diagram source instead of a blank hole.
+{% endcomment %}
+<style>
+  .mermaid {
+    margin: var(--space-4, 1.5rem) 0;
+    text-align: center;
+    overflow-x: auto;
+  }
+  .mermaid svg {
+    max-width: 100%;
+    height: auto;
+  }
+  .mermaid-error {
+    text-align: left;
+    white-space: pre;
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.85rem;
+  }
+</style>
+<script type="module">
+  import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+
+  var root = document.documentElement;
+  var media = window.matchMedia("(prefers-color-scheme: dark)");
+
+  function effectiveTheme(explicit, prefersDark) {
+    if (explicit === "dark" || explicit === "light") return explicit;
+    return prefersDark ? "dark" : "light";
+  }
+
+  var blocks = [];
+  document.querySelectorAll("pre > code.language-mermaid").forEach(function (code) {
+    var pre = code.parentNode;
+    var div = document.createElement("div");
+    div.className = "mermaid";
+    div.setAttribute("data-source", code.textContent);
+    pre.parentNode.replaceChild(div, pre);
+    blocks.push(div);
+  });
+
+  if (blocks.length) {
+    var counter = 0;
+    var rendering = null;
+
+    function renderAll() {
+      var theme = effectiveTheme(root.getAttribute("data-theme"), media.matches) === "dark" ? "dark" : "default";
+      mermaid.initialize({ startOnLoad: false, theme: theme });
+      var run = (async function () {
+        for (var i = 0; i < blocks.length; i++) {
+          var div = blocks[i];
+          try {
+            var out = await mermaid.render("mermaid-" + (counter++), div.getAttribute("data-source"));
+            div.classList.remove("mermaid-error");
+            div.innerHTML = out.svg;
+          } catch (e) {
+            div.classList.add("mermaid-error");
+            div.textContent = div.getAttribute("data-source");
+          }
+        }
+      })();
+      rendering = run;
+      return run;
+    }
+
+    renderAll();
+
+    new MutationObserver(function () {
+      renderAll();
+    }).observe(root, { attributes: true, attributeFilter: ["data-theme"] });
+
+    media.addEventListener("change", function () {
+      if (!root.getAttribute("data-theme")) renderAll();
+    });
+  }
+</script>

@@ -19,6 +19,19 @@ bundle install
 bundle exec jekyll serve
 ```
 
+## Tests
+
+There are two test scripts, both run in CI on every push and pull request (`.github/workflows/test.yml`).
+
+```bash
+# Builds a temp copy of the site with fixture posts and checks the rendered
+# HTML for the mermaid opt-in behavior
+bash test/mermaid_test.sh
+
+# Unit tests for the theme-selection logic in _includes/mermaid.html
+node --test test/*.mjs
+```
+
 ## Deployment
 
 Push to `main` branch. GitHub Pages automatically builds and deploys to www.ryanlitalien.com.
