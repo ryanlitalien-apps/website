@@ -974,6 +974,22 @@ body.pitch {
   border-bottom: 0;
 }
 
+.post-content tr.example td {
+  padding-top: 0;
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--rule);
+}
+
+.post-content tr.example pre {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.post-content tr:has(+ tr.example) td {
+  border-bottom: 0;
+  padding-bottom: var(--space-2);
+}
+
 .post-content table + p {
   margin-top: var(--space-4);
 }
