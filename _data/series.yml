@@ -10,8 +10,8 @@
 aida:
   title: "Building Aida"
   parts:
-    - "Introducing Aida - An agent of agents for one person"
-    - "How it decides"
-    - "How it remembers"
-    - "What it spawned"
-    - "Dynamic model selection (work in progress)"
+    - "Aida, Part 1: An agent of agents for one person"
+    - "Aida, Part 2: How it decides"
+    - "Aida, Part 3: How it remembers"
+    - "Aida, Part 4: What it spawned"
+    - "Aida, Part 5: Dynamic model selection (work in progress)"

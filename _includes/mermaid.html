@@ -2,27 +2,76 @@
   Mermaid diagrams, opt-in per post with `mermaid: true` in front matter.
 
   kramdown renders a ```mermaid fence as <pre><code class="language-mermaid">.
-  This include swaps each one for a <div class="mermaid"> and renders it with
-  the theme the page is actually showing: the explicit data-theme on <html>
-  when the visitor picked light or dark in the dock, else the OS preference.
-  It re-renders on either kind of change (the dock buttons flip data-theme;
-  the OS flips prefers-color-scheme), so a diagram never sits in the wrong
-  theme after a toggle. Source text is kept on the element, so a re-render is
-  a pure function of the current theme.
+  This include replaces each fence only after the renderer has loaded, so the
+  source remains readable when JavaScript or the CDN is unavailable.
 
-  If the CDN is blocked or JS is off, the fence stays a normal code block, so
-  the reader still gets the diagram source instead of a blank hole.
+  Rendering uses Craft's MIT-licensed beautiful-mermaid library. Its ELK layout
+  is substantially cleaner for dense flowcharts than stock Mermaid, and its
+  CSS-property theme updates with the site's light/dark tokens without a full
+  re-render. The palette borrows GitHub's restrained neutral hierarchy while
+  keeping this site's green accent.
 {% endcomment %}
 <style>
   .mermaid {
+    --mermaid-bg: var(--ground);
+    --mermaid-fg: var(--text);
+    --mermaid-line: #74837b;
+    --mermaid-accent: var(--accent);
+    --mermaid-muted: var(--muted);
+    --mermaid-surface: #edf7f1;
+    --mermaid-border: #a5c5b3;
+
     margin: var(--space-4, 1.5rem) 0;
-    text-align: center;
+    padding: clamp(0.75rem, 2vw, 1.5rem);
+    background: var(--mermaid-bg);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-card, 12px);
     overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scrollbar-color: var(--mermaid-line) transparent;
   }
+
   .mermaid svg {
+    display: block;
+    width: auto;
     max-width: 100%;
     height: auto;
+    margin-inline: auto;
   }
+
+  /* beautiful-mermaid measures with a Helvetica-like sans; this override also
+     keeps diagrams in the same type system as the surrounding article. */
+  .mermaid svg text {
+    font-family: var(--font-sans) !important;
+  }
+
+  .mermaid:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  /* On narrow screens preserve legible type and let the card scroll instead
+     of shrinking a large graph into an unreadable thumbnail. */
+  @media (max-width: 699px) {
+    .mermaid svg {
+      max-width: none;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .mermaid {
+      --mermaid-line: #607168;
+      --mermaid-surface: #13261c;
+      --mermaid-border: #3d6a52;
+    }
+  }
+
+  :root[data-theme="dark"] .mermaid {
+    --mermaid-line: #607168;
+    --mermaid-surface: #13261c;
+    --mermaid-border: #3d6a52;
+  }
+
   .mermaid-error {
     text-align: left;
     white-space: pre;
@@ -31,58 +80,76 @@
   }
 </style>
 <script type="module">
-  import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+  import { renderMermaidSVGAsync } from "https://cdn.jsdelivr.net/npm/beautiful-mermaid@1.1.3/+esm";
 
-  var root = document.documentElement;
-  var media = window.matchMedia("(prefers-color-scheme: dark)");
-
-  function effectiveTheme(explicit, prefersDark) {
-    if (explicit === "dark" || explicit === "light") return explicit;
-    return prefersDark ? "dark" : "light";
+  function diagramOptions() {
+    return {
+      bg: "var(--mermaid-bg)",
+      fg: "var(--mermaid-fg)",
+      line: "var(--mermaid-line)",
+      accent: "var(--mermaid-accent)",
+      muted: "var(--mermaid-muted)",
+      surface: "var(--mermaid-surface)",
+      border: "var(--mermaid-border)",
+      font: "Helvetica Neue",
+      transparent: true,
+      padding: 32,
+      nodeSpacing: 32,
+      layerSpacing: 52,
+      componentSpacing: 28,
+      thoroughness: 5
+    };
   }
 
-  var blocks = [];
-  document.querySelectorAll("pre > code.language-mermaid").forEach(function (code) {
+  function useSiteFont(svg) {
+    return svg.replace(/@import url\('[^']*fonts\.googleapis\.com[^']*'\);\s*/g, "");
+  }
+
+  function enlargeArrowheads(svg) {
+    var scale = 1.5;
+    return svg.replace(
+      /<marker([^>]*?)markerWidth="([\d.]+)" markerHeight="([\d.]+)"([^>]*)>/g,
+      function (marker, before, width, height, after) {
+        var scaledWidth = Number(width) * scale;
+        var scaledHeight = Number(height) * scale;
+        return '<marker' + before + 'markerWidth="' + scaledWidth + '" markerHeight="' + scaledHeight +
+          '" viewBox="0 0 ' + width + ' ' + height + '"' + after + '>';
+      }
+    );
+  }
+
+  document.querySelectorAll("pre > code.language-mermaid").forEach(async function (code, index) {
     var pre = code.parentNode;
-    var div = document.createElement("div");
-    div.className = "mermaid";
-    div.setAttribute("data-source", code.textContent);
-    pre.parentNode.replaceChild(div, pre);
-    blocks.push(div);
-  });
+    var diagram = document.createElement("div");
+    var source = code.textContent.trim();
 
-  if (blocks.length) {
-    var counter = 0;
-    var rendering = null;
+    diagram.className = "mermaid";
+    diagram.setAttribute("role", "img");
+    diagram.setAttribute("aria-label", "Diagram rendered from Mermaid source: " + source);
 
-    function renderAll() {
-      var theme = effectiveTheme(root.getAttribute("data-theme"), media.matches) === "dark" ? "dark" : "default";
-      mermaid.initialize({ startOnLoad: false, theme: theme });
-      var run = (async function () {
-        for (var i = 0; i < blocks.length; i++) {
-          var div = blocks[i];
-          try {
-            var out = await mermaid.render("mermaid-" + (counter++), div.getAttribute("data-source"));
-            div.classList.remove("mermaid-error");
-            div.innerHTML = out.svg;
-          } catch (e) {
-            div.classList.add("mermaid-error");
-            div.textContent = div.getAttribute("data-source");
-          }
+    try {
+      var rendered = await renderMermaidSVGAsync(source, diagramOptions());
+      diagram.innerHTML = useSiteFont(enlargeArrowheads(rendered));
+      var svg = diagram.querySelector("svg");
+      if (svg) {
+        svg.setAttribute("aria-hidden", "true");
+        svg.setAttribute("focusable", "false");
+      }
+      pre.parentNode.replaceChild(diagram, pre);
+
+      requestAnimationFrame(function () {
+        if (diagram.scrollWidth > diagram.clientWidth) {
+          diagram.tabIndex = 0;
+          diagram.setAttribute("aria-label", diagram.getAttribute("aria-label") + ". Scroll horizontally to view the full diagram.");
         }
-      })();
-      rendering = run;
-      return run;
+      });
+    } catch (error) {
+      diagram.classList.add("mermaid-error");
+      diagram.removeAttribute("role");
+      diagram.removeAttribute("aria-label");
+      diagram.textContent = source;
+      pre.parentNode.replaceChild(diagram, pre);
+      console.error("Could not render Mermaid diagram " + (index + 1), error);
     }
-
-    renderAll();
-
-    new MutationObserver(function () {
-      renderAll();
-    }).observe(root, { attributes: true, attributeFilter: ["data-theme"] });
-
-    media.addEventListener("change", function () {
-      if (!root.getAttribute("data-theme")) renderAll();
-    });
-  }
+  });
 </script>

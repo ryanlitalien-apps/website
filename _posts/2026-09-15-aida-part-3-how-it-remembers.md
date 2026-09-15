@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How it remembers - Files are the truth, the database is a card catalog"
+title: "Aida, Part 3: How it remembers - files are the truth, the database is a card catalog"
 published_at: 2026-09-15
 series: aida
 series_part: 3
@@ -117,23 +117,22 @@ Read the second column top to bottom and you get the other rule of the stack: th
 
 The physiology column is an analogy, not a claim. Nobody's SQLite file is a hippocampus. But the shape that neuroscience describes, a fast volatile layer feeding a slower durable one through a consolidation pass that keeps what gets used and lets the rest fade, is the shape Atlas describes, the shape OpenViking arrived at, and the shape this brain has. When three unrelated groups converge on a design, the design is probably not the clever part.
 
-### The flow: how a memory moves between levels
+### The flow: how memory is written and promoted
 
-The diagram below is the same five levels drawn as a pipeline, bottom to top. Solid arrows are promotion, which happens automatically; the dashed arrow is decay, which is planned and which demotes by losing weight rather than by deleting anything.
+The diagram below is the same five levels drawn top to bottom. Solid arrows are working code today. Dotted arrows are the two promotion paths still on the roadmap. Decay is not a path between tiers: during agent recall, it lowers the ranking of stale knowledge without moving or deleting the record.
 
 ```mermaid
-flowchart BT
-    L0["L0 · ephemeral<br/>run records, --explain traces<br/>written by every query"]:::tier
-    L1["L1 · feedback lessons<br/>engine + voice lesson stores<br/>(SQLite rows + embeddings)"]:::tier
-    L2["L2 · captured agent memories<br/>per-tool memory profiles:<br/>hook-mirrored + LLM-distilled<br/>session harvests (watermarked)"]:::tier
-    L3["L3 · curated knowledge<br/>entity pages, domain docs,<br/>per-source layer docs"]:::tier
-    L4["L4 · consolidated wiki<br/>consolidation, decay scoring,<br/>supersession (OKF bundle)"]:::tier
+flowchart TD
+    Q(["every query"]):::ext --> L0["L0 · ephemeral<br/>run records + --explain traces"]:::tier
+    Q -- "automatic lesson" --> L1["L1 · feedback lessons<br/>engine + voice lesson stores<br/>(SQLite rows + embeddings)"]:::tier
+    L0 -- "thumbs-up / thumbs-down<br/>promotes the run" --> L1
 
-    L0 -- "thumbs-up / thumbs-down<br/>promotes a run into an<br/>embedded lesson" --> L1
-    SESS(["coding-agent sessions<br/>(capture hooks + harvest sweeps)"]):::ext -- "distill 0–5 durable<br/>records per session" --> L2
-    L2 -- "compile pass (roadmap):<br/>cluster hot memories by<br/>entity/domain, propose merges" --> L3
-    L3 -- "brain consolidate (roadmap):<br/>event → fact promotion<br/>with provenance" --> L4
-    L4 -. "decay scoring demotes:<br/>tiers move down by losing<br/>weight, not by deletion" .-> L3
+    SESS(["coding-agent sessions<br/>(capture hooks + harvest sweeps)"]):::ext --> E["L2 · events<br/>hook-mirrored + LLM-distilled<br/>(watermarked)"]:::tier
+    E -- "brain consolidate (shipped):<br/>provenance + supersession" --> F["L2 · durable facts<br/>+ instructions"]:::tier
+
+    L1 -- "brain compile (shipped)" --> L3["L3 · curated knowledge<br/>entity pages, domain docs,<br/>per-source layer docs"]:::tier
+    F -. "ROADMAP:<br/>cluster / propose merges" .-> L3
+    L3 -. "ROADMAP:<br/>publish into wiki" .-> L4["L4 · wiki<br/>OKF bundle<br/>indexed + read by Aida"]:::tier
 
     classDef tier stroke-width:2.5px;
     classDef ext stroke-dasharray: 5 4;
@@ -145,9 +144,9 @@ Not all memory deserves the same shelf. My kitchen has receipts in a drawer, a s
 - **Sticky notes.** When I thumbs-down an answer and say why, that correction becomes a lesson with real teeth. [Part 2](/posts/aida-part-2-how-it-decides/) covered how lessons mechanically change routing; a correction is memory too, just memory about behavior.
 - **Session notes.** Everything the mirror and the harvester capture: plentiful, automatic, individually small.
 - **The notebook.** Curated pages, one per entity or domain I actually care about, written and revised deliberately: fewer, denser, trusted.
-- **The cookbook.** The long-term consolidated wiki, where knowledge gets promoted, deduplicated, and allowed to fade when it stops being true. Partly built, honestly still the roadmap.
+- **The cookbook.** The long-term wiki, maintained separately today and indexed by Aida for recall. Publishing curated knowledge into it automatically is still the roadmap.
 
-The thing that makes tiers worth having is that records move between them without me shepherding each one. Feedback and hooks promote upward: a thumbs-down turns a receipt into a sticky note the instant I give it, and harvest sweeps turn sessions into session notes on a timer. Decay demotes downward: the planned consolidation pass scores knowledge by use and age, and stale facts lose weight rather than getting deleted by some algorithm that thinks it knows better. My job is to curate exceptions. The pipeline does the commuting.
+Some of that commuting is already automatic. A thumbs-down turns a receipt into a sticky note the instant I give it; harvest sweeps turn sessions into typed memories on a timer; consolidation promotes short-lived events into durable facts or instructions; and the lesson compiler writes accumulated routing wisdom into curated knowledge. The last two crossings are not built yet: clustering L2 memories into L3 pages, then publishing L3 into the wiki. Decay is quieter than the old diagram implied. It changes what recall ranks highly, using age and use count, but never moves or deletes the underlying record. My job is to curate exceptions while the shipped parts of the pipeline do their commuting.
 
 ## The 10-second tax
 
@@ -227,4 +226,3 @@ And this is what all of it looks like from the outside. The brain repo's history
 <img src="/assets/img/blog/aida-brain-commits.png" alt="The brain repo's commit list on GitHub: three auto commits stamped with timestamps, and one knowledge commit authored by Aida" style="display:block;width:85%;margin:0 auto;">
 
 It adds up.
-

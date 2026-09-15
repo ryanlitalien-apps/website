@@ -1,7 +1,6 @@
-// Tests the effectiveTheme() pure function that lives inside
-// _includes/mermaid.html, without a build step. The include stays the
-// single source of truth: this test extracts the function's source text
-// straight out of the include with a regex, evals it, and exercises it.
+// Tests the browser-independent rendering options in _includes/mermaid.html.
+// The include remains the single source of truth; this extracts and evaluates
+// the small pure function without requiring a DOM or a build step.
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
@@ -12,31 +11,60 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const includePath = join(__dirname, "..", "_includes", "mermaid.html");
 const source = readFileSync(includePath, "utf8");
 
-const match = source.match(/function effectiveTheme[\s\S]*?\n  }/);
-assert.ok(match, "expected to find an effectiveTheme function in _includes/mermaid.html");
+const match = source.match(/function diagramOptions[\s\S]*?\n  }/);
+assert.ok(match, "expected to find diagramOptions() in _includes/mermaid.html");
 
 // eslint-disable-next-line no-eval
-const effectiveTheme = eval(`(${match[0]})`);
+const diagramOptions = eval(`(${match[0]})`);
 
-test("explicit dark wins regardless of OS preference", () => {
-  assert.equal(effectiveTheme("dark", false), "dark");
-  assert.equal(effectiveTheme("dark", true), "dark");
+test("uses the site palette through live CSS properties", () => {
+  assert.deepEqual(
+    {
+      bg: diagramOptions().bg,
+      fg: diagramOptions().fg,
+      accent: diagramOptions().accent,
+      surface: diagramOptions().surface,
+      border: diagramOptions().border,
+    },
+    {
+      bg: "var(--mermaid-bg)",
+      fg: "var(--mermaid-fg)",
+      accent: "var(--mermaid-accent)",
+      surface: "var(--mermaid-surface)",
+      border: "var(--mermaid-border)",
+    },
+  );
 });
 
-test("explicit light wins regardless of OS preference", () => {
-  assert.equal(effectiveTheme("light", true), "light");
-  assert.equal(effectiveTheme("light", false), "light");
+test("uses a roomy ELK layout for dense blog diagrams", () => {
+  const options = diagramOptions();
+  assert.equal(options.transparent, true);
+  assert.equal(options.nodeSpacing, 32);
+  assert.equal(options.layerSpacing, 52);
+  assert.equal(options.thoroughness, 5);
 });
 
-test("no explicit theme and OS prefers dark falls back to dark", () => {
-  assert.equal(effectiveTheme(null, true), "dark");
+test("pins the beautiful-mermaid browser dependency", () => {
+  assert.match(source, /beautiful-mermaid@1\.1\.3\/\+esm/);
 });
 
-test("no explicit theme and OS prefers light falls back to light", () => {
-  assert.equal(effectiveTheme(null, false), "light");
+test("removes renderer font imports so diagrams use the site's font stack", () => {
+  const fontMatch = source.match(/function useSiteFont[\s\S]*?\n  }/);
+  assert.ok(fontMatch, "expected to find useSiteFont() in _includes/mermaid.html");
+  // eslint-disable-next-line no-eval
+  const useSiteFont = eval(`(${fontMatch[0]})`);
+  const svg = "<style>@import url('https://fonts.googleapis.com/css2?family=Inter&amp;display=swap'); text { color: red; }</style>";
+  assert.equal(useSiteFont(svg), "<style>text { color: red; }</style>");
 });
 
-test("a garbage explicit value falls through to the OS preference", () => {
-  assert.equal(effectiveTheme("sepia", true), "dark");
-  assert.equal(effectiveTheme("sepia", false), "light");
+test("enlarges SVG marker viewports by 50 percent", () => {
+  const arrowMatch = source.match(/function enlargeArrowheads[\s\S]*?\n  }/);
+  assert.ok(arrowMatch, "expected to find enlargeArrowheads() in _includes/mermaid.html");
+  // eslint-disable-next-line no-eval
+  const enlargeArrowheads = eval(`(${arrowMatch[0]})`);
+  const marker = '<marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7">';
+  assert.equal(
+    enlargeArrowheads(marker),
+    '<marker id="arrowhead" markerWidth="12" markerHeight="9" viewBox="0 0 8 6" refX="7">',
+  );
 });

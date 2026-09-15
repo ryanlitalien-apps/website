@@ -64,16 +64,17 @@ graph TD; A-->B;
 ```
 EOF
 
-# 3. Build the temp site.
-NEWEST_REAL_POST="$(ls -t "$REPO_ROOT"/_posts/*.md | head -1)"
-NEWEST_REAL_SLUG="$(basename "$NEWEST_REAL_POST" .md)"
+# 3. Build the temp site. Pick a real non-Mermaid post as the control; using
+# file modification time can accidentally select the Mermaid post under test.
+REAL_CONTROL_POST="$(grep -L '^mermaid: true$' "$REPO_ROOT"/_posts/*.md | head -1)"
+REAL_CONTROL_SLUG="$(basename "$REAL_CONTROL_POST" .md)"
 
 BUNDLE_GEMFILE="$REPO_ROOT/Gemfile" bundle exec jekyll build -s "$TMP_DIR" -d "$TMP_DIR/_site"
 
 ON_HTML="$TMP_DIR/_site/posts/mermaid-on/index.html"
 OFF_HTML="$TMP_DIR/_site/posts/mermaid-off/index.html"
-NEWEST_REAL_TITLE="$(echo "$NEWEST_REAL_SLUG" | sed -E 's/^[0-9]{4}-[0-9]{2}-[0-9]{2}-//')"
-REAL_HTML="$(find "$TMP_DIR/_site/posts" -ipath "*${NEWEST_REAL_TITLE}*index.html" | head -1)"
+REAL_CONTROL_TITLE="$(echo "$REAL_CONTROL_SLUG" | sed -E 's/^[0-9]{4}-[0-9]{2}-[0-9]{2}-//')"
+REAL_HTML="$(find "$TMP_DIR/_site/posts" -ipath "*${REAL_CONTROL_TITLE}*index.html" | head -1)"
 
 if [[ ! -f "$ON_HTML" ]]; then
   fail "mermaid-on post built an index.html at $ON_HTML"
@@ -88,17 +89,17 @@ else
 fi
 
 if [[ -z "$REAL_HTML" || ! -f "$REAL_HTML" ]]; then
-  fail "found a built index.html for the newest real post ($NEWEST_REAL_SLUG)"
+  fail "found a built index.html for the real control post ($REAL_CONTROL_SLUG)"
 else
-  pass "found a built index.html for the newest real post ($NEWEST_REAL_SLUG)"
+  pass "found a built index.html for the real control post ($REAL_CONTROL_SLUG)"
 fi
 
 # 4. Assertions on the opt-in post.
 if [[ -f "$ON_HTML" ]]; then
-  if grep -q "mermaid.esm.min.mjs" "$ON_HTML"; then
-    pass "opt-in post includes the mermaid module import"
+  if grep -q "beautiful-mermaid@1.1.3/+esm" "$ON_HTML"; then
+    pass "opt-in post includes the pinned beautiful-mermaid module import"
   else
-    fail "opt-in post includes the mermaid module import"
+    fail "opt-in post includes the pinned beautiful-mermaid module import"
   fi
 
   if grep -q 'code class="language-mermaid"' "$ON_HTML"; then
@@ -116,19 +117,19 @@ if [[ -f "$OFF_HTML" ]]; then
     fail "opt-out post still has the fenced mermaid code block"
   fi
 
-  if grep -q "mermaid.esm.min.mjs" "$OFF_HTML"; then
-    fail "opt-out post does NOT include the mermaid module import"
+  if grep -q "beautiful-mermaid" "$OFF_HTML"; then
+    fail "opt-out post does NOT include the beautiful-mermaid module import"
   else
-    pass "opt-out post does NOT include the mermaid module import"
+    pass "opt-out post does NOT include the beautiful-mermaid module import"
   fi
 fi
 
 # 6. Assertion on a real, unrelated, already-published post.
 if [[ -n "$REAL_HTML" && -f "$REAL_HTML" ]]; then
-  if grep -q "mermaid.esm.min.mjs" "$REAL_HTML"; then
-    fail "existing real post ($NEWEST_REAL_SLUG) does NOT include the mermaid module import"
+  if grep -q "beautiful-mermaid" "$REAL_HTML"; then
+    fail "existing real post ($REAL_CONTROL_SLUG) does NOT include the beautiful-mermaid module import"
   else
-    pass "existing real post ($NEWEST_REAL_SLUG) does NOT include the mermaid module import"
+    pass "existing real post ($REAL_CONTROL_SLUG) does NOT include the beautiful-mermaid module import"
   fi
 fi
 
