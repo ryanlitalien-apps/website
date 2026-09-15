@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Aida, Part 5: Dynamic model selection - teaching the loop what it can afford"
+title: "Aida, Part 5: Dynamic model selection - Teaching the loop what it can afford"
 published_at: 2026-09-15
 series: aida
 series_part: 5
