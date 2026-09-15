@@ -85,7 +85,7 @@ Worth knowing: `hooks`, `permissions`, and `enabledPlugins` all merge across tho
 
 ## Where it goes in Aida
 
-I did not want this living only on my laptop. [Aida](/posts/an-agent-of-agents-for-one-person/) already keeps my skills, context layers, and source configs as files in a git repo, so the output style belongs there too, next to everything else I would have to rebuild on a new machine.
+I did not want this living only on my laptop. [Aida](/posts/aida-part-1-an-agent-of-agents-for-one-person/) already keeps my skills, context layers, and source configs as files in a git repo, so the output style belongs there too, next to everything else I would have to rebuild on a new machine.
 
 The library manifest only knew about three categories. Adding a fourth was about thirty lines of Go, mirroring the existing `layers` category exactly:
 
