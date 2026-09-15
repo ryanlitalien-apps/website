@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Introducing Aida - An agent of agents for one person"
+title: "Aida, Part 1: An agent of agents for one person"
 published_at: 2026-09-03
 redirect_from:
   - /posts/an-agent-of-agents-for-one-person/
 series: aida
 series_part: 1
+description: "Why I built Aida, a personal agent-of-agents that routes questions across my own tools and data while keeping its decisions inspectable."
 tags:
   - Technology
   - AI

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How it decides - A rulebook you can read routes the question"
+title: "Aida, Part 2: How it decides — a rulebook you can read routes the question"
 published_at: 2026-09-15
 series: aida
 series_part: 2

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "What it spawned - Four projects, one loop, and Aida goes open source"
+title: "Aida, Part 4: What it spawned — four projects, one loop, and open source"
 published_at: 2026-09-15
 series: aida
 series_part: 4
