@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Aida, Part 3: How it remembers — files are the truth, the database is a card catalog"
+title: "Aida, Part 3: How it remembers - files are the truth, the database is a card catalog"
 published_at: 2026-09-15
 series: aida
 series_part: 3
