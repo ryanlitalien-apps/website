@@ -17,7 +17,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version-file: ".nvmrc"
 
       - name: Run the mermaid build test
         run: bash test/mermaid_test.sh
